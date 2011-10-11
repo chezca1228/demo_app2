@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Heroku::Command::Pgbackups</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/heroku/command/pgbackups_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/heroku/command/pgbackups.rb">lib/heroku/command/pgbackups.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">BaseWithApp</p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="Pgbackups/Display.html">Heroku::Command::Pgbackups::Display</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-backup_name">#backup_name</a></li>
+          
+          <li><a href="#method-i-capture">#capture</a></li>
+          
+          <li><a href="#method-i-config_vars">#config_vars</a></li>
+          
+          <li><a href="#method-i-destroy">#destroy</a></li>
+          
+          <li><a href="#method-i-index">#index</a></li>
+          
+          <li><a href="#method-i-pgbackup_client">#pgbackup_client</a></li>
+          
+          <li><a href="#method-i-poll_transfer-21">#poll_transfer!</a></li>
+          
+          <li><a href="#method-i-restore">#restore</a></li>
+          
+          <li><a href="#method-i-transfer-21">#transfer!</a></li>
+          
+          <li><a href="#method-i-update_display">#update_display</a></li>
+          
+          <li><a href="#method-i-url">#url</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="../../PGResolver.html">PGResolver</a></li>
+        
+        
+        
+          <li><a class="include" href="../../PgUtils.html">PgUtils</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Heroku.html">Heroku</a></li>
+        
+          <li><a href="../../Heroku/Auth.html">Heroku::Auth</a></li>
+        
+          <li><a href="../../Heroku/BuiltinPlugin.html">Heroku::BuiltinPlugin</a></li>
+        
+          <li><a href="../../Heroku/Client.html">Heroku::Client</a></li>
+        
+          <li><a href="../../Heroku/Client/AppCrashed.html">Heroku::Client::AppCrashed</a></li>
+        
+          <li><a href="../../Heroku/Client/ConsoleSession.html">Heroku::Client::ConsoleSession</a></li>
+        
+          <li><a href="../../Heroku/Client/JSON.html">Heroku::Client::JSON</a></li>
+        
+          <li><a href="../../Heroku/Client/Rendezvous.html">Heroku::Client::Rendezvous</a></li>
+        
+          <li><a href="../../Heroku/Client/Service.html">Heroku::Client::Service</a></li>
+        
+          <li><a href="../../Heroku/Command.html">Heroku::Command</a></li>
+        
+          <li><a href="../../Heroku/Command/Account.html">Heroku::Command::Account</a></li>
+        
+          <li><a href="../../Heroku/Command/Addons.html">Heroku::Command::Addons</a></li>
+        
+          <li><a href="../../Heroku/Command/Apps.html">Heroku::Command::Apps</a></li>
+        
+          <li><a href="../../Heroku/Command/Auth.html">Heroku::Command::Auth</a></li>
+        
+          <li><a href="../../Heroku/Command/Base.html">Heroku::Command::Base</a></li>
+        
+          <li><a href="../../Heroku/Command/BaseWithApp.html">Heroku::Command::BaseWithApp</a></li>
+        
+          <li><a href="../../Heroku/Command/CommandFailed.html">Heroku::Command::CommandFailed</a></li>
+        
+          <li><a href="../../Heroku/Command/Config.html">Heroku::Command::Config</a></li>
+        
+          <li><a href="../../Heroku/Command/Db.html">Heroku::Command::Db</a></li>
+        
+          <li><a href="../../Heroku/Command/Domains.html">Heroku::Command::Domains</a></li>
+        
+          <li><a href="../../Heroku/Command/Help.html">Heroku::Command::Help</a></li>
+        
+          <li><a href="../../Heroku/Command/InvalidCommand.html">Heroku::Command::InvalidCommand</a></li>
+        
+          <li><a href="../../Heroku/Command/Keys.html">Heroku::Command::Keys</a></li>
+        
+          <li><a href="../../Heroku/Command/Logs.html">Heroku::Command::Logs</a></li>
+        
+          <li><a href="../../Heroku/Command/Maintenance.html">Heroku::Command::Maintenance</a></li>
+        
+          <li><a href="../../Heroku/Command/Pg.html">Heroku::Command::Pg</a></li>
+        
+          <li><a href="../../Heroku/Command/Pgbackups.html">Heroku::Command::Pgbackups</a></li>
+        
+          <li><a href="../../Heroku/Command/Pgbackups/Display.html">Heroku::Command::Pgbackups::Display</a></li>
+        
+          <li><a href="../../Heroku/Command/Pgbackups/Display/DataSource.html">Heroku::Command::Pgbackups::Display::DataSource</a></li>
+        
+          <li><a href="../../Heroku/Command/Plugins.html">Heroku::Command::Plugins</a></li>
+        
+          <li><a href="../../Heroku/Command/Ps.html">Heroku::Command::Ps</a></li>
+        
+          <li><a href="../../Heroku/Command/Releases.html">Heroku::Command::Releases</a></li>
+        
+          <li><a href="../../Heroku/Command/Run.html">Heroku::Command::Run</a></li>
+        
+          <li><a href="../../Heroku/Command/Sharing.html">Heroku::Command::Sharing</a></li>
+        
+          <li><a href="../../Heroku/Command/Ssl.html">Heroku::Command::Ssl</a></li>
+        
+          <li><a href="../../Heroku/Command/Stack.html">Heroku::Command::Stack</a></li>
+        
+          <li><a href="../../Heroku/Command/Update.html">Heroku::Command::Update</a></li>
+        
+          <li><a href="../../Heroku/Command/Version.html">Heroku::Command::Version</a></li>
+        
+          <li><a href="../../Heroku/Deprecated.html">Heroku::Deprecated</a></li>
+        
+          <li><a href="../../Heroku/Deprecated/Help.html">Heroku::Deprecated::Help</a></li>
+        
+          <li><a href="../../Heroku/Deprecated/Help/ClassMethods.html">Heroku::Deprecated::Help::ClassMethods</a></li>
+        
+          <li><a href="../../Heroku/Deprecated/Help/HelpGroup.html">Heroku::Deprecated::Help::HelpGroup</a></li>
+        
+          <li><a href="../../Heroku/Distribution.html">Heroku::Distribution</a></li>
+        
+          <li><a href="../../Heroku/Helpers.html">Heroku::Helpers</a></li>
+        
+          <li><a href="../../Heroku/OkJson.html">Heroku::OkJson</a></li>
+        
+          <li><a href="../../Heroku/OkJson/ParserError.html">Heroku::OkJson::ParserError</a></li>
+        
+          <li><a href="../../Heroku/Plugin.html">Heroku::Plugin</a></li>
+        
+          <li><a href="../../Heroku/Updater.html">Heroku::Updater</a></li>
+        
+          <li><a href="../../HerokuPostgresql.html">HerokuPostgresql</a></li>
+        
+          <li><a href="../../HerokuPostgresql/Client.html">HerokuPostgresql::Client</a></li>
+        
+          <li><a href="../../PGBackups.html">PGBackups</a></li>
+        
+          <li><a href="../../PGBackups/Client.html">PGBackups::Client</a></li>
+        
+          <li><a href="../../PGResolver.html">PGResolver</a></li>
+        
+          <li><a href="../../PGResolver/Resolver.html">PGResolver::Resolver</a></li>
+        
+          <li><a href="../../PgUtils.html">PgUtils</a></li>
+        
+          <li><a href="../../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Heroku::Command::Pgbackups</h1>
+
+    <div id="description" class="description">
+      
+<p>manage backups of heroku postgresql databases</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="capture-method" class="method-detail ">
+          <a name="method-i-capture"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">capture</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>pgbackups:capture [DATABASE]</p>
+
+<p>capture a backup from a database id</p>
+
+<p>if no DATABASE is specified, defaults to DATABASE_URL</p>
+
+<p>-e, –expire  # if no slots are available to capture, delete the oldest
+backup to make room</p>
+            
+
+            
+            <div class="method-source-code" id="capture-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pgbackups.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">capture</span>
+  <span class="ruby-identifier">deprecate_dash_dash_db</span>(<span class="ruby-string">&quot;pgbackups:capture&quot;</span>)
+
+  <span class="ruby-identifier">db</span> = <span class="ruby-identifier">resolve_db</span>(<span class="ruby-value">:allow_default</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>)
+
+  <span class="ruby-identifier">from_url</span>  = <span class="ruby-identifier">db</span>[<span class="ruby-value">:url</span>]
+  <span class="ruby-identifier">from_name</span> = <span class="ruby-identifier">db</span>[<span class="ruby-value">:name</span>]
+  <span class="ruby-identifier">to_url</span>    = <span class="ruby-keyword">nil</span> <span class="ruby-comment"># server will assign</span>
+  <span class="ruby-identifier">to_name</span>   = <span class="ruby-string">&quot;BACKUP&quot;</span>
+  <span class="ruby-identifier">opts</span>      = {<span class="ruby-value">:expire</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">extract_option</span>(<span class="ruby-string">&quot;--expire&quot;</span>)}
+
+  <span class="ruby-identifier">backup</span> = <span class="ruby-identifier">transfer!</span>(<span class="ruby-identifier">from_url</span>, <span class="ruby-identifier">from_name</span>, <span class="ruby-identifier">to_url</span>, <span class="ruby-identifier">to_name</span>, <span class="ruby-identifier">opts</span>)
+
+  <span class="ruby-identifier">to_uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span> <span class="ruby-identifier">backup</span>[<span class="ruby-string">&quot;to_url&quot;</span>]
+  <span class="ruby-identifier">backup_id</span> = <span class="ruby-identifier">to_uri</span>.<span class="ruby-identifier">path</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;error&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">to_uri</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">'.*'</span>)
+  <span class="ruby-identifier">display</span> <span class="ruby-node">&quot;\n#{db[:pretty_name]}  ----backup---&gt;  #{backup_id}&quot;</span>
+
+  <span class="ruby-identifier">backup</span> = <span class="ruby-identifier">poll_transfer!</span>(<span class="ruby-identifier">backup</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">backup</span>[<span class="ruby-string">&quot;error_at&quot;</span>]
+    <span class="ruby-identifier">message</span>  =   <span class="ruby-string">&quot; !    An error occurred and your backup did not finish.&quot;</span>
+    <span class="ruby-identifier">message</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;\n !    The database is not yet online. Please try again.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">backup</span>[<span class="ruby-string">'log'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/Name or service not known/</span>
+    <span class="ruby-identifier">message</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;\n !    The database credentials are incorrect.&quot;</span>           <span class="ruby-keyword">if</span> <span class="ruby-identifier">backup</span>[<span class="ruby-string">'log'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/psql: FATAL:/</span>
+    <span class="ruby-identifier">abort</span>(<span class="ruby-identifier">message</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- capture-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- capture-method -->
+
+      
+        <div id="destroy-method" class="method-detail ">
+          <a name="method-i-destroy"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">destroy</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>pgbackups:destroy BACKUP_ID</p>
+
+<p>destroys a backup</p>
+            
+
+            
+            <div class="method-source-code" id="destroy-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pgbackups.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
+  <span class="ruby-identifier">name</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-identifier">abort</span>(<span class="ruby-string">&quot;Backup name required&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">name</span>
+  <span class="ruby-identifier">backup</span> = <span class="ruby-identifier">pgbackup_client</span>.<span class="ruby-identifier">get_backup</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">abort</span>(<span class="ruby-node">&quot;Backup #{name} already deleted.&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">backup</span>[<span class="ruby-string">&quot;destroyed_at&quot;</span>]
+
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">pgbackup_client</span>.<span class="ruby-identifier">delete_backup</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>
+    <span class="ruby-identifier">display</span>(<span class="ruby-node">&quot;Backup #{name} deleted.&quot;</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">abort</span>(<span class="ruby-node">&quot;Error deleting backup #{name}.&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- destroy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- destroy-method -->
+
+      
+        <div id="index-method" class="method-detail ">
+          <a name="method-i-index"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">index</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>pgbackups</p>
+
+<p>list captured backups</p>
+            
+
+            
+            <div class="method-source-code" id="index-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pgbackups.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-identifier">backups</span> = []
+  <span class="ruby-identifier">pgbackup_client</span>.<span class="ruby-identifier">get_transfers</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">backup_types</span>.<span class="ruby-identifier">member?</span>(<span class="ruby-identifier">t</span>[<span class="ruby-string">'to_name'</span>]) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-string">'error_at'</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-string">'destroyed_at'</span>]
+    <span class="ruby-identifier">backups</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">backup_name</span>(<span class="ruby-identifier">t</span>[<span class="ruby-string">'to_url'</span>]), <span class="ruby-identifier">t</span>[<span class="ruby-string">'created_at'</span>], <span class="ruby-identifier">t</span>[<span class="ruby-string">'size'</span>], <span class="ruby-identifier">t</span>[<span class="ruby-string">'from_name'</span>], ]
+  }
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">backups</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">no_backups_error!</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-constant">Display</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">render</span>([[<span class="ruby-string">&quot;ID&quot;</span>, <span class="ruby-string">&quot;Backup Time&quot;</span>, <span class="ruby-string">&quot;Size&quot;</span>, <span class="ruby-string">&quot;Database&quot;</span>]], <span class="ruby-identifier">backups</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- index-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- index-method -->
+
+      
+        <div id="restore-method" class="method-detail ">
+          <a name="method-i-restore"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">restore</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>pgbackups:restore [&lt;DATABASE&gt; [BACKUP_ID|BACKUP_URL]]</p>
+
+<p>restore a backup to a database</p>
+
+<p>if no DATABASE is specified, defaults to DATABASE_URL and latest backup if
+DATABASE is specified, but no BACKUP_ID, defaults to latest backup</p>
+            
+
+            
+            <div class="method-source-code" id="restore-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pgbackups.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">restore</span>
+  <span class="ruby-identifier">deprecate_dash_dash_db</span>(<span class="ruby-string">&quot;pgbackups:restore&quot;</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-identifier">db</span> = <span class="ruby-identifier">resolve_db</span>(<span class="ruby-value">:allow_default</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>)
+    <span class="ruby-identifier">backup_id</span> = <span class="ruby-value">:latest</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-value">1</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-identifier">db</span> = <span class="ruby-identifier">resolve_db</span>
+    <span class="ruby-identifier">backup_id</span> = <span class="ruby-value">:latest</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">db</span> = <span class="ruby-identifier">resolve_db</span>
+    <span class="ruby-identifier">backup_id</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">to_name</span> = <span class="ruby-identifier">db</span>[<span class="ruby-value">:name</span>]
+  <span class="ruby-identifier">to_url</span>  = <span class="ruby-identifier">db</span>[<span class="ruby-value">:url</span>]
+
+  <span class="ruby-keyword">if</span> <span class="ruby-value">:latest</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">backup_id</span>
+    <span class="ruby-identifier">backup</span> = <span class="ruby-identifier">pgbackup_client</span>.<span class="ruby-identifier">get_latest_backup</span>
+    <span class="ruby-identifier">no_backups_error!</span> <span class="ruby-keyword">if</span> {} <span class="ruby-operator">==</span> <span class="ruby-identifier">backup</span>
+    <span class="ruby-identifier">to_uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span> <span class="ruby-identifier">backup</span>[<span class="ruby-string">&quot;to_url&quot;</span>]
+    <span class="ruby-identifier">backup_id</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">to_uri</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">'.*'</span>)
+    <span class="ruby-identifier">backup_id</span> = <span class="ruby-node">&quot;#{backup_id} (most recent)&quot;</span>
+    <span class="ruby-identifier">from_url</span>  = <span class="ruby-identifier">backup</span>[<span class="ruby-string">&quot;to_url&quot;</span>]
+    <span class="ruby-identifier">from_name</span> = <span class="ruby-string">&quot;BACKUP&quot;</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">backup_id</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^http(s?):\/\//</span>
+    <span class="ruby-identifier">from_url</span>  = <span class="ruby-identifier">backup_id</span>
+    <span class="ruby-identifier">from_name</span> = <span class="ruby-string">&quot;EXTERNAL_BACKUP&quot;</span>
+    <span class="ruby-identifier">from_uri</span>  = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span> <span class="ruby-identifier">backup_id</span>
+    <span class="ruby-identifier">backup_id</span> = <span class="ruby-identifier">from_uri</span>.<span class="ruby-identifier">path</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">from_uri</span> <span class="ruby-operator">:</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">from_uri</span>.<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">backup</span> = <span class="ruby-identifier">pgbackup_client</span>.<span class="ruby-identifier">get_backup</span>(<span class="ruby-identifier">backup_id</span>)
+    <span class="ruby-identifier">abort</span>(<span class="ruby-node">&quot;Backup #{backup_id} already deleted.&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">backup</span>[<span class="ruby-string">&quot;destroyed_at&quot;</span>]
+
+    <span class="ruby-identifier">from_url</span>  = <span class="ruby-identifier">backup</span>[<span class="ruby-string">&quot;to_url&quot;</span>]
+    <span class="ruby-identifier">from_name</span> = <span class="ruby-string">&quot;BACKUP&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">message</span> = <span class="ruby-node">&quot;#{db[:pretty_name]}  &lt;---restore---  &quot;</span>
+  <span class="ruby-identifier">padding</span> = <span class="ruby-string">&quot; &quot;</span> * <span class="ruby-identifier">message</span>.<span class="ruby-identifier">length</span>
+  <span class="ruby-identifier">display</span> <span class="ruby-node">&quot;\n#{message}#{backup_id}&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">backup</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-identifier">padding</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;#{backup['from_name']}&quot;</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-identifier">padding</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;#{backup['created_at']}&quot;</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-identifier">padding</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;#{backup['size']}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">confirm_command</span>
+    <span class="ruby-identifier">restore</span> = <span class="ruby-identifier">transfer!</span>(<span class="ruby-identifier">from_url</span>, <span class="ruby-identifier">from_name</span>, <span class="ruby-identifier">to_url</span>, <span class="ruby-identifier">to_name</span>)
+    <span class="ruby-identifier">restore</span> = <span class="ruby-identifier">poll_transfer!</span>(<span class="ruby-identifier">restore</span>)
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">restore</span>[<span class="ruby-string">&quot;error_at&quot;</span>]
+      <span class="ruby-identifier">message</span>  =   <span class="ruby-string">&quot; !    An error occurred and your restore did not finish.&quot;</span>
+      <span class="ruby-identifier">message</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;\n !    The backup url is invalid. Use `pgbackups:url` to generate a new temporary URL.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">restore</span>[<span class="ruby-string">'log'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/Invalid dump format: .*: XML  document text/</span>
+      <span class="ruby-identifier">abort</span>(<span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- restore-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- restore-method -->
+
+      
+        <div id="url-method" class="method-detail ">
+          <a name="method-i-url"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">url</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>pgbackups:url [BACKUP_ID]</p>
+
+<p>get a temporary URL for a backup</p>
+            
+
+            
+            <div class="method-source-code" id="url-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pgbackups.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">url</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-identifier">b</span> = <span class="ruby-identifier">pgbackup_client</span>.<span class="ruby-identifier">get_backup</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">b</span> = <span class="ruby-identifier">pgbackup_client</span>.<span class="ruby-identifier">get_latest_backup</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">abort</span>(<span class="ruby-string">&quot;No backup found.&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">b</span>[<span class="ruby-string">'public_url'</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">STDOUT</span>.<span class="ruby-identifier">tty?</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-string">'&quot;'</span><span class="ruby-operator">+</span><span class="ruby-identifier">b</span>[<span class="ruby-string">'public_url'</span>]<span class="ruby-operator">+</span><span class="ruby-string">'&quot;'</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-identifier">b</span>[<span class="ruby-string">'public_url'</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- url-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- url-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+      <div id="protected-instance-method-details" class="method-section section">
+        <h3 class="section-header">Protected Instance Methods</h3>
+
+      
+        <div id="backup_name-method" class="method-detail ">
+          <a name="method-i-backup_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">backup_name</span><span
+              class="method-args">(to_url)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="backup_name-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pgbackups.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">backup_name</span>(<span class="ruby-identifier">to_url</span>)
+  <span class="ruby-comment"># translate s3://bucket/email/foo/bar.dump =&gt; foo/bar</span>
+  <span class="ruby-identifier">parts</span> = <span class="ruby-identifier">to_url</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'/'</span>)
+  <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">slice</span>(<span class="ruby-value">4</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">join</span>(<span class="ruby-string">'/'</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\.dump$/</span>, <span class="ruby-string">''</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- backup_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- backup_name-method -->
+
+      
+        <div id="config_vars-method" class="method-detail ">
+          <a name="method-i-config_vars"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">config_vars</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="config_vars-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pgbackups.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">config_vars</span>
+  <span class="ruby-ivar">@config_vars</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">heroku</span>.<span class="ruby-identifier">config_vars</span>(<span class="ruby-identifier">app</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- config_vars-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- config_vars-method -->
+
+      
+        <div id="pgbackup_client-method" class="method-detail ">
+          <a name="method-i-pgbackup_client"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pgbackup_client</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pgbackup_client-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pgbackups.rb, line 174</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pgbackup_client</span>
+  <span class="ruby-identifier">pgbackups_url</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;PGBACKUPS_URL&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">config_vars</span>[<span class="ruby-string">&quot;PGBACKUPS_URL&quot;</span>]
+  <span class="ruby-identifier">abort</span>(<span class="ruby-string">&quot; !   Please add the pgbackups addon first via:\nheroku addons:add pgbackups&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">pgbackups_url</span>
+  <span class="ruby-ivar">@pgbackup_client</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">PGBackups</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">pgbackups_url</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pgbackup_client-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pgbackup_client-method -->
+
+      
+        <div id="poll_transfer-21-method" class="method-detail ">
+          <a name="method-i-poll_transfer-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">poll_transfer!</span><span
+              class="method-args">(transfer)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="poll_transfer-21-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pgbackups.rb, line 190</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">poll_transfer!</span>(<span class="ruby-identifier">transfer</span>)
+  <span class="ruby-identifier">display</span> <span class="ruby-string">&quot;\n&quot;</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">transfer</span>[<span class="ruby-string">&quot;errors&quot;</span>]
+    <span class="ruby-identifier">transfer</span>[<span class="ruby-string">&quot;errors&quot;</span>].<span class="ruby-identifier">values</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">display</span> <span class="ruby-node">&quot; !    #{e}&quot;</span>
+    }
+    <span class="ruby-identifier">abort</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">while</span> <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">update_display</span>(<span class="ruby-identifier">transfer</span>)
+    <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">transfer</span>[<span class="ruby-string">&quot;finished_at&quot;</span>]
+
+    <span class="ruby-identifier">sleep</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">transfer</span> = <span class="ruby-identifier">pgbackup_client</span>.<span class="ruby-identifier">get_transfer</span>(<span class="ruby-identifier">transfer</span>[<span class="ruby-string">&quot;id&quot;</span>])
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">display</span> <span class="ruby-string">&quot;\n&quot;</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">transfer</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- poll_transfer-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- poll_transfer-21-method -->
+
+      
+        <div id="transfer-21-method" class="method-detail ">
+          <a name="method-i-transfer-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">transfer!</span><span
+              class="method-args">(from_url, from_name, to_url, to_name, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="transfer-21-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pgbackups.rb, line 186</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">transfer!</span>(<span class="ruby-identifier">from_url</span>, <span class="ruby-identifier">from_name</span>, <span class="ruby-identifier">to_url</span>, <span class="ruby-identifier">to_name</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">pgbackup_client</span>.<span class="ruby-identifier">create_transfer</span>(<span class="ruby-identifier">from_url</span>, <span class="ruby-identifier">from_name</span>, <span class="ruby-identifier">to_url</span>, <span class="ruby-identifier">to_name</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- transfer-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- transfer-21-method -->
+
+      
+        <div id="update_display-method" class="method-detail ">
+          <a name="method-i-update_display"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">update_display</span><span
+              class="method-args">(transfer)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="update_display-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pgbackups.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_display</span>(<span class="ruby-identifier">transfer</span>)
+  <span class="ruby-ivar">@ticks</span>            <span class="ruby-operator">||=</span> <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@last_updated_at</span>  <span class="ruby-operator">||=</span> <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@last_logs</span>        <span class="ruby-operator">||=</span> []
+  <span class="ruby-ivar">@last_progress</span>    <span class="ruby-operator">||=</span> [<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-value">0</span>]
+
+  <span class="ruby-ivar">@ticks</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+
+  <span class="ruby-identifier">step_map</span> = {
+    <span class="ruby-string">&quot;dump&quot;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Capturing&quot;</span>,
+    <span class="ruby-string">&quot;upload&quot;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Storing&quot;</span>,
+    <span class="ruby-string">&quot;download&quot;</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Retrieving&quot;</span>,
+    <span class="ruby-string">&quot;restore&quot;</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Restoring&quot;</span>,
+    <span class="ruby-string">&quot;gunzip&quot;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Uncompressing&quot;</span>,
+    <span class="ruby-string">&quot;load&quot;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Restoring&quot;</span>,
+  }
+
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">transfer</span>[<span class="ruby-string">&quot;log&quot;</span>]
+    <span class="ruby-ivar">@last_progress</span> = [<span class="ruby-string">'pending'</span>, <span class="ruby-keyword">nil</span>]
+    <span class="ruby-identifier">redisplay</span> <span class="ruby-node">&quot;Pending... #{spinner(@ticks)}&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">logs</span>        = <span class="ruby-identifier">transfer</span>[<span class="ruby-string">&quot;log&quot;</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+    <span class="ruby-identifier">new_logs</span>    = <span class="ruby-identifier">logs</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@last_logs</span>
+    <span class="ruby-ivar">@last_logs</span>  = <span class="ruby-identifier">logs</span>
+
+    <span class="ruby-identifier">new_logs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">matches</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">scan</span> <span class="ruby-regexp">/^([a-z_]+)_progress:\s+([^ ]+)/</span>
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">empty?</span>
+
+      <span class="ruby-identifier">step</span>, <span class="ruby-identifier">amount</span> = <span class="ruby-identifier">matches</span>[<span class="ruby-value">0</span>]
+
+      <span class="ruby-keyword">if</span> [<span class="ruby-string">'done'</span>, <span class="ruby-string">'error'</span>].<span class="ruby-identifier">include?</span> <span class="ruby-identifier">amount</span>
+        <span class="ruby-comment"># step is done, explicitly print result and newline</span>
+        <span class="ruby-identifier">redisplay</span> <span class="ruby-node">&quot;#{@last_progress[0].capitalize}... #{amount}\n&quot;</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-comment"># store progress, last one in the logs will get displayed</span>
+      <span class="ruby-identifier">step</span> = <span class="ruby-identifier">step_map</span>[<span class="ruby-identifier">step</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">step</span>
+      <span class="ruby-ivar">@last_progress</span> = [<span class="ruby-identifier">step</span>, <span class="ruby-identifier">amount</span>]
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">step</span>, <span class="ruby-identifier">amount</span> = <span class="ruby-ivar">@last_progress</span>
+    <span class="ruby-keyword">unless</span> [<span class="ruby-string">'done'</span>, <span class="ruby-string">'error'</span>].<span class="ruby-identifier">include?</span> <span class="ruby-identifier">amount</span>
+      <span class="ruby-identifier">redisplay</span> <span class="ruby-node">&quot;#{step.capitalize}... #{amount} #{spinner(@ticks)}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- update_display-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- update_display-method -->
+
+      
+      </div><!-- protected-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

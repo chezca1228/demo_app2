@@ -1,0 +1,18 @@
+[2011-10-07 02:32:46] '/home/ralbaredo/.rvm/scripts/gemsets' initial # under ruby-1.9.2-p290
+Importing initial gemsets for ruby-1.9.2-p290.
+paths: /home/ralbaredo/.rvm/gemsets /home/ralbaredo/.rvm/gemsets/ruby /home/ralbaredo/.rvm/gemsets/ruby/1.9.2 /home/ralbaredo/.rvm/gemsets/ruby/1.9.2/p290
+
+Installing gems listed in /home/ralbaredo/.rvm/gemsets/default.gems file...
+
+installing rake 0.9.2...
+rake 0.9.2 installed.
+
+Processing of /home/ralbaredo/.rvm/gemsets/default.gems is complete.
+
+
+Installing gems listed in /home/ralbaredo/.rvm/gemsets/global.gems file...
+
+
+Processing of /home/ralbaredo/.rvm/gemsets/global.gems is complete.
+
+Installation of gems for ruby-1.9.2-p290 is complete.

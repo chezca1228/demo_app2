@@ -1,0 +1,5 @@
+U:RDoc::Attr[iI"mapping:EFI"-Addressable::Template::MatchData#mapping;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"@return [Hash];To:RDoc::Markup::Verbatim;	[	"/The mapping that resulted from the match.
+"@Note that this mapping does not include keys or values for
+"@variables that appear in the Template, but are not present
+"in the URI.:
+@file0FI" lib/addressable/template.rb;T

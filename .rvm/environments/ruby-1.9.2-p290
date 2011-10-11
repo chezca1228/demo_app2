@@ -1,0 +1,12 @@
+export PATH="/home/ralbaredo/.rvm/gems/ruby-1.9.2-p290/bin:/home/ralbaredo/.rvm/gems/ruby-1.9.2-p290@global/bin:/home/ralbaredo/.rvm/rubies/ruby-1.9.2-p290/bin:/home/ralbaredo/.rvm/bin:$PATH"
+rvm_env_string='ruby-1.9.2-p290' ; export rvm_env_string
+rvm_path='/home/ralbaredo/.rvm' ; export rvm_path
+rvm_ruby_string='ruby-1.9.2-p290' ; export rvm_ruby_string
+unset rvm_gemset_name
+RUBY_VERSION='ruby-1.9.2-p290' ; export RUBY_VERSION
+GEM_HOME='/home/ralbaredo/.rvm/gems/ruby-1.9.2-p290' ; export GEM_HOME
+GEM_PATH='/home/ralbaredo/.rvm/gems/ruby-1.9.2-p290:/home/ralbaredo/.rvm/gems/ruby-1.9.2-p290@global' ; export GEM_PATH
+MY_RUBY_HOME='/home/ralbaredo/.rvm/rubies/ruby-1.9.2-p290' ; export MY_RUBY_HOME
+IRBRC='/home/ralbaredo/.rvm/rubies/ruby-1.9.2-p290/.irbrc' ; export IRBRC
+unset MAGLEV_HOME
+unset RBXOPT

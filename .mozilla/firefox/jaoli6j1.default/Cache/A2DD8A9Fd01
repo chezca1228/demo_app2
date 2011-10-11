@@ -1,0 +1,792 @@
+/*
+  title: base css
+*/
+
+@import url("/stylesheets/how-it-works/reset.css");
+
+body {
+  background: #14141b;
+  color: #9191ab;
+  font-family: 'Helvetica Neue', Helvetica, Arial Geneva, sans-serif;
+  font-size: 12px;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+#how-it-works {
+  background: #1b1b24;
+}
+
+#how-it-works .wrapper {
+  margin: 0 auto;
+  padding: 32px 0 64px 0;
+  width: 960px;
+}
+
+/* =nav
+---------------------------------------------- */
+#how-it-works nav {
+  margin: 0 0 32px 0;
+  overflow: hidden;
+}
+
+#how-it-works nav .crumbs {
+  background: url("/images/how-it-works/bracket.png") center 7px no-repeat;
+  float: left;
+  margin: 0 2px 0 0;
+  width: 478px;
+}
+
+#how-it-works nav .crumbs h3 {
+  background: #1b1b24;
+  color: #4a4771;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  margin: 0 auto 7px auto;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .75);
+  width: 80px;
+}
+
+#how-it-works nav .crumbs ul li {
+  border-bottom: 2px solid #0e0e13;
+  border-top: 1px solid #0e0e13;
+  float: left;
+  margin: 0 0 0 -19px;
+  position: relative;
+}
+
+#how-it-works nav .crumbs ul li a {
+  background: url("/images/how-it-works/nav-bg.png") right top;
+  color: #8787ff;
+  display: block;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  line-height: 37px;
+  height: 37px;
+  text-align: center;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, .75);
+}
+
+#how-it-works nav .crumbs ul li a:hover {
+  background-position: right -37px;
+}
+
+#how-it-works nav .crumbs ul li a:active,
+#how-it-works nav .crumbs ul li a.active {
+  background-position: right -74px;
+  color: #73b0ff;
+}
+
+#how-it-works nav .crumbs ul li:nth-child(1) {
+  border-left: 1px solid #0e0e13;
+  margin: 0;
+  z-index: 3;
+}
+
+#how-it-works nav .crumbs ul li:nth-child(1) a {
+  -moz-box-shadow: 1px 0 0 0 rgba(255, 255, 255, .04) inset;
+  -webkit-box-shadow: 1px 0 0 0 rgba(255, 255, 255, .04) inset;
+  box-shadow: 1px 0 0 0 rgba(255, 255, 255, .04) inset;
+  padding: 0 10px 0 0;
+  width: 161px;
+}
+
+#how-it-works nav .crumbs ul li:nth-child(2) {
+  z-index: 2;
+}
+
+#how-it-works nav .crumbs ul li:nth-child(2) a {
+  padding: 0 4px 0 0;
+  width: 168px;
+}
+
+#how-it-works nav .crumbs ul li:nth-child(3) {
+  border-right: 1px solid #0e0e13;
+  z-index: 1;
+}
+
+#how-it-works nav .crumbs ul li:nth-child(3) a {
+  background-position: left top;
+  -moz-box-shadow: -1px 0 0 0 rgba(255, 255, 255, .04) inset;
+  -webkit-box-shadow: -1px 0 0 0 rgba(255, 255, 255, .04) inset;
+  box-shadow: -1px 0 0 0 rgba(255, 255, 255, .04) inset;
+  padding: 0 0 0 10px;
+  width: 161px;
+}
+
+#how-it-works nav .crumbs ul li:nth-child(3) a:hover {
+  background-position: left -37px;
+}
+
+#how-it-works nav .crumbs ul li:nth-child(3) a:active,
+#how-it-works nav .crumbs ul li:nth-child(3) a.active {
+  background-position: left -74px;
+}
+
+#how-it-works nav .crumbs:first-child ul li:nth-child(1) {
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#how-it-works nav .crumbs:first-child ul li:nth-child(1) a {
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#how-it-works nav .crumbs:last-child {
+  margin: 0;
+}
+
+#how-it-works nav .crumbs:last-child ul li:nth-child(3) {
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#how-it-works nav .crumbs:last-child ul li:nth-child(3) a {
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+/* ------------------------------------------- */
+
+/* =article
+---------------------------------------------- */
+#how-it-works article:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+#how-it-works article .text {
+  float: left;
+  padding: 0 12px;
+  width: 320px;
+}
+
+#how-it-works article .text a:link,
+#how-it-works article .text a:visited {
+  color: #cfd3ff;
+}
+
+#how-it-works article .text a:hover,
+#how-it-works article .text a:active {
+  color: #fff;
+}
+
+#how-it-works article .text h3 {
+  color: #d4d4ff;
+  font-family: "CorbelRegular", "Helvetica Neue", Helvetica, sans-serif;  
+  font-size: 18px;
+  margin: 24px 0 0 0;
+}
+
+#how-it-works article .text h3:first-child {
+  margin: 0 0 7px 0;
+}
+
+#how-it-works article .text p {
+  color: #8487af;
+  line-height: 18px;
+  font-size: 13px;
+  margin: 24px 0 0 0;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+}
+
+#how-it-works article h3 + p {
+  margin: 8px 0 0 0 !important;
+}
+
+#how-it-works article .text p.more {
+  margin: 6px 0 32px -1px;
+}
+
+#how-it-works article .text p.more a.button:link,
+#how-it-works article .text p.more a.button:visited {
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 255, 255, .02);
+  border-radius: 17px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  line-height: 17px;
+  padding: 4px 8px;
+  text-shadow: none;
+}
+
+#how-it-works article .text p.more a.button:hover {
+  color: #73b0ff;
+}
+
+#how-it-works article .text code {
+  font-family: Monaco, monospace;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+#how-it-works article .text .recessed {
+  background: rgba(0, 0, 0, .1);
+  border: 1px solid rgba(0, 0, 0, .15);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 1px rgba(255, 255, 255, .1);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .1);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .1);
+  left: -12px;
+  margin: 0 0 24px 0;
+  padding: 12px;
+  position: relative;
+  width: 332px;
+}
+
+#how-it-works article .text .recessed p.more:last-child {
+  margin-bottom: 0;
+}
+
+#how-it-works article .text.vertical {
+  display: table;
+  height: 375px;
+}
+
+#how-it-works article .text.vertical .table {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#how-it-works article .text .overview h3 {
+  font-size: 20px;
+  margin: 0 0 12px 0;
+}
+
+#how-it-works article .text .overview p {
+  font-size: 15px;
+}
+
+#how-it-works article .text .overview p strong {
+  color: #8787ff;
+  font-weight: bold;
+}
+
+#how-it-works article .illustration {
+  float: right;
+  width: 574px;
+}
+
+#how-it-works article .illustration #canvas {
+  height: 290px;
+  margin: 0 0 24px 0;
+  position: relative;
+}
+
+  /* =canvas
+  ---------------------------------------------- */
+  #how-it-works article .illustration #canvas .layer {
+    display: block;
+    position: absolute;
+  }
+
+  #how-it-works article .illustration #canvas .label {
+    color: #9e9ede;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, .75);
+  }
+
+  #how-it-works article .illustration #canvas .label:hover,
+  #how-it-works article .illustration #canvas .label.hover {
+    color: #d4d4ff;
+    cursor: pointer;
+  }
+
+    /* =logplex
+    ---------------------------------------------- */
+    #how-it-works article .illustration #canvas .logplex {
+      background: url("/images/how-it-works/logplex-bg.png") no-repeat;
+      bottom: 0;
+      height: 110px;
+      position: absolute;
+      right: 0;
+      width: 477px;
+    }
+
+    #how-it-works article .illustration #canvas .logplex .label {
+      left: 90px;
+      position: absolute;
+      top: 85px;
+    }
+
+    #how-it-works article .illustration #canvas .logplex:hover,
+    #how-it-works article .illustration #canvas .logplex.hover {
+      background-position: 0 -110px;
+      cursor: pointer;
+    }
+
+    #how-it-works article .illustration #canvas .logplex.active {
+      background-position: 0 -220px;
+    }
+    /* ------------------------------------------- */
+
+    /* =dyno manifold
+    ---------------------------------------------- */
+    #how-it-works article .illustration #canvas .dyno-manifold {
+      background: url("/images/how-it-works/dyno-manifold-bg.png") no-repeat;
+      bottom: 38px;
+      height: 150px;
+      position: absolute;
+      right: 0;
+      width: 477px;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .process-types {
+      bottom: 92px;
+      height: 32px;
+      left: 50px;
+      position: absolute;
+      width: 363px;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .process-types .process-type {
+      background: url("/images/how-it-works/dyno-type-bg.png") no-repeat;
+      height: 32px;
+      position: absolute;
+      width: 135px;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .process-types .process-type:nth-child(2) {
+      left: 120px;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .process-types .process-type:nth-child(3) {
+      background-position: -135px 0;
+      left: 240px;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .process-types:hover .process-type,
+    #how-it-works article .illustration #canvas .dyno-manifold .process-types.hover .process-type {
+      background-position: 0 -32px;
+      cursor: pointer;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .process-types:hover .process-type:nth-child(3),
+    #how-it-works article .illustration #canvas .dyno-manifold .process-types.hover .process-type:nth-child(3) {
+      background-position: -135px -32px;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .process-types.active .process-type {
+      background-position: 0 -64px;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .process-types.active .process-type:nth-child(2) {
+      background-position: -135px -96px;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .process-types.active .process-type:nth-child(3) {
+      background-position: -135px -128px;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .dynos .dyno {
+      background: url("/images/how-it-works/dyno.png") no-repeat;
+      display: block;
+      height: 28px;
+      position: absolute;
+      top: 4px;
+      width: 25px;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .dynos {
+      left: 79px;
+      position: absolute;
+      top: 27px;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .dynos .dyno:nth-child(1) {
+      background-position: -25px 0;
+      z-index: 3;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .dynos .dyno:nth-child(2) {
+      left: 23px;
+      z-index: 2;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .dynos .dyno:nth-child(3) {
+      left: 46px;
+      z-index: 1;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .dynos .dyno:nth-child(4) {
+      background-position: -25px 0;
+      left: 120px;
+      z-index: 2;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .dynos .dyno:nth-child(5) {
+      left: 143px;
+      z-index: 1;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .dynos .dyno:nth-child(6) {
+      left: 240px;
+      z-index: 1;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .dynos .dyno:hover,
+    #how-it-works article .illustration #canvas .dyno-manifold .dynos .dyno.hover {
+      background-position: 0 -28px;
+      cursor: pointer;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .dynos .dyno:hover:nth-child(1),
+    #how-it-works article .illustration #canvas .dyno-manifold .dynos .dyno.hover:nth-child(1) {
+      background-position: -25px -28px;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .dynos .dyno.active {
+      background-position: 0 -56px;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .dynos .dyno.active:nth-child(1) {
+      background-position: -25px -56px;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold .label {
+      left: 90px;
+      position: absolute;
+      top: 104px;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold:hover, 
+    #how-it-works article .illustration #canvas .dyno-manifold.hover {
+      background-position: 0 -150px;
+      cursor: pointer;
+    }
+
+    #how-it-works article .illustration #canvas .dyno-manifold.active {
+      background-position: 0 -300px;
+    }
+    /* ------------------------------------------- */
+
+    /* =control surface apis
+    ---------------------------------------------- */
+    #how-it-works article .illustration #canvas .control-surface-apis {
+      background: url("/images/how-it-works/control-surface-apis-bg.png");
+      bottom: 0;
+      height: 188px;
+      position: absolute;
+      right: 401px;
+      width: 97px;
+    }
+
+    #how-it-works article .illustration #canvas .control-surface-apis .label {
+      left: -58px;
+      line-height: 16px;
+      padding: 0 13px 0 0;
+      position: absolute;
+      text-align: right;
+      top: 34px;
+    }      
+
+    #how-it-works article .illustration #canvas .control-surface-apis:hover,
+    #how-it-works article .illustration #canvas .control-surface-apis.hover {
+      background-position: -97px 0; 
+      cursor: pointer;
+    }
+
+    #how-it-works article .illustration #canvas .control-surface-apis.active {
+      background-position: -194px 0;
+    }
+    /* ------------------------------------------- */
+
+    /* =routing
+    ---------------------------------------------- */
+    @-webkit-keyframes walkingants-default {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 0 8px;
+      }
+    }
+
+    #how-it-works article .illustration #canvas .routing {
+      -webkit-animation-duration: .3s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-name: walkingants-default;
+      -webkit-animation-timing-function: linear;
+      background: url("/images/how-it-works/routing.png");
+      height: 135px;
+      left: 187px;
+      -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1)));
+      opacity: .5;
+      position: absolute;
+      z-index: 4;
+      width: 48px;
+    }
+
+    #how-it-works article .illustration #canvas .routing:hover,
+    #how-it-works article .illustration #canvas .routing.hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    #how-it-works article .illustration #canvas .routing.active {
+      background-image: url("/images/how-it-works/routing-active.png");
+      opacity: 1;
+    }
+    /* ------------------------------------------- */
+
+    /* =connections
+    ---------------------------------------------- */
+    #how-it-works article .illustration #canvas .routing-connection {
+      background: #9e9ede;
+      display: block;
+      height: 1px;
+      left: 239px;
+      position: absolute;
+      opacity: .4;
+      top: 30px;
+      width: 62px;
+    }
+
+    #how-it-works article .illustration #canvas .dynos-connection {
+      display: block;
+      height: 69px;
+      left: 307px;
+      opacity: .4;
+      position: absolute;
+      top: 62px;
+      width: 1px;
+    }
+
+    #how-it-works article .illustration #canvas .dynos-connection .dynos-connection-top {
+      background: #9e9ede;
+      height: 40px;
+      display: block;
+      width: 1px;
+    }
+
+    #how-it-works article .illustration #canvas .dynos-connection .dynos-connection-bottom {
+      background: #9e9ede;
+      display: block;
+      height: 29px;
+      width: 1px;
+    }
+
+    #how-it-works article .illustration #canvas .process-type-connection {
+      display: block;
+      height: 65px;
+      left: 461px;
+      opacity: .4;
+      position: absolute;
+      top: 62px;
+      width: 1px;
+    }
+
+    #how-it-works article .illustration #canvas .process-type-connection .process-type-connection-top {
+      background: #9e9ede;
+      display: block;
+      height: 40px;
+      width: 1px;
+    }
+
+    #how-it-works article .illustration #canvas .process-type-connection .process-type-connection-bottom {
+      background: #9e9ede;
+      display: block;
+      height: 22px;
+      width: 1px;
+    }
+
+    /* ------------------------------------------- */
+
+    /* =legends
+    ---------------------------------------------- */
+    #how-it-works article .illustration #canvas .routing-legend {
+      left: 306px;
+      position: absolute;
+      top: 24px;
+    }
+
+    #how-it-works article .illustration #canvas .dynos-legend {
+      left: 306px;
+      position: absolute;
+      top: 46px;
+    }
+
+    #how-it-works article .illustration #canvas .process-types-legend {
+      left: 460px;
+      position: absolute;
+      top: 46px;
+    }
+
+    #how-it-works article .illustration #canvas .process-types-legend small {
+      font-size: 11px;
+      padding: 0 0 0 12px;
+    }
+
+    #how-it-works article .illustration #canvas .process-types-legend .web {
+      color: #00bfff;
+    }
+
+    #how-it-works article .illustration #canvas .process-types-legend .worker {
+      color: #ffc24f;
+    }
+
+    #how-it-works article .illustration #canvas .process-types-legend .cron {
+      color: #eb57ff;
+    }
+    /* ------------------------------------------- */
+  /* ------------------------------------------- */
+
+#how-it-works article .illustration .resources {
+  margin: 0 0 0 159px;
+  overflow: hidden;
+  width: 408px;
+}
+
+#how-it-works article .illustration .resources .teaser {
+  background: url("/images/how-it-works/resources-teaser.png") no-repeat;
+  display: block;
+  height: 64px;
+  margin: 0 0 0 10px;
+  overflow: hidden;
+  text-indent: -99999px;
+  width: 388px;
+}
+
+#how-it-works article .illustration .resources .teaser:hover {
+  background-position: 0 -64px;
+}
+
+#how-it-works article .illustration .resources .teaser:active,
+#how-it-works article .illustration .resources .teaser.active {
+  background-position: 0 -128px;
+}
+
+#how-it-works article .illustration .resources ul li {
+  float: left;
+  margin: 0 24px 24px 0;
+  width: 84px;
+}
+
+#how-it-works article .illustration .resources ul li div {
+  display: block;
+}
+
+#how-it-works article .illustration .resources ul li .image {
+  background: url("/images/how-it-works/resources-sprite.png") no-repeat;
+  display: block;
+  height: 64px;
+  margin: 0 auto;
+  text-indent: -99999px;
+  width: 64px;
+}
+
+  /* =resources sprite
+  ---------------------------------------------- */
+  #how-it-works article .illustration .resources .database .image {
+    background-position: 0 -128px;
+  }
+
+  #how-it-works article .illustration .resources .routing .image {
+    background-position: -64px -128px;
+  }
+
+  #how-it-works article .illustration .resources .asset-store .image {
+    background-position: -128px -128px;
+  }
+
+  #how-it-works article .illustration .resources .other-addons .image {
+    background-position: -192px -128px;
+  }
+
+  #how-it-works article .illustration .resources .performance-management .image {
+    background-position: -256px -128px;
+  }
+
+  #how-it-works article .illustration .resources .custom-service .image {
+    background-position: -320px -128px;
+  }
+
+  #how-it-works article .illustration .resources .external-apis .image {
+    background-position: -384px -128px;
+  }
+
+  #how-it-works article .illustration .resources .enterprise-data .image {
+    background-position: -448px -128px;
+  }
+  /* ------------------------------------------- */
+
+#how-it-works article .illustration .resources ul li .label {
+  color: #68b8d3;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  display: block;
+  line-height: 18px;
+  margin: 4px 0 0 0;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+  width: 84px;
+}
+
+#how-it-works article .illustration .resources ul li:nth-child(4n) {
+  margin: 0 0 24px 0;
+}
+
+#how-it-works article .illustration .resources ul li:last-child {
+  margin: 0;
+}
+/* ------------------------------------------- */
+
+/* =footer
+---------------------------------------------- */
+#heroku-footer {
+  background: #14141b;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .4) inset;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4) inset;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .4) inset;
+  color: #47456d !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+#heroku-footer .container {
+  width: 994px;
+}
+
+#heroku-footer h3 {
+  color: #b8b8dc;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#heroku-footer a:link,
+#heroku-footer a:visited {
+  color: #47456d;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* ------------------------------------------- */

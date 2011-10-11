@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Heroku::Command::Run</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/heroku/command/run_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/heroku/command/run.rb">lib/heroku/command/run.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Base.html">Heroku::Command::Base</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-console">#console</a></li>
+          
+          <li><a href="#method-i-console_history_add">#console_history_add</a></li>
+          
+          <li><a href="#method-i-console_history_dir">#console_history_dir</a></li>
+          
+          <li><a href="#method-i-console_history_file">#console_history_file</a></li>
+          
+          <li><a href="#method-i-console_history_read">#console_history_read</a></li>
+          
+          <li><a href="#method-i-console_session">#console_session</a></li>
+          
+          <li><a href="#method-i-index">#index</a></li>
+          
+          <li><a href="#method-i-rake">#rake</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Heroku.html">Heroku</a></li>
+        
+          <li><a href="../../Heroku/Auth.html">Heroku::Auth</a></li>
+        
+          <li><a href="../../Heroku/BuiltinPlugin.html">Heroku::BuiltinPlugin</a></li>
+        
+          <li><a href="../../Heroku/Client.html">Heroku::Client</a></li>
+        
+          <li><a href="../../Heroku/Client/AppCrashed.html">Heroku::Client::AppCrashed</a></li>
+        
+          <li><a href="../../Heroku/Client/ConsoleSession.html">Heroku::Client::ConsoleSession</a></li>
+        
+          <li><a href="../../Heroku/Client/JSON.html">Heroku::Client::JSON</a></li>
+        
+          <li><a href="../../Heroku/Client/Rendezvous.html">Heroku::Client::Rendezvous</a></li>
+        
+          <li><a href="../../Heroku/Client/Service.html">Heroku::Client::Service</a></li>
+        
+          <li><a href="../../Heroku/Command.html">Heroku::Command</a></li>
+        
+          <li><a href="../../Heroku/Command/Account.html">Heroku::Command::Account</a></li>
+        
+          <li><a href="../../Heroku/Command/Addons.html">Heroku::Command::Addons</a></li>
+        
+          <li><a href="../../Heroku/Command/Apps.html">Heroku::Command::Apps</a></li>
+        
+          <li><a href="../../Heroku/Command/Auth.html">Heroku::Command::Auth</a></li>
+        
+          <li><a href="../../Heroku/Command/Base.html">Heroku::Command::Base</a></li>
+        
+          <li><a href="../../Heroku/Command/BaseWithApp.html">Heroku::Command::BaseWithApp</a></li>
+        
+          <li><a href="../../Heroku/Command/CommandFailed.html">Heroku::Command::CommandFailed</a></li>
+        
+          <li><a href="../../Heroku/Command/Config.html">Heroku::Command::Config</a></li>
+        
+          <li><a href="../../Heroku/Command/Db.html">Heroku::Command::Db</a></li>
+        
+          <li><a href="../../Heroku/Command/Domains.html">Heroku::Command::Domains</a></li>
+        
+          <li><a href="../../Heroku/Command/Help.html">Heroku::Command::Help</a></li>
+        
+          <li><a href="../../Heroku/Command/InvalidCommand.html">Heroku::Command::InvalidCommand</a></li>
+        
+          <li><a href="../../Heroku/Command/Keys.html">Heroku::Command::Keys</a></li>
+        
+          <li><a href="../../Heroku/Command/Logs.html">Heroku::Command::Logs</a></li>
+        
+          <li><a href="../../Heroku/Command/Maintenance.html">Heroku::Command::Maintenance</a></li>
+        
+          <li><a href="../../Heroku/Command/Pg.html">Heroku::Command::Pg</a></li>
+        
+          <li><a href="../../Heroku/Command/Pgbackups.html">Heroku::Command::Pgbackups</a></li>
+        
+          <li><a href="../../Heroku/Command/Pgbackups/Display.html">Heroku::Command::Pgbackups::Display</a></li>
+        
+          <li><a href="../../Heroku/Command/Pgbackups/Display/DataSource.html">Heroku::Command::Pgbackups::Display::DataSource</a></li>
+        
+          <li><a href="../../Heroku/Command/Plugins.html">Heroku::Command::Plugins</a></li>
+        
+          <li><a href="../../Heroku/Command/Ps.html">Heroku::Command::Ps</a></li>
+        
+          <li><a href="../../Heroku/Command/Releases.html">Heroku::Command::Releases</a></li>
+        
+          <li><a href="../../Heroku/Command/Run.html">Heroku::Command::Run</a></li>
+        
+          <li><a href="../../Heroku/Command/Sharing.html">Heroku::Command::Sharing</a></li>
+        
+          <li><a href="../../Heroku/Command/Ssl.html">Heroku::Command::Ssl</a></li>
+        
+          <li><a href="../../Heroku/Command/Stack.html">Heroku::Command::Stack</a></li>
+        
+          <li><a href="../../Heroku/Command/Update.html">Heroku::Command::Update</a></li>
+        
+          <li><a href="../../Heroku/Command/Version.html">Heroku::Command::Version</a></li>
+        
+          <li><a href="../../Heroku/Deprecated.html">Heroku::Deprecated</a></li>
+        
+          <li><a href="../../Heroku/Deprecated/Help.html">Heroku::Deprecated::Help</a></li>
+        
+          <li><a href="../../Heroku/Deprecated/Help/ClassMethods.html">Heroku::Deprecated::Help::ClassMethods</a></li>
+        
+          <li><a href="../../Heroku/Deprecated/Help/HelpGroup.html">Heroku::Deprecated::Help::HelpGroup</a></li>
+        
+          <li><a href="../../Heroku/Distribution.html">Heroku::Distribution</a></li>
+        
+          <li><a href="../../Heroku/Helpers.html">Heroku::Helpers</a></li>
+        
+          <li><a href="../../Heroku/OkJson.html">Heroku::OkJson</a></li>
+        
+          <li><a href="../../Heroku/OkJson/ParserError.html">Heroku::OkJson::ParserError</a></li>
+        
+          <li><a href="../../Heroku/Plugin.html">Heroku::Plugin</a></li>
+        
+          <li><a href="../../Heroku/Updater.html">Heroku::Updater</a></li>
+        
+          <li><a href="../../HerokuPostgresql.html">HerokuPostgresql</a></li>
+        
+          <li><a href="../../HerokuPostgresql/Client.html">HerokuPostgresql::Client</a></li>
+        
+          <li><a href="../../PGBackups.html">PGBackups</a></li>
+        
+          <li><a href="../../PGBackups/Client.html">PGBackups::Client</a></li>
+        
+          <li><a href="../../PGResolver.html">PGResolver</a></li>
+        
+          <li><a href="../../PGResolver/Resolver.html">PGResolver::Resolver</a></li>
+        
+          <li><a href="../../PgUtils.html">PgUtils</a></li>
+        
+          <li><a href="../../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Heroku::Command::Run</h1>
+
+    <div id="description" class="description">
+      
+<p>run one-off commands (console, rake)</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="console-method" class="method-detail ">
+          <a name="method-i-console"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">console</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>run:console [COMMAND]</p>
+
+<p>open a remote console session</p>
+
+<p>if COMMAND is specified, run the command and exit</p>
+            
+
+            
+            <div class="method-source-code" id="console-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/run.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">console</span>
+  <span class="ruby-identifier">app</span> = <span class="ruby-identifier">extract_app</span>
+  <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">' '</span>).<span class="ruby-identifier">strip</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">console_session</span>(<span class="ruby-identifier">app</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-identifier">heroku</span>.<span class="ruby-identifier">console</span>(<span class="ruby-identifier">app</span>, <span class="ruby-identifier">cmd</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">RestClient</span><span class="ruby-operator">::</span><span class="ruby-constant">RequestTimeout</span>
+  <span class="ruby-identifier">error</span> <span class="ruby-string">&quot;Timed out. Long running requests are not supported on the console.\nPlease consider creating a rake task instead.&quot;</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Heroku</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span><span class="ruby-operator">::</span><span class="ruby-constant">AppCrashed</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-identifier">error</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- console-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- console-method -->
+
+      
+        <div id="index-method" class="method-detail ">
+          <a name="method-i-index"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">index</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>run COMMAND</p>
+
+<p>run an attached process</p>
+            
+
+            
+            <div class="method-source-code" id="index-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/run.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-identifier">app</span> = <span class="ruby-identifier">extract_app</span>
+  <span class="ruby-identifier">command</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot; &quot;</span>)
+  <span class="ruby-identifier">fail</span> <span class="ruby-string">&quot;Usage: heroku run COMMAND&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">command</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">opts</span> = { <span class="ruby-value">:attach</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:command</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">command</span>, <span class="ruby-value">:ps_env</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">get_terminal_environment</span> }
+  <span class="ruby-identifier">display</span> <span class="ruby-node">&quot;Running #{command} attached to terminal... &quot;</span>, <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">ps</span> = <span class="ruby-identifier">heroku</span>.<span class="ruby-identifier">ps_run</span>(<span class="ruby-identifier">app</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">set_buffer</span>(<span class="ruby-keyword">false</span>)
+    <span class="ruby-identifier">$stdin</span>.<span class="ruby-identifier">sync</span> = <span class="ruby-identifier">$stdout</span>.<span class="ruby-identifier">sync</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">rendezvous</span> = <span class="ruby-constant">Heroku</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span><span class="ruby-operator">::</span><span class="ruby-constant">Rendezvous</span>.<span class="ruby-identifier">new</span>(
+      <span class="ruby-value">:rendezvous_url</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ps</span>[<span class="ruby-string">&quot;rendezvous_url&quot;</span>],
+      <span class="ruby-value">:connect_timeout</span> =<span class="ruby-operator">&gt;</span> (<span class="ruby-constant">ENV</span>[<span class="ruby-string">'HEROKU_CONNECT_TIMEOUT'</span>] <span class="ruby-operator">||</span> <span class="ruby-value">120</span>).<span class="ruby-identifier">to_i</span>,
+      <span class="ruby-value">:activity_timeout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+      <span class="ruby-value">:input</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">$stdin</span>,
+      <span class="ruby-value">:output</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">$stdout</span>)
+    <span class="ruby-identifier">rendezvous</span>.<span class="ruby-identifier">on_connect</span> { <span class="ruby-identifier">display</span> <span class="ruby-node">&quot;up, #{ps[&quot;process&quot;]}&quot;</span> }
+    <span class="ruby-identifier">rendezvous</span>.<span class="ruby-identifier">start</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>
+    <span class="ruby-identifier">error</span> <span class="ruby-string">&quot;\nTimeout awaiting process&quot;</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ECONNREFUSED</span>, <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ECONNRESET</span>, <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSLError</span>
+    <span class="ruby-identifier">error</span> <span class="ruby-string">&quot;\nError connecting to process&quot;</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Interrupt</span>
+  <span class="ruby-keyword">ensure</span>
+    <span class="ruby-identifier">set_buffer</span>(<span class="ruby-keyword">true</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- index-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- index-method -->
+
+      
+        <div id="rake-method" class="method-detail ">
+          <a name="method-i-rake"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rake</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>run:rake COMMAND</p>
+
+<p>remotely execute a rake command</p>
+            
+
+            
+            <div class="method-source-code" id="rake-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/run.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rake</span>
+  <span class="ruby-identifier">app</span> = <span class="ruby-identifier">extract_app</span>
+  <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">' '</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Heroku</span><span class="ruby-operator">::</span><span class="ruby-constant">Command</span><span class="ruby-operator">::</span><span class="ruby-constant">CommandFailed</span>, <span class="ruby-string">&quot;Usage: heroku run:rake COMMAND&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">heroku</span>.<span class="ruby-identifier">start</span>(<span class="ruby-identifier">app</span>, <span class="ruby-node">&quot;rake #{cmd}&quot;</span>, <span class="ruby-value">:attached</span>).<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">chunk</span><span class="ruby-operator">|</span> <span class="ruby-identifier">display</span>(<span class="ruby-identifier">chunk</span>, <span class="ruby-keyword">false</span>) }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Heroku</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span><span class="ruby-operator">::</span><span class="ruby-constant">AppCrashed</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-identifier">error</span> <span class="ruby-node">&quot;Couldn't run rake\n#{e.message}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rake-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rake-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+      <div id="protected-instance-method-details" class="method-section section">
+        <h3 class="section-header">Protected Instance Methods</h3>
+
+      
+        <div id="console_history_add-method" class="method-detail ">
+          <a name="method-i-console_history_add"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">console_history_add</span><span
+              class="method-args">(app, cmd)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="console_history_add-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/run.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">console_history_add</span>(<span class="ruby-identifier">app</span>, <span class="ruby-identifier">cmd</span>)
+  <span class="ruby-constant">Readline</span><span class="ruby-operator">::</span><span class="ruby-constant">HISTORY</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">cmd</span>)
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">console_history_file</span>(<span class="ruby-identifier">app</span>), <span class="ruby-string">&quot;a&quot;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">cmd</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span> }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- console_history_add-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- console_history_add-method -->
+
+      
+        <div id="console_history_dir-method" class="method-detail ">
+          <a name="method-i-console_history_dir"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">console_history_dir</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="console_history_dir-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/run.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">console_history_dir</span>
+  <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span>(<span class="ruby-identifier">path</span> = <span class="ruby-node">&quot;#{home_directory}/.heroku/console_history&quot;</span>)
+  <span class="ruby-identifier">path</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- console_history_dir-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- console_history_dir-method -->
+
+      
+        <div id="console_history_file-method" class="method-detail ">
+          <a name="method-i-console_history_file"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">console_history_file</span><span
+              class="method-args">(app)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="console_history_file-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/run.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">console_history_file</span>(<span class="ruby-identifier">app</span>)
+  <span class="ruby-node">&quot;#{console_history_dir}/#{app}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- console_history_file-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- console_history_file-method -->
+
+      
+        <div id="console_history_read-method" class="method-detail ">
+          <a name="method-i-console_history_read"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">console_history_read</span><span
+              class="method-args">(app)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="console_history_read-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/run.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">console_history_read</span>(<span class="ruby-identifier">app</span>)
+  <span class="ruby-identifier">history</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">console_history_file</span>(<span class="ruby-identifier">app</span>)).<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">history</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">50</span>
+    <span class="ruby-identifier">history</span> = <span class="ruby-identifier">history</span>[(<span class="ruby-identifier">history</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">51</span>),(<span class="ruby-identifier">history</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)]
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">console_history_file</span>(<span class="ruby-identifier">app</span>), <span class="ruby-string">&quot;w&quot;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">history</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;\n&quot;</span>) }
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">history</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">cmd</span><span class="ruby-operator">|</span> <span class="ruby-constant">Readline</span><span class="ruby-operator">::</span><span class="ruby-constant">HISTORY</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">cmd</span>) }
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ex</span>
+  <span class="ruby-identifier">display</span> <span class="ruby-node">&quot;Error reading your console history: #{ex.message}&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">confirm</span>(<span class="ruby-string">&quot;Would you like to clear it? (y/N):&quot;</span>)
+    <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">rm</span>(<span class="ruby-identifier">console_history_file</span>(<span class="ruby-identifier">app</span>)) <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- console_history_read-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- console_history_read-method -->
+
+      
+        <div id="console_session-method" class="method-detail ">
+          <a name="method-i-console_session"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">console_session</span><span
+              class="method-args">(app)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="console_session-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/run.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">console_session</span>(<span class="ruby-identifier">app</span>)
+  <span class="ruby-identifier">heroku</span>.<span class="ruby-identifier">console</span>(<span class="ruby-identifier">app</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">console</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">console_history_read</span>(<span class="ruby-identifier">app</span>)
+
+    <span class="ruby-identifier">display</span> <span class="ruby-node">&quot;Ruby console for #{app}.#{heroku.host}&quot;</span>
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">Readline</span>.<span class="ruby-identifier">readline</span>(<span class="ruby-string">'&gt;&gt; '</span>)
+      <span class="ruby-keyword">unless</span> <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">console_history_add</span>(<span class="ruby-identifier">app</span>, <span class="ruby-identifier">cmd</span>)
+        <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">==</span> <span class="ruby-string">'exit'</span>
+        <span class="ruby-identifier">display</span> <span class="ruby-identifier">console</span>.<span class="ruby-identifier">run</span>(<span class="ruby-identifier">cmd</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- console_session-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- console_session-method -->
+
+      
+      </div><!-- protected-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

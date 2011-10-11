@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>heroku-2.8.5 Documentation</title>
+
+  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+  
+  <h1>heroku-2.8.5 Documentation</h1>
+
+  
+  <p>This is the API documentation for 'heroku-2.8.5 Documentation'.</p>
+  
+
+  
+  
+
+  <h2 id="classes">Classes/Modules</h2>
+  <ul>
+    
+    <li class="module"><a href="Heroku.html">Heroku</a></li>
+    
+    <li class="class"><a href="Heroku/Auth.html">Heroku::Auth</a></li>
+    
+    <li class="class"><a href="Heroku/BuiltinPlugin.html">Heroku::BuiltinPlugin</a></li>
+    
+    <li class="class"><a href="Heroku/Client.html">Heroku::Client</a></li>
+    
+    <li class="class"><a href="Heroku/Client/AppCrashed.html">Heroku::Client::AppCrashed</a></li>
+    
+    <li class="class"><a href="Heroku/Client/ConsoleSession.html">Heroku::Client::ConsoleSession</a></li>
+    
+    <li class="module"><a href="Heroku/Client/JSON.html">Heroku::Client::JSON</a></li>
+    
+    <li class="class"><a href="Heroku/Client/Rendezvous.html">Heroku::Client::Rendezvous</a></li>
+    
+    <li class="class"><a href="Heroku/Client/Service.html">Heroku::Client::Service</a></li>
+    
+    <li class="module"><a href="Heroku/Command.html">Heroku::Command</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Account.html">Heroku::Command::Account</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Addons.html">Heroku::Command::Addons</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Apps.html">Heroku::Command::Apps</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Auth.html">Heroku::Command::Auth</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Base.html">Heroku::Command::Base</a></li>
+    
+    <li class="class"><a href="Heroku/Command/BaseWithApp.html">Heroku::Command::BaseWithApp</a></li>
+    
+    <li class="class"><a href="Heroku/Command/CommandFailed.html">Heroku::Command::CommandFailed</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Config.html">Heroku::Command::Config</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Db.html">Heroku::Command::Db</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Domains.html">Heroku::Command::Domains</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Help.html">Heroku::Command::Help</a></li>
+    
+    <li class="class"><a href="Heroku/Command/InvalidCommand.html">Heroku::Command::InvalidCommand</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Keys.html">Heroku::Command::Keys</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Logs.html">Heroku::Command::Logs</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Maintenance.html">Heroku::Command::Maintenance</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Pg.html">Heroku::Command::Pg</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Pgbackups.html">Heroku::Command::Pgbackups</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Pgbackups/Display.html">Heroku::Command::Pgbackups::Display</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Pgbackups/Display/DataSource.html">Heroku::Command::Pgbackups::Display::DataSource</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Plugins.html">Heroku::Command::Plugins</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Ps.html">Heroku::Command::Ps</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Releases.html">Heroku::Command::Releases</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Run.html">Heroku::Command::Run</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Sharing.html">Heroku::Command::Sharing</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Ssl.html">Heroku::Command::Ssl</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Stack.html">Heroku::Command::Stack</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Update.html">Heroku::Command::Update</a></li>
+    
+    <li class="class"><a href="Heroku/Command/Version.html">Heroku::Command::Version</a></li>
+    
+    <li class="module"><a href="Heroku/Deprecated.html">Heroku::Deprecated</a></li>
+    
+    <li class="module"><a href="Heroku/Deprecated/Help.html">Heroku::Deprecated::Help</a></li>
+    
+    <li class="module"><a href="Heroku/Deprecated/Help/ClassMethods.html">Heroku::Deprecated::Help::ClassMethods</a></li>
+    
+    <li class="class"><a href="Heroku/Deprecated/Help/HelpGroup.html">Heroku::Deprecated::Help::HelpGroup</a></li>
+    
+    <li class="module"><a href="Heroku/Distribution.html">Heroku::Distribution</a></li>
+    
+    <li class="module"><a href="Heroku/Helpers.html">Heroku::Helpers</a></li>
+    
+    <li class="module"><a href="Heroku/OkJson.html">Heroku::OkJson</a></li>
+    
+    <li class="class"><a href="Heroku/OkJson/ParserError.html">Heroku::OkJson::ParserError</a></li>
+    
+    <li class="class"><a href="Heroku/Plugin.html">Heroku::Plugin</a></li>
+    
+    <li class="module"><a href="Heroku/Updater.html">Heroku::Updater</a></li>
+    
+    <li class="module"><a href="HerokuPostgresql.html">HerokuPostgresql</a></li>
+    
+    <li class="class"><a href="HerokuPostgresql/Client.html">HerokuPostgresql::Client</a></li>
+    
+    <li class="module"><a href="PGBackups.html">PGBackups</a></li>
+    
+    <li class="class"><a href="PGBackups/Client.html">PGBackups::Client</a></li>
+    
+    <li class="module"><a href="PGResolver.html">PGResolver</a></li>
+    
+    <li class="class"><a href="PGResolver/Resolver.html">PGResolver::Resolver</a></li>
+    
+    <li class="module"><a href="PgUtils.html">PgUtils</a></li>
+    
+    <li class="class"><a href="String.html">String</a></li>
+    
+  </ul>
+
+  <h2 id="methods">Methods</h2>
+  <ul>
+    
+      <li><a href="Heroku/Command/Base.html#method-c-alias_command">::alias_command &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="PGResolver/Resolver.html#method-c-all">::all &mdash; PGResolver::Resolver</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-ask_for_and_save_credentials">::ask_for_and_save_credentials &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-ask_for_credentials">::ask_for_credentials &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-ask_for_password">::ask_for_password &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-ask_for_password_on_windows">::ask_for_password_on_windows &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-associate_key">::associate_key &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-associate_or_generate_ssh_key">::associate_or_generate_ssh_key &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Client.html#method-c-auth">::auth &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-available_ssh_public_keys">::available_ssh_public_keys &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-check">::check &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-check_for_associated_ssh_key">::check_for_associated_ssh_key &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Plugin.html#method-c-check_for_deprecation">::check_for_deprecation &mdash; Heroku::Plugin</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-clear">::clear &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-client">::client &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-command_aliases">::command_aliases &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-commands">::commands &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-confirmation_required">::confirmation_required &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-credentials_file">::credentials_file &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-current_args">::current_args &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-current_command">::current_command &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-current_options">::current_options &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-default_host">::default_host &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-delete_credentials">::delete_credentials &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/BuiltinPlugin.html#method-c-directory">::directory &mdash; Heroku::BuiltinPlugin</a></li>
+    
+      <li><a href="Heroku/Plugin.html#method-c-directory">::directory &mdash; Heroku::Plugin</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-c-disable_error_capture">::disable_error_capture &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-echo_off">::echo_off &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-echo_on">::echo_on &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-c-enable_error_capture">::enable_error_capture &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-c-extended">::extended &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-c-extended_into">::extended_into &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-c-extract_banner">::extract_banner &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-c-extract_command">::extract_command &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-c-extract_description">::extract_description &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-extract_error">::extract_error &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-c-extract_help">::extract_help &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-c-extract_help_from_caller">::extract_help_from_caller &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-c-extract_options">::extract_options &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-c-extract_summary">::extract_summary &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Distribution.html#method-c-files">::files &mdash; Heroku::Distribution</a></li>
+    
+      <li><a href="Heroku/Client.html#method-c-gem_version_string">::gem_version_string &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-generate_ssh_key">::generate_ssh_key &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-global_option">::global_option &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-global_options">::global_options &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Updater.html#method-c-home_directory">::home_directory &mdash; Heroku::Updater</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-host">::host &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-c-included">::included &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Deprecated/Help.html#method-c-included">::included &mdash; Heroku::Deprecated::Help</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-c-included_into">::included_into &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-c-inherited">::inherited &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Updater.html#method-c-inject_libpath">::inject_libpath &mdash; Heroku::Updater</a></li>
+    
+      <li><a href="Heroku/Plugin.html#method-c-list">::list &mdash; Heroku::Plugin</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-load">::load &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Plugin.html#method-c-load-21">::load! &mdash; Heroku::Plugin</a></li>
+    
+      <li><a href="Heroku/Plugin.html#method-c-load_plugin">::load_plugin &mdash; Heroku::Plugin</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-login">::login &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-logout">::logout &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-c-method_added">::method_added &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-c-namespace">::namespace &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-namespaces">::namespaces &mdash; Heroku::Command</a></li>
+    
+      <li><a href="HerokuPostgresql/Client.html#method-c-new">::new &mdash; HerokuPostgresql::Client</a></li>
+    
+      <li><a href="Heroku/Client/ConsoleSession.html#method-c-new">::new &mdash; Heroku::Client::ConsoleSession</a></li>
+    
+      <li><a href="Heroku/Client/Service.html#method-c-new">::new &mdash; Heroku::Client::Service</a></li>
+    
+      <li><a href="Heroku/Command/BaseWithApp.html#method-c-new">::new &mdash; Heroku::Command::BaseWithApp</a></li>
+    
+      <li><a href="Heroku/Command/Pgbackups/Display.html#method-c-new">::new &mdash; Heroku::Command::Pgbackups::Display</a></li>
+    
+      <li><a href="Heroku/Command/Pgbackups/Display/DataSource.html#method-c-new">::new &mdash; Heroku::Command::Pgbackups::Display::DataSource</a></li>
+    
+      <li><a href="Heroku/Client.html#method-c-new">::new &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-c-new">::new &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="PGBackups/Client.html#method-c-new">::new &mdash; PGBackups::Client</a></li>
+    
+      <li><a href="Heroku/Plugin.html#method-c-new">::new &mdash; Heroku::Plugin</a></li>
+    
+      <li><a href="Heroku/Deprecated/Help/HelpGroup.html#method-c-new">::new &mdash; Heroku::Deprecated::Help::HelpGroup</a></li>
+    
+      <li><a href="PGResolver/Resolver.html#method-c-new">::new &mdash; PGResolver::Resolver</a></li>
+    
+      <li><a href="Heroku/Client/Rendezvous.html#method-c-new">::new &mdash; Heroku::Client::Rendezvous</a></li>
+    
+      <li><a href="Heroku/Client/JSON.html#method-c-parse">::parse &mdash; Heroku::Client::JSON</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-parse">::parse &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-parse_error_json">::parse_error_json &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-parse_error_plain">::parse_error_plain &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-parse_error_xml">::parse_error_xml &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-prepare_run">::prepare_run &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-read_credentials">::read_credentials &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-reauthorize">::reauthorize &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-register_command">::register_command &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-register_namespace">::register_namespace &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Plugin.html#method-c-remove_plugin">::remove_plugin &mdash; Heroku::Plugin</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-retry_login-3F">::retry_login? &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Command.html#method-c-run">::run &mdash; Heroku::Command</a></li>
+    
+      <li><a href="Heroku/Updater.html#method-c-running_on_windows-3F">::running_on_windows? &mdash; Heroku::Updater</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-set_credentials_permissions">::set_credentials_permissions &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="Heroku/Plugin.html#method-c-skip_plugins">::skip_plugins &mdash; Heroku::Plugin</a></li>
+    
+      <li><a href="Heroku/Updater.html#method-c-update">::update &mdash; Heroku::Updater</a></li>
+    
+      <li><a href="Heroku/Updater.html#method-c-updated_client_path">::updated_client_path &mdash; Heroku::Updater</a></li>
+    
+      <li><a href="Heroku/Command/Help.html#method-c-usage_for_command">::usage_for_command &mdash; Heroku::Command::Help</a></li>
+    
+      <li><a href="Heroku/Client.html#method-c-version">::version &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Auth.html#method-c-write_credentials">::write_credentials &mdash; Heroku::Auth</a></li>
+    
+      <li><a href="PGResolver/Resolver.html#method-i-5B-5D">#[] &mdash; PGResolver::Resolver</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-abbrev">#abbrev &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-action">#action &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Command/Keys.html#method-i-add">#add &mdash; Heroku::Command::Keys</a></li>
+    
+      <li><a href="Heroku/Command/Domains.html#method-i-add">#add &mdash; Heroku::Command::Domains</a></li>
+    
+      <li><a href="Heroku/Command/Addons.html#method-i-add">#add &mdash; Heroku::Command::Addons</a></li>
+    
+      <li><a href="Heroku/Command/Config.html#method-i-add">#add &mdash; Heroku::Command::Config</a></li>
+    
+      <li><a href="Heroku/Command/Ssl.html#method-i-add">#add &mdash; Heroku::Command::Ssl</a></li>
+    
+      <li><a href="Heroku/Command/Sharing.html#method-i-add">#add &mdash; Heroku::Command::Sharing</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-add_collaborator">#add_collaborator &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-add_config_vars">#add_config_vars &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-add_domain">#add_domain &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-add_drain">#add_drain &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-add_key">#add_key &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-add_ssl">#add_ssl &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-addons">#addons &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/BaseWithApp.html#method-i-app">#app &mdash; Heroku::Command::BaseWithApp</a></li>
+    
+      <li><a href="Heroku/Command/Domains.html#method-i-app_url">#app_url &mdash; Heroku::Command::Domains</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-app_urls">#app_urls &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-arrenc">#arrenc &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-arrow">#arrow &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-arrparse">#arrparse &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-ask">#ask &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="PGBackups/Client.html#method-i-authenticated_resource">#authenticated_resource &mdash; PGBackups::Client</a></li>
+    
+      <li><a href="Heroku/Command/Pgbackups.html#method-i-backup_name">#backup_name &mdash; Heroku::Command::Pgbackups</a></li>
+    
+      <li><a href="Heroku/Command/Update.html#method-i-beta">#beta &mdash; Heroku::Command::Update</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-bounce">#bounce &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client/Service.html#method-i-bounce">#bounce &mdash; Heroku::Client::Service</a></li>
+    
+      <li><a href="Heroku/Command/Pgbackups.html#method-i-capture">#capture &mdash; Heroku::Command::Pgbackups</a></li>
+    
+      <li><a href="HerokuPostgresql/Client.html#method-i-checking_client_version">#checking_client_version &mdash; HerokuPostgresql::Client</a></li>
+    
+      <li><a href="Heroku/Command/Ssl.html#method-i-clear">#clear &mdash; Heroku::Command::Ssl</a></li>
+    
+      <li><a href="Heroku/Command/Keys.html#method-i-clear">#clear &mdash; Heroku::Command::Keys</a></li>
+    
+      <li><a href="Heroku/Command/Domains.html#method-i-clear">#clear &mdash; Heroku::Command::Domains</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-clear_config_vars">#clear_config_vars &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-clear_drains">#clear_drains &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-clear_ssl">#clear_ssl &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Deprecated/Help/HelpGroup.html#method-i-command">#command &mdash; Heroku::Deprecated::Help::HelpGroup</a></li>
+    
+      <li><a href="Heroku/Command/Db.html#method-i-conf_to_uri_hash">#conf_to_uri_hash &mdash; Heroku::Command::Db</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-config_vars">#config_vars &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Pgbackups.html#method-i-config_vars">#config_vars &mdash; Heroku::Command::Pgbackups</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-confirm">#confirm &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-confirm_billing">#confirm_billing &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-confirm_billing">#confirm_billing &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Account.html#method-i-confirm_billing">#confirm_billing &mdash; Heroku::Command::Account</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-confirm_command">#confirm_command &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-i-confirm_mismatch-3F">#confirm_mismatch? &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-console">#console &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Run.html#method-i-console">#console &mdash; Heroku::Command::Run</a></li>
+    
+      <li><a href="Heroku/Command/Run.html#method-i-console_history_add">#console_history_add &mdash; Heroku::Command::Run</a></li>
+    
+      <li><a href="Heroku/Command/Run.html#method-i-console_history_dir">#console_history_dir &mdash; Heroku::Command::Run</a></li>
+    
+      <li><a href="Heroku/Command/Run.html#method-i-console_history_file">#console_history_file &mdash; Heroku::Command::Run</a></li>
+    
+      <li><a href="Heroku/Command/Run.html#method-i-console_history_read">#console_history_read &mdash; Heroku::Command::Run</a></li>
+    
+      <li><a href="Heroku/Command/Run.html#method-i-console_session">#console_session &mdash; Heroku::Command::Run</a></li>
+    
+      <li><a href="Heroku/Command/Apps.html#method-i-create">#create &mdash; Heroku::Command::Apps</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-create">#create &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-create_complete-3F">#create_complete? &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-create_git_remote">#create_git_remote &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-create_request">#create_request &mdash; Heroku::Client</a></li>
+    
+      <li><a href="PGBackups/Client.html#method-i-create_transfer">#create_transfer &mdash; PGBackups::Client</a></li>
+    
+      <li><a href="Heroku/Command/Logs.html#method-i-cron">#cron &mdash; Heroku::Command::Logs</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-cron_logs">#cron_logs &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-database_reset">#database_reset &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-database_session">#database_session &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-decode">#decode &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="PGBackups/Client.html#method-i-delete_backup">#delete_backup &mdash; PGBackups::Client</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-deprecate">#deprecate &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="PgUtils.html#method-i-deprecate_dash_dash_db">#deprecate_dash_dash_db &mdash; PgUtils</a></li>
+    
+      <li><a href="Heroku/Command/Apps.html#method-i-destroy">#destroy &mdash; Heroku::Command::Apps</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-destroy">#destroy &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Pgbackups.html#method-i-destroy">#destroy &mdash; Heroku::Command::Pgbackups</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-display">#display &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="HerokuPostgresql/Client.html#method-i-display_heroku_warning">#display_heroku_warning &mdash; HerokuPostgresql::Client</a></li>
+    
+      <li><a href="PgUtils.html#method-i-display_info">#display_info &mdash; PgUtils</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-display_row">#display_row &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-display_table">#display_table &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Command/Config.html#method-i-display_vars">#display_vars &mdash; Heroku::Command::Config</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-down">#down &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client/Service.html#method-i-down">#down &mdash; Heroku::Client::Service</a></li>
+    
+      <li><a href="Heroku/Command/Addons.html#method-i-downgrade">#downgrade &mdash; Heroku::Command::Addons</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-downgrade_addon">#downgrade_addon &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Logs.html#method-i-drains">#drains &mdash; Heroku::Command::Logs</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-dynos">#dynos &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Ps.html#method-i-dynos">#dynos &mdash; Heroku::Command::Ps</a></li>
+    
+      <li><a href="Heroku/Client/Service.html#method-i-each">#each &mdash; Heroku::Client::Service</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-eat">#eat &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-encode">#encode &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/Client/Service.html#method-i-end_of_stream-3F">#end_of_stream? &mdash; Heroku::Client::Service</a></li>
+    
+      <li><a href="Heroku/Command/Db.html#method-i-enforce_taps_version">#enforce_taps_version &mdash; Heroku::Command::Db</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-error">#error &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-error_with_failure">#error_with_failure &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-i-escape">#escape &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-i-extract_app">#extract_app &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-i-extract_app_from_git_config">#extract_app_from_git_config &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-i-extract_app_in_dir">#extract_app_in_dir &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-i-extract_option">#extract_option &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-extract_warning">#extract_warning &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-fail">#fail &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-falsetok">#falsetok &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/Command/Config.html#method-i-format">#format &mdash; Heroku::Command::Config</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-format_bytes">#format_bytes &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-format_date">#format_date &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Command/Keys.html#method-i-format_key_for_display">#format_key_for_display &mdash; Heroku::Command::Keys</a></li>
+    
+      <li><a href="Heroku/Command/Logs.html#method-i-format_with_colors">#format_with_colors &mdash; Heroku::Command::Logs</a></li>
+    
+      <li><a href="PGBackups/Client.html#method-i-get_backup">#get_backup &mdash; PGBackups::Client</a></li>
+    
+      <li><a href="PGBackups/Client.html#method-i-get_backups">#get_backups &mdash; PGBackups::Client</a></li>
+    
+      <li><a href="HerokuPostgresql/Client.html#method-i-get_database">#get_database &mdash; HerokuPostgresql::Client</a></li>
+    
+      <li><a href="PGBackups/Client.html#method-i-get_latest_backup">#get_latest_backup &mdash; PGBackups::Client</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-get_terminal_environment">#get_terminal_environment &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="PGBackups/Client.html#method-i-get_transfer">#get_transfer &mdash; PGBackups::Client</a></li>
+    
+      <li><a href="PGBackups/Client.html#method-i-get_transfers">#get_transfers &mdash; PGBackups::Client</a></li>
+    
+      <li><a href="HerokuPostgresql/Client.html#method-i-get_wait_status">#get_wait_status &mdash; HerokuPostgresql::Client</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-git">#git &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-i-git_remotes">#git_remotes &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/Deprecated/Help/ClassMethods.html#method-i-group">#group &mdash; Heroku::Deprecated::Help::ClassMethods</a></li>
+    
+      <li><a href="Heroku/Deprecated/Help/ClassMethods.html#method-i-groups">#groups &mdash; Heroku::Deprecated::Help::ClassMethods</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-has_git-3F">#has_git? &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Command/Base.html#method-i-heroku">#heroku &mdash; Heroku::Command::Base</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-hexdec4">#hexdec4 &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-hexenc4">#hexenc4 &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-home_directory">#home_directory &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="HerokuPostgresql/Client.html#method-i-http_get">#http_get &mdash; HerokuPostgresql::Client</a></li>
+    
+      <li><a href="HerokuPostgresql/Client.html#method-i-http_post">#http_post &mdash; HerokuPostgresql::Client</a></li>
+    
+      <li><a href="HerokuPostgresql/Client.html#method-i-http_put">#http_put &mdash; HerokuPostgresql::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-httpcache_purge">#httpcache_purge &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Help.html#method-i-index">#index &mdash; Heroku::Command::Help</a></li>
+    
+      <li><a href="Heroku/Command/Version.html#method-i-index">#index &mdash; Heroku::Command::Version</a></li>
+    
+      <li><a href="Heroku/Command/Plugins.html#method-i-index">#index &mdash; Heroku::Command::Plugins</a></li>
+    
+      <li><a href="Heroku/Command/Domains.html#method-i-index">#index &mdash; Heroku::Command::Domains</a></li>
+    
+      <li><a href="Heroku/Command/Run.html#method-i-index">#index &mdash; Heroku::Command::Run</a></li>
+    
+      <li><a href="Heroku/Command/Config.html#method-i-index">#index &mdash; Heroku::Command::Config</a></li>
+    
+      <li><a href="Heroku/Command/Stack.html#method-i-index">#index &mdash; Heroku::Command::Stack</a></li>
+    
+      <li><a href="Heroku/Command/Releases.html#method-i-index">#index &mdash; Heroku::Command::Releases</a></li>
+    
+      <li><a href="Heroku/Command/Apps.html#method-i-index">#index &mdash; Heroku::Command::Apps</a></li>
+    
+      <li><a href="Heroku/Command/Keys.html#method-i-index">#index &mdash; Heroku::Command::Keys</a></li>
+    
+      <li><a href="Heroku/Command/Update.html#method-i-index">#index &mdash; Heroku::Command::Update</a></li>
+    
+      <li><a href="Heroku/Command/Pgbackups.html#method-i-index">#index &mdash; Heroku::Command::Pgbackups</a></li>
+    
+      <li><a href="Heroku/Command/Ssl.html#method-i-index">#index &mdash; Heroku::Command::Ssl</a></li>
+    
+      <li><a href="Heroku/Command/Logs.html#method-i-index">#index &mdash; Heroku::Command::Logs</a></li>
+    
+      <li><a href="Heroku/Command/Addons.html#method-i-index">#index &mdash; Heroku::Command::Addons</a></li>
+    
+      <li><a href="Heroku/Command/Ps.html#method-i-index">#index &mdash; Heroku::Command::Ps</a></li>
+    
+      <li><a href="Heroku/Command/Sharing.html#method-i-index">#index &mdash; Heroku::Command::Sharing</a></li>
+    
+      <li><a href="Heroku/Command/Releases.html#method-i-info">#info &mdash; Heroku::Command::Releases</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-info">#info &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Apps.html#method-i-info">#info &mdash; Heroku::Command::Apps</a></li>
+    
+      <li><a href="Heroku/Command/Pg.html#method-i-info">#info &mdash; Heroku::Command::Pg</a></li>
+    
+      <li><a href="Heroku/Command/Pg.html#method-i-ingress">#ingress &mdash; Heroku::Command::Pg</a></li>
+    
+      <li><a href="HerokuPostgresql/Client.html#method-i-ingress">#ingress &mdash; HerokuPostgresql::Client</a></li>
+    
+      <li><a href="Heroku/Command/Logs.html#method-i-init_colors">#init_colors &mdash; Heroku::Command::Logs</a></li>
+    
+      <li><a href="Heroku/Command/Plugins.html#method-i-install">#install &mdash; Heroku::Command::Plugins</a></li>
+    
+      <li><a href="Heroku/Plugin.html#method-i-install">#install &mdash; Heroku::Plugin</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-install_addon">#install_addon &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Plugins.html#method-i-installation_failed">#installation_failed &mdash; Heroku::Command::Plugins</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-installed_addons">#installed_addons &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-json_decode">#json_decode &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-json_encode">#json_encode &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-keys">#keys &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-lex">#lex &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-list">#list &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Addons.html#method-i-list">#list &mdash; Heroku::Command::Addons</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-list_collaborators">#list_collaborators &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-list_domains">#list_domains &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-list_drains">#list_drains &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-list_stacks">#list_stacks &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Db.html#method-i-load_taps">#load_taps &mdash; Heroku::Command::Db</a></li>
+    
+      <li><a href="Heroku/Command/Auth.html#method-i-login">#login &mdash; Heroku::Command::Auth</a></li>
+    
+      <li><a href="Heroku/Command/Auth.html#method-i-logout">#logout &mdash; Heroku::Command::Auth</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-logs">#logs &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-longest">#longest &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-maintenance">#maintenance &mdash; Heroku::Client</a></li>
+    
+      <li><a href="PGResolver/Resolver.html#method-i-message">#message &mdash; PGResolver::Resolver</a></li>
+    
+      <li><a href="Heroku/Command/Stack.html#method-i-migrate">#migrate &mdash; Heroku::Command::Stack</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-migrate_to_stack">#migrate_to_stack &mdash; Heroku::Client</a></li>
+    
+      <li><a href="PGResolver/Resolver.html#method-i-name">#name &mdash; PGResolver::Resolver</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-nibble">#nibble &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-nulltok">#nulltok &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-numenc">#numenc &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-numtok">#numtok &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-objenc">#objenc &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-objparse">#objparse &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/Command/Maintenance.html#method-i-off">#off &mdash; Heroku::Command::Maintenance</a></li>
+    
+      <li><a href="Heroku/Command/Maintenance.html#method-i-on">#on &mdash; Heroku::Command::Maintenance</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-on_warning">#on_warning &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Addons.html#method-i-open">#open &mdash; Heroku::Command::Addons</a></li>
+    
+      <li><a href="Heroku/Command/Apps.html#method-i-open">#open &mdash; Heroku::Command::Apps</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-output">#output &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-output_with_arrow">#output_with_arrow &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-pairparse">#pairparse &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/Command/Db.html#method-i-parse_database_yml">#parse_database_yml &mdash; Heroku::Command::Db</a></li>
+    
+      <li><a href="Heroku/Command/Logs.html#method-i-parse_log">#parse_log &mdash; Heroku::Command::Logs</a></li>
+    
+      <li><a href="Heroku/Command/Db.html#method-i-parse_taps_opts">#parse_taps_opts &mdash; Heroku::Command::Db</a></li>
+    
+      <li><a href="Heroku/Plugin.html#method-i-path">#path &mdash; Heroku::Plugin</a></li>
+    
+      <li><a href="Heroku/Command/Pgbackups.html#method-i-pgbackup_client">#pgbackup_client &mdash; Heroku::Command::Pgbackups</a></li>
+    
+      <li><a href="Heroku/Command/Pgbackups.html#method-i-poll_transfer-21">#poll_transfer! &mdash; Heroku::Command::Pgbackups</a></li>
+    
+      <li><a href="PGResolver/Resolver.html#method-i-pretty_name">#pretty_name &mdash; PGResolver::Resolver</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-process">#process &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Pg.html#method-i-promote">#promote &mdash; Heroku::Command::Pg</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-ps">#ps &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-ps_restart">#ps_restart &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-ps_run">#ps_run &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-ps_scale">#ps_scale &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Pg.html#method-i-psql">#psql &mdash; Heroku::Command::Pg</a></li>
+    
+      <li><a href="Heroku/Command/Db.html#method-i-pull">#pull &mdash; Heroku::Command::Db</a></li>
+    
+      <li><a href="Heroku/Command/Db.html#method-i-push">#push &mdash; Heroku::Command::Db</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-quantify">#quantify &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-rake">#rake &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Run.html#method-i-rake">#rake &mdash; Heroku::Command::Run</a></li>
+    
+      <li><a href="Heroku/Client/Service.html#method-i-read">#read &mdash; Heroku::Client::Service</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-read_logs">#read_logs &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-redisplay">#redisplay &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-release">#release &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-releases">#releases &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Keys.html#method-i-remove">#remove &mdash; Heroku::Command::Keys</a></li>
+    
+      <li><a href="Heroku/Command/Sharing.html#method-i-remove">#remove &mdash; Heroku::Command::Sharing</a></li>
+    
+      <li><a href="Heroku/Command/Ssl.html#method-i-remove">#remove &mdash; Heroku::Command::Ssl</a></li>
+    
+      <li><a href="Heroku/Command/Config.html#method-i-remove">#remove &mdash; Heroku::Command::Config</a></li>
+    
+      <li><a href="Heroku/Command/Addons.html#method-i-remove">#remove &mdash; Heroku::Command::Addons</a></li>
+    
+      <li><a href="Heroku/Command/Domains.html#method-i-remove">#remove &mdash; Heroku::Command::Domains</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-remove_all_keys">#remove_all_keys &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-remove_collaborator">#remove_collaborator &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-remove_config_var">#remove_config_var &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-remove_domain">#remove_domain &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-remove_domains">#remove_domains &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-remove_drain">#remove_drain &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-remove_key">#remove_key &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-remove_ssl">#remove_ssl &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Apps.html#method-i-rename">#rename &mdash; Heroku::Command::Apps</a></li>
+    
+      <li><a href="Heroku/Command/Pgbackups/Display.html#method-i-render">#render &mdash; Heroku::Command::Pgbackups::Display</a></li>
+    
+      <li><a href="Heroku/Command/Pg.html#method-i-reset">#reset &mdash; Heroku::Command::Pg</a></li>
+    
+      <li><a href="HerokuPostgresql/Client.html#method-i-reset">#reset &mdash; HerokuPostgresql::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-resource">#resource &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-restart">#restart &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Ps.html#method-i-restart">#restart &mdash; Heroku::Command::Ps</a></li>
+    
+      <li><a href="Heroku/Command/Pgbackups.html#method-i-restore">#restore &mdash; Heroku::Command::Pgbackups</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-retry_on_exception">#retry_on_exception &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Command/Releases.html#method-i-rollback">#rollback &mdash; Heroku::Command::Releases</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-rollback">#rollback &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client/ConsoleSession.html#method-i-run">#run &mdash; Heroku::Client::ConsoleSession</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-run_command">#run_command &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-run_console_command">#run_console_command &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-running_on_a_mac-3F">#running_on_a_mac? &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-running_on_windows-3F">#running_on_windows? &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Command/Ps.html#method-i-scale">#scale &mdash; Heroku::Command::Ps</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-service">#service &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-set_buffer">#set_buffer &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-set_dynos">#set_dynos &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-set_workers">#set_workers &mdash; Heroku::Client</a></li>
+    
+      <li><a href="HerokuPostgresql/Client.html#method-i-sha">#sha &mdash; HerokuPostgresql::Client</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-shell">#shell &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="String.html#method-i-shellescape">#shellescape &mdash; String</a></li>
+    
+      <li><a href="Heroku/Deprecated/Help/HelpGroup.html#method-i-space">#space &mdash; Heroku::Deprecated::Help::HelpGroup</a></li>
+    
+      <li><a href="PgUtils.html#method-i-spinner">#spinner &mdash; PgUtils</a></li>
+    
+      <li><a href="Heroku/Client/Rendezvous.html#method-i-start">#start &mdash; Heroku::Client::Rendezvous</a></li>
+    
+      <li><a href="Heroku/Client/Service.html#method-i-start">#start &mdash; Heroku::Client::Service</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-start">#start &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-status">#status &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-strenc">#strenc &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-strtok">#strtok &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-subst">#subst &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-surrogate-3F">#surrogate? &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="HerokuPostgresql/Client.html#method-i-sym_keys">#sym_keys &mdash; HerokuPostgresql::Client</a></li>
+    
+      <li><a href="Heroku/Command/Db.html#method-i-taps_client">#taps_client &mdash; Heroku::Command::Db</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-textparse">#textparse &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="PgUtils.html#method-i-ticking">#ticking &mdash; PgUtils</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-time_ago">#time_ago &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/Client/Service.html#method-i-to_s">#to_s &mdash; Heroku::Client::Service</a></li>
+    
+      <li><a href="Heroku/Plugin.html#method-i-to_s">#to_s &mdash; Heroku::Plugin</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-tok">#tok &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/Command/Sharing.html#method-i-transfer">#transfer &mdash; Heroku::Command::Sharing</a></li>
+    
+      <li><a href="Heroku/Command/Pgbackups.html#method-i-transfer-21">#transfer! &mdash; Heroku::Command::Pgbackups</a></li>
+    
+      <li><a href="Heroku/Client/Service.html#method-i-transition">#transition &mdash; Heroku::Client::Service</a></li>
+    
+      <li><a href="PgUtils.html#method-i-translate_fork_and_follow">#translate_fork_and_follow &mdash; PgUtils</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-truetok">#truetok &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/Helpers.html#method-i-truncate">#truncate &mdash; Heroku::Helpers</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-uchardec">#uchardec &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-ucharenc">#ucharenc &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="HerokuPostgresql/Client.html#method-i-unfollow">#unfollow &mdash; HerokuPostgresql::Client</a></li>
+    
+      <li><a href="Heroku/Command/Pg.html#method-i-unfollow">#unfollow &mdash; Heroku::Command::Pg</a></li>
+    
+      <li><a href="Heroku/Command/Plugins.html#method-i-uninstall">#uninstall &mdash; Heroku::Command::Plugins</a></li>
+    
+      <li><a href="Heroku/Plugin.html#method-i-uninstall">#uninstall &mdash; Heroku::Plugin</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-uninstall_addon">#uninstall_addon &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-unquote">#unquote &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-unsubst">#unsubst &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/Client/Service.html#method-i-up">#up &mdash; Heroku::Client::Service</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-up">#up &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-update">#update &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Pgbackups.html#method-i-update_display">#update_display &mdash; Heroku::Command::Pgbackups</a></li>
+    
+      <li><a href="Heroku/Command/Addons.html#method-i-upgrade">#upgrade &mdash; Heroku::Command::Addons</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-upgrade_addon">#upgrade_addon &mdash; Heroku::Client</a></li>
+    
+      <li><a href="Heroku/Command/Db.html#method-i-uri_hash_to_url">#uri_hash_to_url &mdash; Heroku::Command::Db</a></li>
+    
+      <li><a href="Heroku/Command/Pgbackups.html#method-i-url">#url &mdash; Heroku::Command::Pgbackups</a></li>
+    
+      <li><a href="Heroku/Command/Db.html#method-i-userinfo_from_uri">#userinfo_from_uri &mdash; Heroku::Command::Db</a></li>
+    
+      <li><a href="Heroku/OkJson.html#method-i-valparse">#valparse &mdash; Heroku::OkJson</a></li>
+    
+      <li><a href="Heroku/Command/Pg.html#method-i-wait">#wait &mdash; Heroku::Command::Pg</a></li>
+    
+      <li><a href="Heroku/Command/Ps.html#method-i-workers">#workers &mdash; Heroku::Command::Ps</a></li>
+    
+      <li><a href="Heroku/Client.html#method-i-workers">#workers &mdash; Heroku::Client</a></li>
+    
+  </ul>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>

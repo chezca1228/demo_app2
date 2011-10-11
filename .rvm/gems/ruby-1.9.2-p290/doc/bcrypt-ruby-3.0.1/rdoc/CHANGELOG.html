@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: CHANGELOG [bcrypt-ruby-3.0.1 Documentation]</title>
+
+  <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+  <script src="./js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file">
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./CHANGELOG.html">CHANGELOG</a></li>
+        
+          <li class="file"><a href="./COPYING.html">COPYING</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./BCrypt.html">BCrypt</a></li>
+        
+          <li><a href="./BCrypt/Engine.html">BCrypt::Engine</a></li>
+        
+          <li><a href="./BCrypt/Errors.html">BCrypt::Errors</a></li>
+        
+          <li><a href="./BCrypt/Errors/InvalidCost.html">BCrypt::Errors::InvalidCost</a></li>
+        
+          <li><a href="./BCrypt/Errors/InvalidHash.html">BCrypt::Errors::InvalidHash</a></li>
+        
+          <li><a href="./BCrypt/Errors/InvalidSalt.html">BCrypt::Errors::InvalidSalt</a></li>
+        
+          <li><a href="./BCrypt/Errors/InvalidSecret.html">BCrypt::Errors::InvalidSecret</a></li>
+        
+          <li><a href="./BCrypt/Password.html">BCrypt::Password</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    
+<p>1.0.0  Feb 27 2007</p>
+
+<pre>- Initial release.</pre>
+
+<p>2.0.0  Mar 07 2007</p>
+
+<pre>- Removed BCrypt::Password#exactly_equals -- use BCrypt::Password#eql? instead.
+- Added BCrypt::Password#is_password?.
+- Refactored out BCrypt::Internals into more useful BCrypt::Engine.
+- Added validation of secrets -- nil is not healthy.</pre>
+
+<p>2.0.1  Mar 09 2007</p>
+
+<pre>- Fixed load path issues
+- Fixed crashes when hashing weird values (e.g., false, etc.)</pre>
+
+<p>2.0.2  Jun 06 2007</p>
+
+<pre>- Fixed example code in the README [Winson]
+- Fixed Solaris compatibility [Jeremy LaTrasse, Twitter crew]</pre>
+
+<p>2.0.3  May 07 2008</p>
+
+<pre>- Made exception classes descend from StandardError, not Exception [Dan42]
+- Changed BCrypt::Engine.hash to BCrypt::Engine.hash_secret to avoid Merb
+  sorting issues. [Lee Pope]</pre>
+
+<p>2.0.4  Mar 09 2009</p>
+
+<pre>- Added Ruby 1.9 compatibility. [Genki Takiuchi]
+- Fixed segfaults on some different types of empty strings. [Mike Pomraning]</pre>
+
+<p>2.0.5  Mar 11 2009</p>
+
+<pre>- Fixed Ruby 1.8.5 compatibility. [Mike Pomraning]</pre>
+
+<p>2.1.0  Aug 12 2009</p>
+
+<pre>- Improved code coverage, unit tests, and build chain. [Hongli Lai]
+- Ruby 1.9 compatibility fixes. [Hongli Lai]
+- JRuby support, using Damien Miller's jBCrypt. [Hongli Lai]
+- Ruby 1.9 GIL releasing for high-cost hashes. [Hongli Lai]</pre>
+
+<p>2.1.1  Aug 14 2009</p>
+
+<pre>- JVM 1.4/1.5 compatibility [Hongli Lai]</pre>
+
+<p>2.1.2  Sep 16 2009</p>
+
+<pre>- Fixed support for Solaris, OpenSolaris.</pre>
+
+<p>3.0.0 Aug 24, 2011</p>
+
+<pre>- Bcrypt C implementation replaced with a public domain implementation.
+- License changed to MIT</pre>
+
+<p>3.0.1</p>
+
+<pre>- create raises an exception if the cost is higher than 31. GH #27</pre>
+
+  </div>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>
+

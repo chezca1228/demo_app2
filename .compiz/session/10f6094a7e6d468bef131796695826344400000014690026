@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz_session id="10f6094a7e6d468bef131796695826344400000014690026">
+  <window id="10f6094a7e6d468bef131796695826435600000014690028" title="x-nautilus-desktop" class="Nautilus" name="desktop_window" command="nautilus">
+    <geometry x="0" y="0" width="1680" height="1050"/>
+  </window>
+  <window id="10f6094a7e6d468bef131796695826435600000014690028" title="ralbaredo - File Browser" class="Nautilus" name="nautilus" command="nautilus">
+    <geometry x="0" y="444" width="800" height="550"/>
+    <workspace index="0"/>
+  </window>
+  <window id="10f6094a7e6d468bef131796701779829600000014690034" title="How to install RVM on Ubuntu 10.04 - Mozilla Firefox" class="Firefox" name="Navigator" role="browser" command="firefox-bin">
+    <geometry x="859" y="24" width="820" height="964"/>
+    <maximized vert="yes" horiz="yes"/>
+    <workspace index="0"/>
+  </window>
+  <window id="10f6094a7e6d468bef131796700648077100000014690033" title="ralbaredo@ubuntu: ~" class="Gnome-terminal" name="gnome-terminal" role="gnome-terminal-window-1675-282375755-1317967006" command="gnome-terminal">
+    <geometry x="601" y="86" width="658" height="437"/>
+    <workspace index="0"/>
+  </window>
+</compiz_session>

@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="main_window_hidden" mtime="1318297319" type="bool" value="true"/>
+</gconf>

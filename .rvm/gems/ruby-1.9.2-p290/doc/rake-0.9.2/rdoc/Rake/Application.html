@@ -1,0 +1,2203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Rake::Application</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/rake/application_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rake/application.rb">lib/rake/application.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-add_import">#add_import</a></li>
+					
+					<li><a href="#method-i-add_loader">#add_loader</a></li>
+					
+					<li><a href="#method-i-collect_tasks">#collect_tasks</a></li>
+					
+					<li><a href="#method-i-const_warning">#const_warning</a></li>
+					
+					<li><a href="#method-i-deprecate">#deprecate</a></li>
+					
+					<li><a href="#method-i-display_error_message">#display_error_message</a></li>
+					
+					<li><a href="#method-i-display_prerequisites">#display_prerequisites</a></li>
+					
+					<li><a href="#method-i-display_tasks_and_comments">#display_tasks_and_comments</a></li>
+					
+					<li><a href="#method-i-dynamic_width">#dynamic_width</a></li>
+					
+					<li><a href="#method-i-dynamic_width_stty">#dynamic_width_stty</a></li>
+					
+					<li><a href="#method-i-dynamic_width_tput">#dynamic_width_tput</a></li>
+					
+					<li><a href="#method-i-find_rakefile_location">#find_rakefile_location</a></li>
+					
+					<li><a href="#method-i-glob">#glob</a></li>
+					
+					<li><a href="#method-i-handle_options">#handle_options</a></li>
+					
+					<li><a href="#method-i-has_chain%3F">#has_chain?</a></li>
+					
+					<li><a href="#method-i-have_rakefile">#have_rakefile</a></li>
+					
+					<li><a href="#method-i-init">#init</a></li>
+					
+					<li><a href="#method-i-invoke_task">#invoke_task</a></li>
+					
+					<li><a href="#method-i-load_imports">#load_imports</a></li>
+					
+					<li><a href="#method-i-load_rakefile">#load_rakefile</a></li>
+					
+					<li><a href="#method-i-options">#options</a></li>
+					
+					<li><a href="#method-i-parse_task_string">#parse_task_string</a></li>
+					
+					<li><a href="#method-i-print_rakefile_directory">#print_rakefile_directory</a></li>
+					
+					<li><a href="#method-i-rake_require">#rake_require</a></li>
+					
+					<li><a href="#method-i-rakefile_location">#rakefile_location</a></li>
+					
+					<li><a href="#method-i-run">#run</a></li>
+					
+					<li><a href="#method-i-standard_exception_handling">#standard_exception_handling</a></li>
+					
+					<li><a href="#method-i-standard_rake_options">#standard_rake_options</a></li>
+					
+					<li><a href="#method-i-system_dir">#system_dir</a></li>
+					
+					<li><a href="#method-i-terminal_width">#terminal_width</a></li>
+					
+					<li><a href="#method-i-top_level">#top_level</a></li>
+					
+					<li><a href="#method-i-truncate">#truncate</a></li>
+					
+					<li><a href="#method-i-truncate_output%3F">#truncate_output?</a></li>
+					
+					<li><a href="#method-i-tty_output%3D">#tty_output=</a></li>
+					
+					<li><a href="#method-i-tty_output%3F">#tty_output?</a></li>
+					
+					<li><a href="#method-i-unix%3F">#unix?</a></li>
+					
+					<li><a href="#method-i-windows%3F">#windows?</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">TaskManager</span></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="../MIT-LICENSE.html">MIT-LICENSE</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+					<li class="file"><a href="../TODO.html">TODO</a></li>
+				
+					<li class="file"><a href="../doc/command_line_usage_rdoc.html">command_line_usage.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/glossary_rdoc.html">glossary.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/proto_rake_rdoc.html">proto_rake.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/rakefile_rdoc.html">rakefile.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/rational_rdoc.html">rational.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_4_14_rdoc.html">rake-0.4.14.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_4_15_rdoc.html">rake-0.4.15.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_5_0_rdoc.html">rake-0.5.0.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_5_3_rdoc.html">rake-0.5.3.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_5_4_rdoc.html">rake-0.5.4.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_6_0_rdoc.html">rake-0.6.0.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_7_0_rdoc.html">rake-0.7.0.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_7_1_rdoc.html">rake-0.7.1.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_7_2_rdoc.html">rake-0.7.2.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_7_3_rdoc.html">rake-0.7.3.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_8_0_rdoc.html">rake-0.8.0.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_8_2_rdoc.html">rake-0.8.2.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_8_3_rdoc.html">rake-0.8.3.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_8_4_rdoc.html">rake-0.8.4.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_8_5_rdoc.html">rake-0.8.5.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_8_6_rdoc.html">rake-0.8.6.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_8_7_rdoc.html">rake-0.8.7.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_9_0_rdoc.html">rake-0.9.0.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_9_1_rdoc.html">rake-0.9.1.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/release_notes/rake-0_9_2_rdoc.html">rake-0.9.2.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Rake/AltSystem.html">Rake::AltSystem</a></li>
+				
+					<li><a href="../Rake/Application.html">Rake::Application</a></li>
+				
+					<li><a href="../Rake/Application.html">Rake::Application</a></li>
+				
+					<li><a href="../Rake/Cloneable.html">Rake::Cloneable</a></li>
+				
+					<li><a href="../Rake/CompositePublisher.html">Rake::CompositePublisher</a></li>
+				
+					<li><a href="../Rake/DSL.html">Rake::DSL</a></li>
+				
+					<li><a href="../Rake/DefaultLoader.html">Rake::DefaultLoader</a></li>
+				
+					<li><a href="../Rake/DeprecatedObjectDSL.html">Rake::DeprecatedObjectDSL</a></li>
+				
+					<li><a href="../Rake/EarlyTime.html">Rake::EarlyTime</a></li>
+				
+					<li><a href="../Rake/FileCreationTask.html">Rake::FileCreationTask</a></li>
+				
+					<li><a href="../Rake/FileList.html">Rake::FileList</a></li>
+				
+					<li><a href="../Rake/FileList.html">Rake::FileList</a></li>
+				
+					<li><a href="../Rake/FileTask.html">Rake::FileTask</a></li>
+				
+					<li><a href="../Rake/FileUtilsExt.html">Rake::FileUtilsExt</a></li>
+				
+					<li><a href="../Rake/FileUtilsExt.html">Rake::FileUtilsExt</a></li>
+				
+					<li><a href="../Rake/FtpFile.html">Rake::FtpFile</a></li>
+				
+					<li><a href="../Rake/FtpUploader.html">Rake::FtpUploader</a></li>
+				
+					<li><a href="../Rake/InvocationChain.html">Rake::InvocationChain</a></li>
+				
+					<li><a href="../Rake/InvocationChain/EmptyInvocationChain.html">Rake::InvocationChain::EmptyInvocationChain</a></li>
+				
+					<li><a href="../Rake/InvocationExceptionMixin.html">Rake::InvocationExceptionMixin</a></li>
+				
+					<li><a href="../Rake/MakefileLoader.html">Rake::MakefileLoader</a></li>
+				
+					<li><a href="../Rake/MultiTask.html">Rake::MultiTask</a></li>
+				
+					<li><a href="../Rake/NameSpace.html">Rake::NameSpace</a></li>
+				
+					<li><a href="../Rake/PackageTask.html">Rake::PackageTask</a></li>
+				
+					<li><a href="../Rake/PseudoStatus.html">Rake::PseudoStatus</a></li>
+				
+					<li><a href="../Rake/RDocTask.html">Rake::RDocTask</a></li>
+				
+					<li><a href="../Rake/RubyForgePublisher.html">Rake::RubyForgePublisher</a></li>
+				
+					<li><a href="../Rake/RuleRecursionOverflowError.html">Rake::RuleRecursionOverflowError</a></li>
+				
+					<li><a href="../Rake/SshDirPublisher.html">Rake::SshDirPublisher</a></li>
+				
+					<li><a href="../Rake/SshFilePublisher.html">Rake::SshFilePublisher</a></li>
+				
+					<li><a href="../Rake/SshFreshDirPublisher.html">Rake::SshFreshDirPublisher</a></li>
+				
+					<li><a href="../Rake/Task.html">Rake::Task</a></li>
+				
+					<li><a href="../Rake/Task.html">Rake::Task</a></li>
+				
+					<li><a href="../Rake/TaskArgumentError.html">Rake::TaskArgumentError</a></li>
+				
+					<li><a href="../Rake/TaskArguments.html">Rake::TaskArguments</a></li>
+				
+					<li><a href="../Rake/TaskLib.html">Rake::TaskLib</a></li>
+				
+					<li><a href="../Rake/TaskManager.html">Rake::TaskManager</a></li>
+				
+					<li><a href="../Rake/TestTask.html">Rake::TestTask</a></li>
+				
+					<li><a href="../Rake/Version.html">Rake::Version</a></li>
+				
+					<li><a href="../Rake/Win32.html">Rake::Win32</a></li>
+				
+					<li><a href="../Rake/Win32/Win32HomeError.html">Rake::Win32::Win32HomeError</a></li>
+				
+					<li><a href="../CompositePublisher.html">CompositePublisher</a></li>
+				
+					<li><a href="../FileUtils.html">FileUtils</a></li>
+				
+					<li><a href="../Module.html">Module</a></li>
+				
+					<li><a href="../SshDirPublisher.html">SshDirPublisher</a></li>
+				
+					<li><a href="../SshFilePublisher.html">SshFilePublisher</a></li>
+				
+					<li><a href="../SshFreshDirPublisher.html">SshFreshDirPublisher</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+					<li><a href="../Sys.html">Sys</a></li>
+				
+					<li><a href="../Time.html">Time</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Rake::Application</h1>
+
+		<div id="description">
+			<pre>
+                                                                    
+</pre>
+<p>
+Rake main application object.  When invoking <tt>rake</tt> from the command
+line, a <a href="Application.html">Rake::Application</a> object is created
+and run.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="DEFAULT_RAKEFILES">DEFAULT_RAKEFILES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="name-attribute-method" class="method-detail">
+				<a name="name"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">name</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+The name of the application (typically &#8216;rake&#8217;)
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="original-dir-attribute-method" class="method-detail">
+				<a name="original_dir"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">original_dir</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+The original directory where rake was invoked.
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="rakefile-attribute-method" class="method-detail">
+				<a name="rakefile"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">rakefile</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Name of the actual rakefile used.
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="top-level-tasks-attribute-method" class="method-detail">
+				<a name="top_level_tasks"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">top_level_tasks</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+List of the top level task names (task names from the command line).
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initialize a <a href="Application.html">Rake::Application</a> object.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rake/application.rb, line 31</span>
+31:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+32:       <span class="ruby-keyword kw">super</span>
+33:       <span class="ruby-ivar">@name</span> = <span class="ruby-value str">'rake'</span>
+34:       <span class="ruby-ivar">@rakefiles</span> = <span class="ruby-constant">DEFAULT_RAKEFILES</span>.<span class="ruby-identifier">dup</span>
+35:       <span class="ruby-ivar">@rakefile</span> = <span class="ruby-keyword kw">nil</span>
+36:       <span class="ruby-ivar">@pending_imports</span> = []
+37:       <span class="ruby-ivar">@imported</span> = []
+38:       <span class="ruby-ivar">@loaders</span> = {}
+39:       <span class="ruby-ivar">@default_loader</span> = <span class="ruby-constant">Rake</span><span class="ruby-operator">::</span><span class="ruby-constant">DefaultLoader</span>.<span class="ruby-identifier">new</span>
+40:       <span class="ruby-ivar">@original_dir</span> = <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">pwd</span>
+41:       <span class="ruby-ivar">@top_level_tasks</span> = []
+42:       <span class="ruby-identifier">add_loader</span>(<span class="ruby-value str">'rb'</span>, <span class="ruby-constant">DefaultLoader</span>.<span class="ruby-identifier">new</span>)
+43:       <span class="ruby-identifier">add_loader</span>(<span class="ruby-value str">'rf'</span>, <span class="ruby-constant">DefaultLoader</span>.<span class="ruby-identifier">new</span>)
+44:       <span class="ruby-identifier">add_loader</span>(<span class="ruby-value str">'rake'</span>, <span class="ruby-constant">DefaultLoader</span>.<span class="ruby-identifier">new</span>)
+45:       <span class="ruby-ivar">@tty_output</span> = <span class="ruby-constant">STDOUT</span>.<span class="ruby-identifier">tty?</span>
+46:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="add-import-method" class="method-detail ">
+				<a name="method-i-add_import"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_import</span><span
+						class="method-args">(fn)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Add a file to the list of files to be imported.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-import-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 550</span>
+550:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_import</span>(<span class="ruby-identifier">fn</span>)
+551:       <span class="ruby-ivar">@pending_imports</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">fn</span>
+552:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="add-loader-method" class="method-detail ">
+				<a name="method-i-add_loader"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_loader</span><span
+						class="method-args">(ext, loader)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Add a loader to handle imported files ending in the extension <tt>ext</tt>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-loader-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 97</span>
+ 97:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_loader</span>(<span class="ruby-identifier">ext</span>, <span class="ruby-identifier">loader</span>)
+ 98:       <span class="ruby-identifier">ext</span> = <span class="ruby-node">&quot;.#{ext}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">ext</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^\./</span>
+ 99:       <span class="ruby-ivar">@loaders</span>[<span class="ruby-identifier">ext</span>] = <span class="ruby-identifier">loader</span>
+100:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="collect-tasks-method" class="method-detail ">
+				<a name="method-i-collect_tasks"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">collect_tasks</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Collect the list of tasks on the command line.  If no tasks are given,
+return a list containing only the default task. Environmental assignments
+are processed at this time as well.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="collect-tasks-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 537</span>
+537:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">collect_tasks</span>
+538:       <span class="ruby-ivar">@top_level_tasks</span> = []
+539:       <span class="ruby-constant">ARGV</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span>
+540:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">arg</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^(\w+)=(.*)$/</span>
+541:           <span class="ruby-constant">ENV</span>[<span class="ruby-node">$1</span>] = <span class="ruby-node">$2</span>
+542:         <span class="ruby-keyword kw">else</span>
+543:           <span class="ruby-ivar">@top_level_tasks</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">arg</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">arg</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^-/</span>
+544:         <span class="ruby-keyword kw">end</span>
+545:       <span class="ruby-keyword kw">end</span>
+546:       <span class="ruby-ivar">@top_level_tasks</span>.<span class="ruby-identifier">push</span>(<span class="ruby-value str">&quot;default&quot;</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@top_level_tasks</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+547:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="const-warning-method" class="method-detail ">
+				<a name="method-i-const_warning"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">const_warning</span><span
+						class="method-args">(const_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Warn about deprecated use of top level constant names.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="const-warning-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 569</span>
+569:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">const_warning</span>(<span class="ruby-identifier">const_name</span>)
+570:       <span class="ruby-ivar">@const_warning</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">false</span>
+571:       <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span> <span class="ruby-ivar">@const_warning</span>
+572:         <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">%{WARNING: Deprecated reference to top-level constant '#{const_name}' }</span> <span class="ruby-operator">+</span>
+573:           <span class="ruby-node">%{found at: #{rakefile_location}}</span> <span class="ruby-comment cmt"># '</span>
+574:         <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">%{    Use --classic-namespace on rake command}</span>
+575:         <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">%{    or 'require &quot;rake/classic_namespace&quot;' in Rakefile}</span>
+576:       <span class="ruby-keyword kw">end</span>
+577:       <span class="ruby-ivar">@const_warning</span> = <span class="ruby-keyword kw">true</span>
+578:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="deprecate-method" class="method-detail ">
+				<a name="method-i-deprecate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">deprecate</span><span
+						class="method-args">(old_usage, new_usage, call_site)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Warn about deprecated usage.
+</p>
+<p>
+Example:
+</p>
+<pre>
+   Rake.application.deprecate(&quot;import&quot;, &quot;Rake.import&quot;, caller.first)</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="deprecate-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 161</span>
+161:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deprecate</span>(<span class="ruby-identifier">old_usage</span>, <span class="ruby-identifier">new_usage</span>, <span class="ruby-identifier">call_site</span>)
+162:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">ignore_deprecate</span>
+163:       <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;WARNING: '#{old_usage}' is deprecated.  &quot;</span> <span class="ruby-operator">+</span>
+164:         <span class="ruby-node">&quot;Please use '#{new_usage}' instead.\n&quot;</span> <span class="ruby-operator">+</span>
+165:         <span class="ruby-node">&quot;    at #{call_site}&quot;</span>
+166:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="display-error-message-method" class="method-detail ">
+				<a name="method-i-display_error_message"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">display_error_message</span><span
+						class="method-args">(ex)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Display the error message that caused the exception.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="display-error-message-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 144</span>
+144:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">display_error_message</span>(<span class="ruby-identifier">ex</span>)
+145:       <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{name} aborted!&quot;</span>
+146:       <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">ex</span>.<span class="ruby-identifier">message</span>
+147:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">trace</span>
+148:         <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">ex</span>.<span class="ruby-identifier">backtrace</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\n&quot;</span>)
+149:       <span class="ruby-keyword kw">else</span>
+150:         <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">rakefile_location</span>(<span class="ruby-identifier">ex</span>.<span class="ruby-identifier">backtrace</span>)
+151:       <span class="ruby-keyword kw">end</span>
+152:       <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Tasks: #{ex.chain}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">has_chain?</span>(<span class="ruby-identifier">ex</span>)
+153:       <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;(See full trace by running task with --trace)&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">trace</span>
+154:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="display-prerequisites-method" class="method-detail ">
+				<a name="method-i-display_prerequisites"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">display_prerequisites</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Display the tasks and prerequisites
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="display-prerequisites-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 277</span>
+277:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">display_prerequisites</span>
+278:       <span class="ruby-identifier">tasks</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+279:         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{name} #{t.name}&quot;</span>
+280:         <span class="ruby-identifier">t</span>.<span class="ruby-identifier">prerequisites</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">pre</span><span class="ruby-operator">|</span> <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;    #{pre}&quot;</span> }
+281:       <span class="ruby-keyword kw">end</span>
+282:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="display-tasks-and-comments-method" class="method-detail ">
+				<a name="method-i-display_tasks_and_comments"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">display_tasks_and_comments</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Display the tasks and comments.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="display-tasks-and-comments-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 205</span>
+205:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">display_tasks_and_comments</span>
+206:       <span class="ruby-identifier">displayable_tasks</span> = <span class="ruby-identifier">tasks</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+207:         <span class="ruby-identifier">t</span>.<span class="ruby-identifier">comment</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">show_task_pattern</span>
+208:       }
+209:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">show_tasks</span>
+210:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:tasks</span>
+211:         <span class="ruby-identifier">width</span> = <span class="ruby-identifier">displayable_tasks</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">name_with_args</span>.<span class="ruby-identifier">length</span> }.<span class="ruby-identifier">max</span> <span class="ruby-operator">||</span> <span class="ruby-value">10</span>
+212:         <span class="ruby-identifier">max_column</span> = <span class="ruby-identifier">truncate_output?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">terminal_width</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-value">7</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>
+213:         <span class="ruby-identifier">displayable_tasks</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+214:           <span class="ruby-identifier">printf</span> <span class="ruby-node">&quot;#{name} %-#{width}s  # %s\n&quot;</span>,
+215:             <span class="ruby-identifier">t</span>.<span class="ruby-identifier">name_with_args</span>, <span class="ruby-identifier">max_column</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">truncate</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">comment</span>, <span class="ruby-identifier">max_column</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">comment</span>
+216:         <span class="ruby-keyword kw">end</span>
+217:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:describe</span>
+218:         <span class="ruby-identifier">displayable_tasks</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+219:           <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{name} #{t.name_with_args}&quot;</span>
+220:           <span class="ruby-identifier">t</span>.<span class="ruby-identifier">full_comment</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;\n&quot;</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+221:             <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;    #{line}&quot;</span>
+222:           <span class="ruby-keyword kw">end</span>
+223:           <span class="ruby-identifier">puts</span>
+224:         <span class="ruby-keyword kw">end</span>
+225:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:lines</span>
+226:         <span class="ruby-identifier">displayable_tasks</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+227:           <span class="ruby-identifier">t</span>.<span class="ruby-identifier">locations</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">loc</span><span class="ruby-operator">|</span>
+228:             <span class="ruby-identifier">printf</span> <span class="ruby-node">&quot;#{name} %-30s %s\n&quot;</span>,<span class="ruby-identifier">t</span>.<span class="ruby-identifier">name_with_args</span>, <span class="ruby-identifier">loc</span>
+229:           <span class="ruby-keyword kw">end</span>
+230:         <span class="ruby-keyword kw">end</span>
+231:       <span class="ruby-keyword kw">else</span>
+232:         <span class="ruby-identifier">fail</span> <span class="ruby-node">&quot;Unknown show task mode: '#{options.show_tasks}'&quot;</span>
+233:       <span class="ruby-keyword kw">end</span>
+234:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="dynamic-width-method" class="method-detail ">
+				<a name="method-i-dynamic_width"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dynamic_width</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Calculate the dynamic width of the
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="dynamic-width-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 248</span>
+248:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dynamic_width</span>
+249:       <span class="ruby-ivar">@dynamic_width</span> <span class="ruby-operator">||=</span> (<span class="ruby-identifier">dynamic_width_stty</span>.<span class="ruby-identifier">nonzero?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">dynamic_width_tput</span>)
+250:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="dynamic-width-stty-method" class="method-detail ">
+				<a name="method-i-dynamic_width_stty"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dynamic_width_stty</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="dynamic-width-stty-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 252</span>
+252:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dynamic_width_stty</span>
+253:       <span class="ruby-value">%{stty size 2&gt;/dev/null}</span>.<span class="ruby-identifier">split</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_i</span>
+254:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="dynamic-width-tput-method" class="method-detail ">
+				<a name="method-i-dynamic_width_tput"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dynamic_width_tput</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="dynamic-width-tput-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 256</span>
+256:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dynamic_width_tput</span>
+257:       <span class="ruby-value">%{tput cols 2&gt;/dev/null}</span>.<span class="ruby-identifier">to_i</span>
+258:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="find-rakefile-location-method" class="method-detail ">
+				<a name="method-i-find_rakefile_location"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">find_rakefile_location</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="find-rakefile-location-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 460</span>
+460:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_rakefile_location</span>
+461:       <span class="ruby-identifier">here</span> = <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">pwd</span>
+462:       <span class="ruby-keyword kw">while</span> <span class="ruby-operator">!</span> (<span class="ruby-identifier">fn</span> = <span class="ruby-identifier">have_rakefile</span>)
+463:         <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">chdir</span>(<span class="ruby-value str">&quot;..&quot;</span>)
+464:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">pwd</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">here</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">nosearch</span>
+465:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+466:         <span class="ruby-keyword kw">end</span>
+467:         <span class="ruby-identifier">here</span> = <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">pwd</span>
+468:       <span class="ruby-keyword kw">end</span>
+469:       [<span class="ruby-identifier">fn</span>, <span class="ruby-identifier">here</span>]
+470:     <span class="ruby-keyword kw">ensure</span>
+471:       <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">chdir</span>(<span class="ruby-constant">Rake</span>.<span class="ruby-identifier">original_dir</span>)
+472:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="handle-options-method" class="method-detail ">
+				<a name="method-i-handle_options"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">handle_options</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Read and handle the command line options.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="handle-options-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 416</span>
+416:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">handle_options</span>
+417:       <span class="ruby-identifier">options</span>.<span class="ruby-identifier">rakelib</span> = [<span class="ruby-value str">'rakelib'</span>]
+418: 
+419:       <span class="ruby-constant">OptionParser</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">opts</span><span class="ruby-operator">|</span>
+420:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">banner</span> = <span class="ruby-value str">&quot;rake [-f rakefile] {options} targets...&quot;</span>
+421:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">separator</span> <span class="ruby-value str">&quot;&quot;</span>
+422:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">separator</span> <span class="ruby-value str">&quot;Options are ...&quot;</span>
+423: 
+424:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on_tail</span>(<span class="ruby-value str">&quot;-h&quot;</span>, <span class="ruby-value str">&quot;--help&quot;</span>, <span class="ruby-value str">&quot;-H&quot;</span>, <span class="ruby-value str">&quot;Display this help message.&quot;</span>) <span class="ruby-keyword kw">do</span>
+425:           <span class="ruby-identifier">puts</span> <span class="ruby-identifier">opts</span>
+426:           <span class="ruby-identifier">exit</span>
+427:         <span class="ruby-keyword kw">end</span>
+428: 
+429:         <span class="ruby-identifier">standard_rake_options</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">args</span><span class="ruby-operator">|</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(*<span class="ruby-identifier">args</span>) }
+430:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">environment</span>(<span class="ruby-value str">'RAKEOPT'</span>)
+431:       <span class="ruby-keyword kw">end</span>.<span class="ruby-identifier">parse!</span>
+432: 
+433:       <span class="ruby-comment cmt"># If class namespaces are requested, set the global options</span>
+434:       <span class="ruby-comment cmt"># according to the values in the options structure.</span>
+435:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">classic_namespace</span>
+436:         <span class="ruby-identifier">$show_tasks</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">show_tasks</span>
+437:         <span class="ruby-identifier">$show_prereqs</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">show_prereqs</span>
+438:         <span class="ruby-identifier">$trace</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">trace</span>
+439:         <span class="ruby-identifier">$dryrun</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">dryrun</span>
+440:         <span class="ruby-identifier">$silent</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">silent</span>
+441:       <span class="ruby-keyword kw">end</span>
+442:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="have-rakefile-method" class="method-detail ">
+				<a name="method-i-have_rakefile"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">have_rakefile</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+True if one of the files in RAKEFILES is in the current directory. If a
+match is found, it is copied into @rakefile.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="have-rakefile-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 176</span>
+176:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">have_rakefile</span>
+177:       <span class="ruby-ivar">@rakefiles</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fn</span><span class="ruby-operator">|</span>
+178:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">fn</span>)
+179:           <span class="ruby-identifier">others</span> = <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-identifier">fn</span>, <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">FNM_CASEFOLD</span>)
+180:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">others</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">others</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">fn</span>
+181:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">fn</span> <span class="ruby-operator">==</span> <span class="ruby-value str">''</span>
+182:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">fn</span>
+183:         <span class="ruby-keyword kw">end</span>
+184:       <span class="ruby-keyword kw">end</span>
+185:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+186:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="init-method" class="method-detail ">
+				<a name="method-i-init"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">init</span><span
+						class="method-args">(app_name='rake')</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initialize the command line parameters and app name.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="init-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rake/application.rb, line 67</span>
+67:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">init</span>(<span class="ruby-identifier">app_name</span>=<span class="ruby-value str">'rake'</span>)
+68:       <span class="ruby-identifier">standard_exception_handling</span> <span class="ruby-keyword kw">do</span>
+69:         <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">app_name</span>
+70:         <span class="ruby-identifier">handle_options</span>
+71:         <span class="ruby-identifier">collect_tasks</span>
+72:       <span class="ruby-keyword kw">end</span>
+73:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="invoke-task-method" class="method-detail ">
+				<a name="method-i-invoke_task"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">invoke_task</span><span
+						class="method-args">(task_string)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+private
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="invoke-task-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 109</span>
+109:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">invoke_task</span>(<span class="ruby-identifier">task_string</span>)
+110:       <span class="ruby-identifier">name</span>, <span class="ruby-identifier">args</span> = <span class="ruby-identifier">parse_task_string</span>(<span class="ruby-identifier">task_string</span>)
+111:       <span class="ruby-identifier">t</span> = <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">name</span>]
+112:       <span class="ruby-identifier">t</span>.<span class="ruby-identifier">invoke</span>(*<span class="ruby-identifier">args</span>)
+113:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="load-imports-method" class="method-detail ">
+				<a name="method-i-load_imports"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_imports</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Load the pending list of imported files.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="load-imports-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 555</span>
+555:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_imports</span>
+556:       <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">fn</span> = <span class="ruby-ivar">@pending_imports</span>.<span class="ruby-identifier">shift</span>
+557:         <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@imported</span>.<span class="ruby-identifier">member?</span>(<span class="ruby-identifier">fn</span>)
+558:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">fn_task</span> = <span class="ruby-identifier">lookup</span>(<span class="ruby-identifier">fn</span>)
+559:           <span class="ruby-identifier">fn_task</span>.<span class="ruby-identifier">invoke</span>
+560:         <span class="ruby-keyword kw">end</span>
+561:         <span class="ruby-identifier">ext</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">extname</span>(<span class="ruby-identifier">fn</span>)
+562:         <span class="ruby-identifier">loader</span> = <span class="ruby-ivar">@loaders</span>[<span class="ruby-identifier">ext</span>] <span class="ruby-operator">||</span> <span class="ruby-ivar">@default_loader</span>
+563:         <span class="ruby-identifier">loader</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">fn</span>)
+564:         <span class="ruby-ivar">@imported</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">fn</span>
+565:       <span class="ruby-keyword kw">end</span>
+566:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="load-rakefile-method" class="method-detail ">
+				<a name="method-i-load_rakefile"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_rakefile</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Find the rakefile and then load it and any pending imports.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="load-rakefile-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rake/application.rb, line 76</span>
+76:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_rakefile</span>
+77:       <span class="ruby-identifier">standard_exception_handling</span> <span class="ruby-keyword kw">do</span>
+78:         <span class="ruby-identifier">raw_load_rakefile</span>
+79:       <span class="ruby-keyword kw">end</span>
+80:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="options-method" class="method-detail ">
+				<a name="method-i-options"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">options</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+<a href="Application.html">Application</a> options from the command line
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="options-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 103</span>
+103:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">options</span>
+104:       <span class="ruby-ivar">@options</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">OpenStruct</span>.<span class="ruby-identifier">new</span>
+105:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-task-string-method" class="method-detail ">
+				<a name="method-i-parse_task_string"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_task_string</span><span
+						class="method-args">(string)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-task-string-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 115</span>
+115:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_task_string</span>(<span class="ruby-identifier">string</span>)
+116:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">string</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^([^\[]+)(\[(.*)\])$/</span>
+117:         <span class="ruby-identifier">name</span> = <span class="ruby-node">$1</span>
+118:         <span class="ruby-identifier">args</span> = <span class="ruby-node">$3</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\s*,\s*/</span>)
+119:       <span class="ruby-keyword kw">else</span>
+120:         <span class="ruby-identifier">name</span> = <span class="ruby-identifier">string</span>
+121:         <span class="ruby-identifier">args</span> = []
+122:       <span class="ruby-keyword kw">end</span>
+123:       [<span class="ruby-identifier">name</span>, <span class="ruby-identifier">args</span>]
+124:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="print-rakefile-directory-method" class="method-detail ">
+				<a name="method-i-print_rakefile_directory"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">print_rakefile_directory</span><span
+						class="method-args">(location)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="print-rakefile-directory-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 474</span>
+474:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">print_rakefile_directory</span>(<span class="ruby-identifier">location</span>)
+475:       <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;(in #{Dir.pwd})&quot;</span> <span class="ruby-keyword kw">unless</span>
+476:         <span class="ruby-identifier">options</span>.<span class="ruby-identifier">silent</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">original_dir</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">location</span>
+477:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rake-require-method" class="method-detail ">
+				<a name="method-i-rake_require"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rake_require</span><span
+						class="method-args">(file_name, paths=$LOAD_PATH, loaded=$")</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Similar to the regular Ruby <tt>require</tt> command, but will check for
+*.rake files in addition to *.rb files.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="rake-require-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 446</span>
+446:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rake_require</span>(<span class="ruby-identifier">file_name</span>, <span class="ruby-identifier">paths</span>=<span class="ruby-identifier">$LOAD_PATH</span>, <span class="ruby-identifier">loaded</span>=<span class="ruby-identifier">$&quot;</span>)
+447:       <span class="ruby-identifier">fn</span> = <span class="ruby-identifier">file_name</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;.rake&quot;</span>
+448:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">loaded</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">fn</span>)
+449:       <span class="ruby-identifier">paths</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+450:         <span class="ruby-identifier">full_path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">fn</span>)
+451:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">full_path</span>)
+452:           <span class="ruby-constant">Rake</span>.<span class="ruby-identifier">load_rakefile</span>(<span class="ruby-identifier">full_path</span>)
+453:           <span class="ruby-identifier">loaded</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">fn</span>
+454:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+455:         <span class="ruby-keyword kw">end</span>
+456:       <span class="ruby-keyword kw">end</span>
+457:       <span class="ruby-identifier">fail</span> <span class="ruby-constant">LoadError</span>, <span class="ruby-node">&quot;Can't find #{file_name}&quot;</span>
+458:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rakefile-location-method" class="method-detail ">
+				<a name="method-i-rakefile_location"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rakefile_location</span><span
+						class="method-args">(backtrace = caller)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="rakefile-location-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 580</span>
+580:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rakefile_location</span> <span class="ruby-identifier">backtrace</span> = <span class="ruby-identifier">caller</span>
+581:       <span class="ruby-identifier">backtrace</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">t</span>[<span class="ruby-regexp re">/([^:]+):/</span>,<span class="ruby-value">1</span>] }
+582: 
+583:       <span class="ruby-identifier">re</span> = <span class="ruby-node">/^#{@rakefile}$/</span>
+584:       <span class="ruby-identifier">re</span> = <span class="ruby-node">/#{re.source}/</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">windows?</span>
+585: 
+586:       <span class="ruby-identifier">backtrace</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">str</span><span class="ruby-operator">|</span> <span class="ruby-identifier">str</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">re</span> } <span class="ruby-operator">||</span> <span class="ruby-value str">''</span>
+587:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="run-method" class="method-detail ">
+				<a name="method-i-run"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">run</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Run the Rake application.  The run method performs the following three
+steps:
+</p>
+<ul>
+<li><p>
+Initialize the command line options (<tt>init</tt>).
+</p>
+</li>
+<li><p>
+Define the tasks (<tt><a
+href="Application.html#method-i-load_rakefile">load_rakefile</a></tt>).
+</p>
+</li>
+<li><p>
+Run the top level tasks (<tt>run_tasks</tt>).
+</p>
+</li>
+</ul>
+<p>
+If you wish to build a custom rake command, you should call <tt>init</tt>
+on your application.  Then define any tasks.  Finally, call <tt><a
+href="Application.html#method-i-top_level">top_level</a></tt> to run your
+top level tasks.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="run-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rake/application.rb, line 58</span>
+58:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run</span>
+59:       <span class="ruby-identifier">standard_exception_handling</span> <span class="ruby-keyword kw">do</span>
+60:         <span class="ruby-identifier">init</span>
+61:         <span class="ruby-identifier">load_rakefile</span>
+62:         <span class="ruby-identifier">top_level</span>
+63:       <span class="ruby-keyword kw">end</span>
+64:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="standard-exception-handling-method" class="method-detail ">
+				<a name="method-i-standard_exception_handling"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">standard_exception_handling</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Provide standard exception handling for the given block.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="standard-exception-handling-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 127</span>
+127:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">standard_exception_handling</span>
+128:       <span class="ruby-keyword kw">begin</span>
+129:         <span class="ruby-keyword kw">yield</span>
+130:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">SystemExit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ex</span>
+131:         <span class="ruby-comment cmt"># Exit silently with current status</span>
+132:         <span class="ruby-identifier">raise</span>
+133:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">OptionParser</span><span class="ruby-operator">::</span><span class="ruby-constant">InvalidOption</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ex</span>
+134:         <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">ex</span>.<span class="ruby-identifier">message</span>
+135:         <span class="ruby-identifier">exit</span>(<span class="ruby-keyword kw">false</span>)
+136:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ex</span>
+137:         <span class="ruby-comment cmt"># Exit with error message</span>
+138:         <span class="ruby-identifier">display_error_message</span>(<span class="ruby-identifier">ex</span>)
+139:         <span class="ruby-identifier">exit</span>(<span class="ruby-keyword kw">false</span>)
+140:       <span class="ruby-keyword kw">end</span>
+141:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="standard-rake-options-method" class="method-detail ">
+				<a name="method-i-standard_rake_options"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">standard_rake_options</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+A list of all the standard options used in rake, suitable for passing to
+OptionParser.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="standard-rake-options-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 286</span>
+286:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">standard_rake_options</span>
+287:       [
+288:         [<span class="ruby-value str">'--classic-namespace'</span>, <span class="ruby-value str">'-C'</span>, <span class="ruby-value str">&quot;Put Task and FileTask in the top level namespace&quot;</span>,
+289:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+290:             <span class="ruby-identifier">require</span> <span class="ruby-value str">'rake/classic_namespace'</span>
+291:             <span class="ruby-identifier">options</span>.<span class="ruby-identifier">classic_namespace</span> = <span class="ruby-keyword kw">true</span>
+292:           }
+293:         ],
+294:         [<span class="ruby-value str">'--describe'</span>, <span class="ruby-value str">'-D [PATTERN]'</span>, <span class="ruby-value str">&quot;Describe the tasks (matching optional PATTERN), then exit.&quot;</span>,
+295:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+296:             <span class="ruby-identifier">options</span>.<span class="ruby-identifier">show_tasks</span> = <span class="ruby-value">:describe</span>
+297:             <span class="ruby-identifier">options</span>.<span class="ruby-identifier">show_task_pattern</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">value</span> <span class="ruby-operator">||</span> <span class="ruby-value str">''</span>)
+298:             <span class="ruby-constant">TaskManager</span>.<span class="ruby-identifier">record_task_metadata</span> = <span class="ruby-keyword kw">true</span>
+299:           }
+300:         ],
+301:         [<span class="ruby-value str">'--dry-run'</span>, <span class="ruby-value str">'-n'</span>, <span class="ruby-value str">&quot;Do a dry run without executing actions.&quot;</span>,
+302:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+303:             <span class="ruby-constant">Rake</span>.<span class="ruby-identifier">verbose</span>(<span class="ruby-keyword kw">true</span>)
+304:             <span class="ruby-constant">Rake</span>.<span class="ruby-identifier">nowrite</span>(<span class="ruby-keyword kw">true</span>)
+305:             <span class="ruby-identifier">options</span>.<span class="ruby-identifier">dryrun</span> = <span class="ruby-keyword kw">true</span>
+306:             <span class="ruby-identifier">options</span>.<span class="ruby-identifier">trace</span> = <span class="ruby-keyword kw">true</span>
+307:           }
+308:         ],
+309:         [<span class="ruby-value str">'--execute'</span>,  <span class="ruby-value str">'-e CODE'</span>, <span class="ruby-value str">&quot;Execute some Ruby code and exit.&quot;</span>,
+310:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+311:             <span class="ruby-identifier">eval</span>(<span class="ruby-identifier">value</span>)
+312:             <span class="ruby-identifier">exit</span>
+313:           }
+314:         ],
+315:         [<span class="ruby-value str">'--execute-print'</span>,  <span class="ruby-value str">'-p CODE'</span>, <span class="ruby-value str">&quot;Execute some Ruby code, print the result, then exit.&quot;</span>,
+316:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+317:             <span class="ruby-identifier">puts</span> <span class="ruby-identifier">eval</span>(<span class="ruby-identifier">value</span>)
+318:             <span class="ruby-identifier">exit</span>
+319:           }
+320:         ],
+321:         [<span class="ruby-value str">'--execute-continue'</span>,  <span class="ruby-value str">'-E CODE'</span>,
+322:           <span class="ruby-value str">&quot;Execute some Ruby code, then continue with normal task processing.&quot;</span>,
+323:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">eval</span>(<span class="ruby-identifier">value</span>) }
+324:         ],
+325:         [<span class="ruby-value str">'--libdir'</span>, <span class="ruby-value str">'-I LIBDIR'</span>, <span class="ruby-value str">&quot;Include LIBDIR in the search path for required modules.&quot;</span>,
+326:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">$:</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">value</span>) }
+327:         ],
+328:         [<span class="ruby-value str">'--no-search'</span>, <span class="ruby-value str">'--nosearch'</span>, <span class="ruby-value str">'-N'</span>, <span class="ruby-value str">&quot;Do not search parent directories for the Rakefile.&quot;</span>,
+329:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">nosearch</span> = <span class="ruby-keyword kw">true</span> }
+330:         ],
+331:         [<span class="ruby-value str">'--prereqs'</span>, <span class="ruby-value str">'-P'</span>, <span class="ruby-value str">&quot;Display the tasks and dependencies, then exit.&quot;</span>,
+332:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">show_prereqs</span> = <span class="ruby-keyword kw">true</span> }
+333:         ],
+334:         [<span class="ruby-value str">'--quiet'</span>, <span class="ruby-value str">'-q'</span>, <span class="ruby-value str">&quot;Do not log messages to standard output.&quot;</span>,
+335:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-constant">Rake</span>.<span class="ruby-identifier">verbose</span>(<span class="ruby-keyword kw">false</span>) }
+336:         ],
+337:         [<span class="ruby-value str">'--rakefile'</span>, <span class="ruby-value str">'-f [FILE]'</span>, <span class="ruby-value str">&quot;Use FILE as the rakefile.&quot;</span>,
+338:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+339:             <span class="ruby-identifier">value</span> <span class="ruby-operator">||=</span> <span class="ruby-value str">''</span>
+340:             <span class="ruby-ivar">@rakefiles</span>.<span class="ruby-identifier">clear</span>
+341:             <span class="ruby-ivar">@rakefiles</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
+342:           }
+343:         ],
+344:         [<span class="ruby-value str">'--rakelibdir'</span>, <span class="ruby-value str">'--rakelib'</span>, <span class="ruby-value str">'-R RAKELIBDIR'</span>,
+345:           <span class="ruby-value str">&quot;Auto-import any .rake files in RAKELIBDIR. (default is 'rakelib')&quot;</span>,
+346:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">rakelib</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">':'</span>) }
+347:         ],
+348:         [<span class="ruby-value str">'--require'</span>, <span class="ruby-value str">'-r MODULE'</span>, <span class="ruby-value str">&quot;Require MODULE before executing rakefile.&quot;</span>,
+349:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+350:             <span class="ruby-keyword kw">begin</span>
+351:               <span class="ruby-identifier">require</span> <span class="ruby-identifier">value</span>
+352:             <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ex</span>
+353:               <span class="ruby-keyword kw">begin</span>
+354:                 <span class="ruby-identifier">rake_require</span> <span class="ruby-identifier">value</span>
+355:               <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span>
+356:                 <span class="ruby-identifier">raise</span> <span class="ruby-identifier">ex</span>
+357:               <span class="ruby-keyword kw">end</span>
+358:             <span class="ruby-keyword kw">end</span>
+359:           }
+360:         ],
+361:         [<span class="ruby-value str">'--rules'</span>, <span class="ruby-value str">&quot;Trace the rules resolution.&quot;</span>,
+362:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">trace_rules</span> = <span class="ruby-keyword kw">true</span> }
+363:         ],
+364:         [<span class="ruby-value str">'--silent'</span>, <span class="ruby-value str">'-s'</span>, <span class="ruby-value str">&quot;Like --quiet, but also suppresses the 'in directory' announcement.&quot;</span>,
+365:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+366:             <span class="ruby-constant">Rake</span>.<span class="ruby-identifier">verbose</span>(<span class="ruby-keyword kw">false</span>)
+367:             <span class="ruby-identifier">options</span>.<span class="ruby-identifier">silent</span> = <span class="ruby-keyword kw">true</span>
+368:           }
+369:         ],
+370:         [<span class="ruby-value str">'--system'</span>,  <span class="ruby-value str">'-g'</span>,
+371:           <span class="ruby-value str">&quot;Using system wide (global) rakefiles (usually '~/.rake/*.rake').&quot;</span>,
+372:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">load_system</span> = <span class="ruby-keyword kw">true</span> }
+373:         ],
+374:         [<span class="ruby-value str">'--no-system'</span>, <span class="ruby-value str">'--nosystem'</span>, <span class="ruby-value str">'-G'</span>,
+375:           <span class="ruby-value str">&quot;Use standard project Rakefile search paths, ignore system wide rakefiles.&quot;</span>,
+376:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">ignore_system</span> = <span class="ruby-keyword kw">true</span> }
+377:         ],
+378:         [<span class="ruby-value str">'--tasks'</span>, <span class="ruby-value str">'-T [PATTERN]'</span>, <span class="ruby-value str">&quot;Display the tasks (matching optional PATTERN) with descriptions, then exit.&quot;</span>,
+379:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+380:             <span class="ruby-identifier">options</span>.<span class="ruby-identifier">show_tasks</span> = <span class="ruby-value">:tasks</span>
+381:             <span class="ruby-identifier">options</span>.<span class="ruby-identifier">show_task_pattern</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">value</span> <span class="ruby-operator">||</span> <span class="ruby-value str">''</span>)
+382:             <span class="ruby-constant">Rake</span><span class="ruby-operator">::</span><span class="ruby-constant">TaskManager</span>.<span class="ruby-identifier">record_task_metadata</span> = <span class="ruby-keyword kw">true</span>
+383:           }
+384:         ],
+385:         [<span class="ruby-value str">'--trace'</span>, <span class="ruby-value str">'-t'</span>, <span class="ruby-value str">&quot;Turn on invoke/execute tracing, enable full backtrace.&quot;</span>,
+386:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+387:             <span class="ruby-identifier">options</span>.<span class="ruby-identifier">trace</span> = <span class="ruby-keyword kw">true</span>
+388:             <span class="ruby-constant">Rake</span>.<span class="ruby-identifier">verbose</span>(<span class="ruby-keyword kw">true</span>)
+389:           }
+390:         ],
+391:         [<span class="ruby-value str">'--verbose'</span>, <span class="ruby-value str">'-v'</span>, <span class="ruby-value str">&quot;Log message to standard output.&quot;</span>,
+392:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-constant">Rake</span>.<span class="ruby-identifier">verbose</span>(<span class="ruby-keyword kw">true</span>) }
+393:         ],
+394:         [<span class="ruby-value str">'--version'</span>, <span class="ruby-value str">'-V'</span>, <span class="ruby-value str">&quot;Display the program version.&quot;</span>,
+395:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+396:             <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;rake, version #{RAKEVERSION}&quot;</span>
+397:             <span class="ruby-identifier">exit</span>
+398:           }
+399:         ],
+400:         [<span class="ruby-value str">'--where'</span>, <span class="ruby-value str">'-W [PATTERN]'</span>, <span class="ruby-value str">&quot;Describe the tasks (matching optional PATTERN), then exit.&quot;</span>,
+401:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+402:             <span class="ruby-identifier">options</span>.<span class="ruby-identifier">show_tasks</span> = <span class="ruby-value">:lines</span>
+403:             <span class="ruby-identifier">options</span>.<span class="ruby-identifier">show_task_pattern</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">value</span> <span class="ruby-operator">||</span> <span class="ruby-value str">''</span>)
+404:             <span class="ruby-constant">Rake</span><span class="ruby-operator">::</span><span class="ruby-constant">TaskManager</span>.<span class="ruby-identifier">record_task_metadata</span> = <span class="ruby-keyword kw">true</span>
+405:           }
+406:         ],
+407:         [<span class="ruby-value str">'--no-deprecation-warnings'</span>, <span class="ruby-value str">'-X'</span>, <span class="ruby-value str">&quot;Disable the deprecation warnings.&quot;</span>,
+408:           <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+409:             <span class="ruby-identifier">options</span>.<span class="ruby-identifier">ignore_deprecate</span> = <span class="ruby-keyword kw">true</span>
+410:           }
+411:         ],
+412:       ]
+413:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="system-dir-method" class="method-detail ">
+				<a name="method-i-system_dir"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">system_dir</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The directory path containing the system wide rakefiles.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="system-dir-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 511</span>
+511:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">system_dir</span>
+512:       <span class="ruby-ivar">@system_dir</span> <span class="ruby-operator">||=</span>
+513:         <span class="ruby-keyword kw">begin</span>
+514:           <span class="ruby-keyword kw">if</span> <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'RAKE_SYSTEM'</span>]
+515:             <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'RAKE_SYSTEM'</span>]
+516:           <span class="ruby-keyword kw">else</span>
+517:             <span class="ruby-identifier">standard_system_dir</span>
+518:           <span class="ruby-keyword kw">end</span>
+519:         <span class="ruby-keyword kw">end</span>
+520:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="terminal-width-method" class="method-detail ">
+				<a name="method-i-terminal_width"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">terminal_width</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="terminal-width-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 236</span>
+236:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">terminal_width</span>
+237:       <span class="ruby-keyword kw">if</span> <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'RAKE_COLUMNS'</span>]
+238:         <span class="ruby-identifier">result</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'RAKE_COLUMNS'</span>].<span class="ruby-identifier">to_i</span>
+239:       <span class="ruby-keyword kw">else</span>
+240:         <span class="ruby-identifier">result</span> = <span class="ruby-identifier">unix?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">dynamic_width</span> <span class="ruby-operator">:</span> <span class="ruby-value">80</span>
+241:       <span class="ruby-keyword kw">end</span>
+242:       (<span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">10</span>) <span class="ruby-operator">?</span> <span class="ruby-value">80</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">result</span>
+243:     <span class="ruby-keyword kw">rescue</span>
+244:       <span class="ruby-value">80</span>
+245:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="top-level-method" class="method-detail ">
+				<a name="method-i-top_level"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">top_level</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Run the top level tasks of a Rake application.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="top-level-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rake/application.rb, line 83</span>
+83:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">top_level</span>
+84:       <span class="ruby-identifier">standard_exception_handling</span> <span class="ruby-keyword kw">do</span>
+85:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">show_tasks</span>
+86:           <span class="ruby-identifier">display_tasks_and_comments</span>
+87:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">show_prereqs</span>
+88:           <span class="ruby-identifier">display_prerequisites</span>
+89:         <span class="ruby-keyword kw">else</span>
+90:           <span class="ruby-identifier">top_level_tasks</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">task_name</span><span class="ruby-operator">|</span> <span class="ruby-identifier">invoke_task</span>(<span class="ruby-identifier">task_name</span>) }
+91:         <span class="ruby-keyword kw">end</span>
+92:       <span class="ruby-keyword kw">end</span>
+93:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="truncate-method" class="method-detail ">
+				<a name="method-i-truncate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">truncate</span><span
+						class="method-args">(string, width)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="truncate-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 268</span>
+268:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">truncate</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">width</span>)
+269:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">string</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">width</span>
+270:         <span class="ruby-identifier">string</span>
+271:       <span class="ruby-keyword kw">else</span>
+272:         ( <span class="ruby-identifier">string</span>[<span class="ruby-value">0</span>, <span class="ruby-identifier">width</span><span class="ruby-operator">-</span><span class="ruby-value">3</span>] <span class="ruby-operator">||</span> <span class="ruby-value str">&quot;&quot;</span> ) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;...&quot;</span>
+273:       <span class="ruby-keyword kw">end</span>
+274:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="truncate-output--method" class="method-detail ">
+				<a name="method-i-truncate_output%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">truncate_output?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+We will truncate output if we are outputting to a TTY or if we&#8217;ve
+been given an explicit column width to honor
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="truncate-output--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 200</span>
+200:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">truncate_output?</span>
+201:       <span class="ruby-identifier">tty_output?</span> <span class="ruby-operator">||</span> <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'RAKE_COLUMNS'</span>]
+202:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="tty-output--method" class="method-detail ">
+				<a name="method-i-tty_output%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">tty_output=</span><span
+						class="method-args">( tty_output_state )</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Override the detected TTY output state (mostly for testing)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="tty-output--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 194</span>
+194:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tty_output=</span>( <span class="ruby-identifier">tty_output_state</span> )
+195:       <span class="ruby-ivar">@tty_output</span> = <span class="ruby-identifier">tty_output_state</span>
+196:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="tty-output--method" class="method-detail ">
+				<a name="method-i-tty_output%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">tty_output?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+True if we are outputting to TTY, false otherwise
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="tty-output--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 189</span>
+189:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tty_output?</span>
+190:       <span class="ruby-ivar">@tty_output</span>
+191:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="unix--method" class="method-detail ">
+				<a name="method-i-unix%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">unix?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="unix--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 260</span>
+260:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">unix?</span>
+261:       <span class="ruby-constant">RbConfig</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-value str">'host_os'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/(aix|darwin|linux|(net|free|open)bsd|cygwin|solaris|irix|hpux)/</span>
+262:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="windows--method" class="method-detail ">
+				<a name="method-i-windows%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">windows?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="windows--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 264</span>
+264:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">windows?</span>
+265:       <span class="ruby-constant">Win32</span>.<span class="ruby-identifier">windows?</span>
+266:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="glob-method" class="method-detail ">
+				<a name="method-i-glob"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">glob</span><span
+						class="method-args">(path, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="glob-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 505</span>
+505:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">glob</span>(<span class="ruby-identifier">path</span>, &amp;<span class="ruby-identifier">block</span>)
+506:       <span class="ruby-constant">Dir</span>[<span class="ruby-identifier">path</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;\\&quot;</span>, <span class="ruby-value str">'/'</span>)].<span class="ruby-identifier">each</span>(&amp;<span class="ruby-identifier">block</span>)
+507:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="has-chain--method" class="method-detail ">
+				<a name="method-i-has_chain%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">has_chain?</span><span
+						class="method-args">(exception)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Does the exception have a task invocation chain?
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="has-chain--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rake/application.rb, line 169</span>
+169:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_chain?</span>(<span class="ruby-identifier">exception</span>)
+170:       <span class="ruby-identifier">exception</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:chain</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">exception</span>.<span class="ruby-identifier">chain</span>
+171:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"pattern:EFI""Addressable::Template#pattern;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"4@return [String] The Template object's pattern.;T:
+@file0FI" lib/addressable/template.rb;T

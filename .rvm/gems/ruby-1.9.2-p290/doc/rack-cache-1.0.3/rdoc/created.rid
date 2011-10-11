@@ -1,0 +1,17 @@
+Fri, 07 Oct 2011 03:08:43 -0400
+lib/rack/cache/metastore.rb	Fri, 07 Oct 2011 03:05:46 -0400
+lib/rack/cache/request.rb	Fri, 07 Oct 2011 03:05:46 -0400
+lib/rack/cache/entitystore.rb	Fri, 07 Oct 2011 03:05:46 -0400
+lib/rack/cache/response.rb	Fri, 07 Oct 2011 03:05:46 -0400
+lib/rack/cache/cachecontrol.rb	Fri, 07 Oct 2011 03:05:46 -0400
+lib/rack/cache/context.rb	Fri, 07 Oct 2011 03:05:46 -0400
+lib/rack/cache/options.rb	Fri, 07 Oct 2011 03:05:46 -0400
+lib/rack/cache/storage.rb	Fri, 07 Oct 2011 03:05:46 -0400
+lib/rack/cache/key.rb	Fri, 07 Oct 2011 03:05:46 -0400
+lib/rack/cache/appengine.rb	Fri, 07 Oct 2011 03:05:46 -0400
+lib/rack/cache.rb	Fri, 07 Oct 2011 03:05:46 -0400
+lib/rack-cache.rb	Fri, 07 Oct 2011 03:05:46 -0400
+README	Fri, 07 Oct 2011 03:05:46 -0400
+COPYING	Fri, 07 Oct 2011 03:05:46 -0400
+TODO	Fri, 07 Oct 2011 03:05:46 -0400
+CHANGES	Fri, 07 Oct 2011 03:05:46 -0400

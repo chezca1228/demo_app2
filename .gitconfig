@@ -1,0 +1,10 @@
+[user]
+	name = chezca1228
+	email = lo_r_can@yahoo.com
+[alias]
+	co = checkout
+[core]
+	editor = gvim -f
+[github]
+	user = chezca1228
+	token = 8e99ff7977ddcda16031786fc7b99f12

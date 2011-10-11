@@ -1,0 +1,13 @@
+{:ancestors{I"ExecJS::Error:EF[I"StandardError;FI"ExecJS::RuntimeError;F[I"ExecJS::Error;FI"ExecJS::ProgramError;F[@I"ExecJS::RuntimeUnavailable;F[I"ExecJS::RuntimeError;FI"ExecJS::JohnsonRuntime;F[I"Object;FI"$ExecJS::JohnsonRuntime::Context;F[I"Object;FI"ExecJS::MustangRuntime;F[I"Object;FI"$ExecJS::MustangRuntime::Context;F[I"Object;FI"ExecJS::RubyRhinoRuntime;F[I"Object;FI"&ExecJS::RubyRhinoRuntime::Context;F[I"Object;FI"ExecJS::RubyRacerRuntime;F[I"Object;FI"&ExecJS::RubyRacerRuntime::Context;F[I"Object;FI"ExecJS::ExternalRuntime;F[I"Object;FI"%ExecJS::ExternalRuntime::Context;F[I"Object;F:attributes{I"ExecJS::ExternalRuntime;F[I"attr_reader name;FI"ExecJS;F[I"attr_reader runtime;F:class_methods{@[I"new;F@[I"new;F@![I"new;F@'[I"new;FI"ExecJS::ExternalRuntime;F[I"new;F@-[I"new;FI"ExecJS;F[I"compile;FI"	eval;FI"	exec;FI"	root;FI"runtime;FI"runtime=;FI"runtimes;FI"windows?;FI"ExecJS::Runtimes;F[
+I"autodetect;FI"best_available;FI"from_environment;FI"
+names;FI"runtimes;F:encodingIu:Encoding
+UTF-8;F:instance_methods{I"ExecJS::JohnsonRuntime;F[
+I"available?;FI"compile;FI"	eval;FI"	exec;FI"	name;F@[	I"	call;FI"	eval;FI"	exec;FI"
+unbox;FI"ExecJS::MustangRuntime;F[
+I"available?;FI"compile;FI"	eval;FI"	exec;FI"	name;F@[	I"	call;FI"	eval;FI"	exec;FI"
+unbox;F@[
+I"available?;FI"compile;FI"	eval;FI"	exec;FI"	name;F@![	I"	call;FI"	eval;FI"	exec;FI"
+unbox;F@$[
+I"available?;FI"compile;FI"	eval;FI"	exec;FI"	name;F@'[	I"	call;FI"	eval;FI"	exec;FI"
+unbox;FI"ExecJS::ExternalRuntime;F[I"available?;FI"compile;FI"	eval;FI"	exec;FI"exec_runtime;FI"locate_binary;FI"	name;FI"runner_source;FI"sh;FI"shell_escape;FI"
+which;F@-[I"	call;FI"compile;FI"compile_to_tempfile;FI"encode_unicode_codepoints;FI"	eval;FI"	exec;FI"extract_result;F:modules[I"ExecJS;F@I"ExecJS::ExternalRuntime;FI"%ExecJS::ExternalRuntime::Context;FI"ExecJS::JohnsonRuntime;FI"$ExecJS::JohnsonRuntime::Context;FI"ExecJS::MustangRuntime;FI"$ExecJS::MustangRuntime::Context;FI"ExecJS::ProgramError;FI"ExecJS::RubyRacerRuntime;FI"&ExecJS::RubyRacerRuntime::Context;FI"ExecJS::RubyRhinoRuntime;FI"&ExecJS::RubyRhinoRuntime::Context;F@I"ExecJS::RuntimeUnavailable;FI"ExecJS::Runtimes;F

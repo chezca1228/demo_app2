@@ -1,0 +1,14 @@
+Fri, 07 Oct 2011 04:38:09 -0400
+lib/restclient.rb	Fri, 07 Oct 2011 04:37:54 -0400
+lib/restclient/payload.rb	Fri, 07 Oct 2011 04:37:54 -0400
+lib/restclient/request.rb	Fri, 07 Oct 2011 04:37:54 -0400
+lib/restclient/response.rb	Fri, 07 Oct 2011 04:37:54 -0400
+lib/restclient/resource.rb	Fri, 07 Oct 2011 04:37:54 -0400
+lib/restclient/exceptions.rb	Fri, 07 Oct 2011 04:37:54 -0400
+lib/restclient/net_http_ext.rb	Fri, 07 Oct 2011 04:37:54 -0400
+lib/restclient/abstract_response.rb	Fri, 07 Oct 2011 04:37:54 -0400
+lib/restclient/raw_response.rb	Fri, 07 Oct 2011 04:37:54 -0400
+lib/rest_client.rb	Fri, 07 Oct 2011 04:37:54 -0400
+lib/rest-client.rb	Fri, 07 Oct 2011 04:37:54 -0400
+README.rdoc	Fri, 07 Oct 2011 04:37:54 -0400
+history.md	Fri, 07 Oct 2011 04:37:54 -0400

@@ -1,0 +1,6 @@
+[2011-10-07 02:22:11] autoreconf
+Can't exec "libtoolize": No such file or directory at /usr/bin/autoreconf line 189.
+Use of uninitialized value in pattern match (m//) at /usr/bin/autoreconf line 189.
+configure.in:389: warning: underquoted definition of RUBY_TRY_CFLAGS
+configure.in:389:   run info '(automake)Extending aclocal'
+configure.in:389:   or see http://sources.redhat.com/automake/automake.html#Extending-aclocal

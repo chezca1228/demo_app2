@@ -1,0 +1,20 @@
+Fri, 07 Oct 2011 04:38:15 -0400
+lib/launchy.rb	Fri, 07 Oct 2011 04:37:56 -0400
+lib/launchy/application.rb	Fri, 07 Oct 2011 04:37:56 -0400
+lib/launchy/os_family.rb	Fri, 07 Oct 2011 04:37:56 -0400
+lib/launchy/cli.rb	Fri, 07 Oct 2011 04:37:56 -0400
+lib/launchy/applications/browser.rb	Fri, 07 Oct 2011 04:37:56 -0400
+lib/launchy/version.rb	Fri, 07 Oct 2011 04:37:56 -0400
+lib/launchy/error.rb	Fri, 07 Oct 2011 04:37:56 -0400
+lib/launchy/deprecated.rb	Fri, 07 Oct 2011 04:37:56 -0400
+lib/launchy/descendant_tracker.rb	Fri, 07 Oct 2011 04:37:56 -0400
+lib/launchy/detect.rb	Fri, 07 Oct 2011 04:37:56 -0400
+lib/launchy/detect/host_os_family.rb	Fri, 07 Oct 2011 04:37:56 -0400
+lib/launchy/detect/nix_desktop_environment.rb	Fri, 07 Oct 2011 04:37:56 -0400
+lib/launchy/detect/runner.rb	Fri, 07 Oct 2011 04:37:56 -0400
+lib/launchy/detect/ruby_engine.rb	Fri, 07 Oct 2011 04:37:56 -0400
+lib/launchy/detect/host_os.rb	Fri, 07 Oct 2011 04:37:56 -0400
+HISTORY	Fri, 07 Oct 2011 04:37:56 -0400
+LICENSE	Fri, 07 Oct 2011 04:37:56 -0400
+README	Fri, 07 Oct 2011 04:37:56 -0400
+bin/launchy	Fri, 07 Oct 2011 04:37:56 -0400

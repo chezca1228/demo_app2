@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+ENV['GEM_HOME']=ENV['GEM_HOME'] || '/home/ralbaredo/.rvm/gems/ruby-1.9.2-head'
+ENV['GEM_PATH']=ENV['GEM_PATH'] || '/home/ralbaredo/.rvm/gems/ruby-1.9.2-head:/home/ralbaredo/.rvm/gems/ruby-1.9.2-head@global'
+ENV['PATH']='/home/ralbaredo/.rvm/gems/ruby-1.9.2-head/bin:/home/ralbaredo/.rvm/gems/ruby-1.9.2-head@global/bin:/home/ralbaredo/.rvm/rubies/ruby-1.9.2-head/bin:' + ENV['PATH']
+
+
+require 'rdoc/ri/driver'
+
+RDoc::RI::Driver.run ARGV

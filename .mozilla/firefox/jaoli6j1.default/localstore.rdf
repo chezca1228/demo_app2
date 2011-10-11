@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="chrome://mozapps/content/downloads/downloads.xul#downloadManager"
+                   width="485"
+                   height="300"
+                   sizemode="normal"
+                   screenX="642"
+                   screenY="111" />
+  <RDF:Description RDF:about="chrome://mozapps/content/extensions/extensions.xul#search-view"
+                   last-selected="urn:mozilla:addons:search:https://addons.mozilla.org/firefox/downloads/file/132573/booly_shopping_best_prices_coupons_offers-2.250-fx.xpi?src=api" />
+  <RDF:Description RDF:about="chrome://mozapps/content/plugins/pluginInstallerWizard.xul#plugin-installer-wizard"
+                   width="601"
+                   height="400"
+                   sizemode="normal"
+                   screenX="539"
+                   screenY="325" />
+  <RDF:Description RDF:about="chrome://mozapps/content/extensions/extensions.xul#themes-view"
+                   last-selected="urn:mozilla:item:{972ce4c6-7e08-4474-a285-3208198ce6fd}" />
+  <RDF:Description RDF:about="chrome://browser/content/browser.xul#sidebar-box"
+                   sidebarcommand=""
+                   width=""
+                   src="" />
+  <RDF:Description RDF:about="chrome://mozapps/content/extensions/extensions.xul#extensions-view"
+                   last-selected="urn:mozilla:item:ubufox@ubuntu.com" />
+  <RDF:Description RDF:about="chrome://mozapps/content/extensions/extensions.xul#extensionsManager"
+                   width="520"
+                   height="380"
+                   sizemode="normal"
+                   screenX="245"
+                   screenY="367" />
+  <RDF:Description RDF:about="chrome://mozapps/content/extensions/extensions.xul#locales-view"
+                   last-selected="urn:mozilla:item:langpack-en-GB@firefox-3.6.ubuntu.com" />
+  <RDF:Description RDF:about="chrome://mozapps/content/extensions/extensions.xul#plugins-view"
+                   selected="true"
+                   last-selected="urn:mozilla:item:libtotem-gmp-plugin.so" />
+  <RDF:Description RDF:about="chrome://mozapps/content/downloads/unknownContentType.xul#unknownContentType"
+                   screenX="613"
+                   screenY="318" />
+  <RDF:Description RDF:about="chrome://mozapps/content/plugins/pluginInstallerWizard.xul">
+    <NC:persist RDF:resource="chrome://mozapps/content/plugins/pluginInstallerWizard.xul#plugin-installer-wizard"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://browser/content/browser.xul#sidebar-title"
+                   value="" />
+  <RDF:Description RDF:about="chrome://mozapps/content/downloads/unknownContentType.xul">
+    <NC:persist RDF:resource="chrome://mozapps/content/downloads/unknownContentType.xul#unknownContentType"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://browser/content/browser.xul">
+    <NC:persist RDF:resource="chrome://browser/content/browser.xul#main-window"/>
+    <NC:persist RDF:resource="chrome://browser/content/browser.xul#sidebar-box"/>
+    <NC:persist RDF:resource="chrome://browser/content/browser.xul#sidebar-title"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://browser/content/browser.xul#main-window"
+                   width="820"
+                   height="964"
+                   screenY="24"
+                   screenX="858"
+                   sizemode="maximized" />
+  <RDF:Description RDF:about="chrome://mozapps/content/extensions/extensions.xul">
+    <NC:persist RDF:resource="chrome://mozapps/content/extensions/extensions.xul#search-view"/>
+    <NC:persist RDF:resource="chrome://mozapps/content/extensions/extensions.xul#viewGroup"/>
+    <NC:persist RDF:resource="chrome://mozapps/content/extensions/extensions.xul#extensionsManager"/>
+    <NC:persist RDF:resource="chrome://mozapps/content/extensions/extensions.xul#extensions-view"/>
+    <NC:persist RDF:resource="chrome://mozapps/content/extensions/extensions.xul#themes-view"/>
+    <NC:persist RDF:resource="chrome://mozapps/content/extensions/extensions.xul#locales-view"/>
+    <NC:persist RDF:resource="chrome://mozapps/content/extensions/extensions.xul#plugins-view"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://mozapps/content/downloads/downloads.xul">
+    <NC:persist RDF:resource="chrome://mozapps/content/downloads/downloads.xul#downloadManager"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://mozapps/content/extensions/extensions.xul#viewGroup"
+                   last-selected="plugins" />
+</RDF:RDF>

@@ -1,0 +1,16 @@
+Fri, 07 Oct 2011 03:08:07 -0400
+lib/blankslate.rb	Fri, 07 Oct 2011 03:05:32 -0400
+lib/builder.rb	Fri, 07 Oct 2011 03:05:32 -0400
+lib/builder/blankslate.rb	Fri, 07 Oct 2011 03:05:32 -0400
+lib/builder/xmlevents.rb	Fri, 07 Oct 2011 03:05:32 -0400
+lib/builder/xmlmarkup.rb	Fri, 07 Oct 2011 03:05:32 -0400
+lib/builder/xmlbase.rb	Fri, 07 Oct 2011 03:05:32 -0400
+lib/builder/xchar.rb	Fri, 07 Oct 2011 03:05:32 -0400
+CHANGES	Fri, 07 Oct 2011 03:05:32 -0400
+Rakefile	Fri, 07 Oct 2011 03:05:32 -0400
+README	Fri, 07 Oct 2011 03:05:32 -0400
+README.rdoc	Fri, 07 Oct 2011 03:05:32 -0400
+TAGS	Fri, 07 Oct 2011 03:05:32 -0400
+doc/releases/builder-1.2.4.rdoc	Fri, 07 Oct 2011 03:05:32 -0400
+doc/releases/builder-2.0.0.rdoc	Fri, 07 Oct 2011 03:05:32 -0400
+doc/releases/builder-2.1.1.rdoc	Fri, 07 Oct 2011 03:05:32 -0400

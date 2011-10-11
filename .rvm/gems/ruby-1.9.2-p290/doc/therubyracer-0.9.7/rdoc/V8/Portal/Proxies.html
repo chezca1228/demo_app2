@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: V8::Portal::Proxies</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/v8/portal/proxies_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/v8/portal/proxies.rb">lib/v8/portal/proxies.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="Proxies/ClearJSProxy.html">V8::Portal::Proxies::ClearJSProxy</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Proxies/ClearRubyProxy.html">V8::Portal::Proxies::ClearRubyProxy</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-empty-3F">#empty?</a></li>
+          
+          <li><a href="#method-i-js2rb">#js2rb</a></li>
+          
+          <li><a href="#method-i-js_empty-3F">#js_empty?</a></li>
+          
+          <li><a href="#method-i-js_object_2_rb_proxy">#js_object_2_rb_proxy</a></li>
+          
+          <li><a href="#method-i-js_proxy_2_rb_object">#js_proxy_2_rb_object</a></li>
+          
+          <li><a href="#method-i-rb2js">#rb2js</a></li>
+          
+          <li><a href="#method-i-rb_empty-3F">#rb_empty?</a></li>
+          
+          <li><a href="#method-i-rb_object_2_js_proxy">#rb_object_2_js_proxy</a></li>
+          
+          <li><a href="#method-i-rb_proxy_2_js_object">#rb_proxy_2_js_object</a></li>
+          
+          <li><a href="#method-i-register_javascript_proxy">#register_javascript_proxy</a></li>
+          
+          <li><a href="#method-i-register_ruby_proxy">#register_ruby_proxy</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../ext/v8/Makefile.html">Makefile</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../V8.html">V8</a></li>
+        
+          <li><a href="../../V8/Access.html">V8::Access</a></li>
+        
+          <li><a href="../../V8/Array.html">V8::Array</a></li>
+        
+          <li><a href="../../V8/C.html">V8::C</a></li>
+        
+          <li><a href="../../V8/C/Context.html">V8::C::Context</a></li>
+        
+          <li><a href="../../V8/CLI.html">V8::CLI</a></li>
+        
+          <li><a href="../../V8/CLI/Shell.html">V8::CLI::Shell</a></li>
+        
+          <li><a href="../../V8/Context.html">V8::Context</a></li>
+        
+          <li><a href="../../V8/Function.html">V8::Function</a></li>
+        
+          <li><a href="../../V8/JSError.html">V8::JSError</a></li>
+        
+          <li><a href="../../V8/JSError/Boundary.html">V8::JSError::Boundary</a></li>
+        
+          <li><a href="../../V8/JSError.html">V8::JavasriptError</a></li>
+        
+          <li><a href="../../V8/Object.html">V8::Object</a></li>
+        
+          <li><a href="../../V8/Portal.html">V8::Portal</a></li>
+        
+          <li><a href="../../V8/Portal/Caller.html">V8::Portal::Caller</a></li>
+        
+          <li><a href="../../V8/Portal/ConstructorAdapter.html">V8::Portal::ConstructorAdapter</a></li>
+        
+          <li><a href="../../V8/Portal/FunctionAdapter.html">V8::Portal::FunctionAdapter</a></li>
+        
+          <li><a href="../../V8/Portal/FunctionAdapter/BindAndCall.html">V8::Portal::FunctionAdapter::BindAndCall</a></li>
+        
+          <li><a href="../../V8/Portal/FunctionAdapter/Call.html">V8::Portal::FunctionAdapter::Call</a></li>
+        
+          <li><a href="../../V8/Portal/Interceptors.html">V8::Portal::Interceptors</a></li>
+        
+          <li><a href="../../V8/Portal/Interceptors/IndexedPropertyDeleter.html">V8::Portal::Interceptors::IndexedPropertyDeleter</a></li>
+        
+          <li><a href="../../V8/Portal/Interceptors/IndexedPropertyEnumerator.html">V8::Portal::Interceptors::IndexedPropertyEnumerator</a></li>
+        
+          <li><a href="../../V8/Portal/Interceptors/IndexedPropertyGetter.html">V8::Portal::Interceptors::IndexedPropertyGetter</a></li>
+        
+          <li><a href="../../V8/Portal/Interceptors/IndexedPropertyQuery.html">V8::Portal::Interceptors::IndexedPropertyQuery</a></li>
+        
+          <li><a href="../../V8/Portal/Interceptors/IndexedPropertySetter.html">V8::Portal::Interceptors::IndexedPropertySetter</a></li>
+        
+          <li><a href="../../V8/Portal/Interceptors/Interceptor.html">V8::Portal::Interceptors::Interceptor</a></li>
+        
+          <li><a href="../../V8/Portal/Interceptors/NamedPropertyDeleter.html">V8::Portal::Interceptors::NamedPropertyDeleter</a></li>
+        
+          <li><a href="../../V8/Portal/Interceptors/NamedPropertyEnumerator.html">V8::Portal::Interceptors::NamedPropertyEnumerator</a></li>
+        
+          <li><a href="../../V8/Portal/Interceptors/NamedPropertyGetter.html">V8::Portal::Interceptors::NamedPropertyGetter</a></li>
+        
+          <li><a href="../../V8/Portal/Interceptors/NamedPropertyQuery.html">V8::Portal::Interceptors::NamedPropertyQuery</a></li>
+        
+          <li><a href="../../V8/Portal/Interceptors/NamedPropertySetter.html">V8::Portal::Interceptors::NamedPropertySetter</a></li>
+        
+          <li><a href="../../V8/Portal/Interceptors/PropertyAttributes.html">V8::Portal::Interceptors::PropertyAttributes</a></li>
+        
+          <li><a href="../../V8/Portal/Proxies.html">V8::Portal::Proxies</a></li>
+        
+          <li><a href="../../V8/Portal/Proxies/ClearJSProxy.html">V8::Portal::Proxies::ClearJSProxy</a></li>
+        
+          <li><a href="../../V8/Portal/Proxies/ClearRubyProxy.html">V8::Portal::Proxies::ClearRubyProxy</a></li>
+        
+          <li><a href="../../V8/Portal/Templates.html">V8::Portal::Templates</a></li>
+        
+          <li><a href="../../V8/Portal/Templates/Release.html">V8::Portal::Templates::Release</a></li>
+        
+          <li><a href="../../V8/StackFrame.html">V8::StackFrame</a></li>
+        
+          <li><a href="../../V8/StackTrace.html">V8::StackTrace</a></li>
+        
+          <li><a href="../../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">V8::Portal::Proxies</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="DoubleProxyError">DoubleProxyError</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal/proxies.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+  <span class="ruby-ivar">@js_proxies_rb2js</span> = {}
+  <span class="ruby-ivar">@js_proxies_js2rb</span> = {}
+  <span class="ruby-ivar">@rb_proxies_rb2js</span> = {}
+  <span class="ruby-ivar">@rb_proxies_js2rb</span> = {}
+  <span class="ruby-ivar">@clear_js_proxy</span> = <span class="ruby-constant">ClearJSProxy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@js_proxies_rb2js</span>, <span class="ruby-ivar">@js_proxies_js2rb</span>)
+  <span class="ruby-ivar">@clear_rb_proxy</span> = <span class="ruby-constant">ClearRubyProxy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@rb_proxies_rb2js</span>, <span class="ruby-ivar">@rb_proxies_js2rb</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="empty-3F-method" class="method-detail ">
+          <a name="method-i-empty-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">empty?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="empty-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal/proxies.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">js_empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">rb_empty?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- empty-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- empty-3F-method -->
+
+      
+        <div id="js2rb-method" class="method-detail ">
+          <a name="method-i-js2rb"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">js2rb</span><span
+              class="method-args">(js)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="js2rb-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal/proxies.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">js2rb</span>(<span class="ruby-identifier">js</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">rb</span> = <span class="ruby-identifier">js_proxy_2_rb_object</span>(<span class="ruby-identifier">js</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">rb</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">rb</span> = <span class="ruby-identifier">js_object_2_rb_proxy</span>(<span class="ruby-identifier">js</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">rb</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">proxy</span> = <span class="ruby-identifier">block_given?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">js</span>) <span class="ruby-operator">:</span> <span class="ruby-constant">Object</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">register_ruby_proxy</span> <span class="ruby-identifier">proxy</span>, <span class="ruby-value">:for</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">js</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">proxy</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">js</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">js</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">Handle</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">proxy</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- js2rb-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- js2rb-method -->
+
+      
+        <div id="js_empty-3F-method" class="method-detail ">
+          <a name="method-i-js_empty-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">js_empty?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="js_empty-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal/proxies.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">js_empty?</span>
+  <span class="ruby-ivar">@js_proxies_rb2js</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@js_proxies_js2rb</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- js_empty-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- js_empty-3F-method -->
+
+      
+        <div id="js_object_2_rb_proxy-method" class="method-detail ">
+          <a name="method-i-js_object_2_rb_proxy"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">js_object_2_rb_proxy</span><span
+              class="method-args">(object)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Looks up the Ruby proxy for an object that is natively JavaScript @param
+[V8::C::Handle] object the JavaScript whose proxy we want @return [Object]
+the Ruby proxy for `object`</p>
+            
+
+            
+            <div class="method-source-code" id="js_object_2_rb_proxy-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal/proxies.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">js_object_2_rb_proxy</span>(<span class="ruby-identifier">object</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">id</span> = <span class="ruby-ivar">@rb_proxies_js2rb</span>[<span class="ruby-identifier">object</span>]
+    <span class="ruby-constant">ObjectSpace</span>.<span class="ruby-identifier">_id2ref</span> <span class="ruby-identifier">id</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">RangeError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-comment"># sometimes, the Ruby proxy has been garbage collected, but</span>
+  <span class="ruby-comment"># the finalizer which runs has not been called. That's OK</span>
+  <span class="ruby-comment"># we just clear out the entry, and return nil so that a new</span>
+  <span class="ruby-comment"># proxy can be created.</span>
+  <span class="ruby-ivar">@clear_rb_proxy</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- js_object_2_rb_proxy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- js_object_2_rb_proxy-method -->
+
+      
+        <div id="js_proxy_2_rb_object-method" class="method-detail ">
+          <a name="method-i-js_proxy_2_rb_object"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">js_proxy_2_rb_object</span><span
+              class="method-args">(proxy)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Look up a natively Ruby object given its JavaScript proxy @param
+[V8::C::Handle] proxy the JavaScript proxy @return [Object] the Ruby object
+represented by `proxy`</p>
+            
+
+            
+            <div class="method-source-code" id="js_proxy_2_rb_object-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal/proxies.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">js_proxy_2_rb_object</span>(<span class="ruby-identifier">proxy</span>)
+  <span class="ruby-ivar">@js_proxies_js2rb</span>[<span class="ruby-identifier">proxy</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- js_proxy_2_rb_object-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- js_proxy_2_rb_object-method -->
+
+      
+        <div id="rb2js-method" class="method-detail ">
+          <a name="method-i-rb2js"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rb2js</span><span
+              class="method-args">(rb)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="rb2js-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal/proxies.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rb2js</span>(<span class="ruby-identifier">rb</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">js</span> = <span class="ruby-identifier">rb_proxy_2_js_object</span>(<span class="ruby-identifier">rb</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">js</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">js</span> = <span class="ruby-identifier">rb_object_2_js_proxy</span>(<span class="ruby-identifier">rb</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">js</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">proxy</span> = <span class="ruby-identifier">block_given?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">rb</span>) <span class="ruby-operator">:</span> <span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">Object</span><span class="ruby-operator">::</span><span class="ruby-constant">New</span>()
+    <span class="ruby-identifier">register_javascript_proxy</span> <span class="ruby-identifier">proxy</span>, <span class="ruby-value">:for</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">rb</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@js_proxies_rb2js</span>[<span class="ruby-identifier">rb</span>]
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">proxy</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rb2js-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rb2js-method -->
+
+      
+        <div id="rb_empty-3F-method" class="method-detail ">
+          <a name="method-i-rb_empty-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rb_empty?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="rb_empty-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal/proxies.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rb_empty?</span>
+  <span class="ruby-ivar">@rb_proxies_rb2js</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@rb_proxies_js2rb</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rb_empty-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rb_empty-3F-method -->
+
+      
+        <div id="rb_object_2_js_proxy-method" class="method-detail ">
+          <a name="method-i-rb_object_2_js_proxy"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rb_object_2_js_proxy</span><span
+              class="method-args">(object)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Lookup the JavaScript proxy for a natively Ruby object @param [Object]
+object the Ruby object @return [V8::C::Handle] the JavaScript proxy
+representing `object`</p>
+            
+
+            
+            <div class="method-source-code" id="rb_object_2_js_proxy-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal/proxies.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rb_object_2_js_proxy</span>(<span class="ruby-identifier">object</span>)
+  <span class="ruby-ivar">@js_proxies_rb2js</span>[<span class="ruby-identifier">object</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rb_object_2_js_proxy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rb_object_2_js_proxy-method -->
+
+      
+        <div id="rb_proxy_2_js_object-method" class="method-detail ">
+          <a name="method-i-rb_proxy_2_js_object"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rb_proxy_2_js_object</span><span
+              class="method-args">(proxy)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Looks up a native JavaScript object by its Ruby proxy @param [Object] proxy
+the Ruby proxy @return [V8::C::Handle] the native JavaScript object</p>
+            
+
+            
+            <div class="method-source-code" id="rb_proxy_2_js_object-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal/proxies.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rb_proxy_2_js_object</span>(<span class="ruby-identifier">proxy</span>)
+  <span class="ruby-ivar">@rb_proxies_rb2js</span>[<span class="ruby-identifier">proxy</span>.<span class="ruby-identifier">object_id</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rb_proxy_2_js_object-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rb_proxy_2_js_object-method -->
+
+      
+        <div id="register_javascript_proxy-method" class="method-detail ">
+          <a name="method-i-register_javascript_proxy"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">register_javascript_proxy</span><span
+              class="method-args">(proxy, options = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="register_javascript_proxy-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal/proxies.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">register_javascript_proxy</span>(<span class="ruby-identifier">proxy</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">target</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:for</span>] <span class="ruby-keyword">or</span> <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;must specify the object that you're proxying with the :for =&gt; param&quot;</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;javascript proxy must be a V8::C::Handle, not #{proxy.class}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">proxy</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">Handle</span>)
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">DoubleProxyError</span>, <span class="ruby-string">&quot;target already has a registered proxy&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@js_proxies_rb2js</span>[<span class="ruby-identifier">target</span>]
+
+  <span class="ruby-ivar">@js_proxies_js2rb</span>[<span class="ruby-identifier">proxy</span>] = <span class="ruby-identifier">target</span>
+  <span class="ruby-ivar">@js_proxies_rb2js</span>[<span class="ruby-identifier">target</span>] = <span class="ruby-identifier">proxy</span>
+  <span class="ruby-identifier">proxy</span>.<span class="ruby-constant">MakeWeak</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@clear_js_proxy</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- register_javascript_proxy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- register_javascript_proxy-method -->
+
+      
+        <div id="register_ruby_proxy-method" class="method-detail ">
+          <a name="method-i-register_ruby_proxy"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">register_ruby_proxy</span><span
+              class="method-args">(proxy, options = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="register_ruby_proxy-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal/proxies.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">register_ruby_proxy</span>(<span class="ruby-identifier">proxy</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">target</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:for</span>] <span class="ruby-keyword">or</span> <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;must specify the object that you're proxying with the :for =&gt; param&quot;</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;'#{proxy.inspect}' is not a Handle to an actual V8 object&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">Handle</span>)
+  <span class="ruby-ivar">@rb_proxies_rb2js</span>[<span class="ruby-identifier">proxy</span>.<span class="ruby-identifier">object_id</span>] = <span class="ruby-identifier">target</span>
+  <span class="ruby-ivar">@rb_proxies_js2rb</span>[<span class="ruby-identifier">target</span>] = <span class="ruby-identifier">proxy</span>.<span class="ruby-identifier">object_id</span>
+  <span class="ruby-constant">ObjectSpace</span>.<span class="ruby-identifier">define_finalizer</span>(<span class="ruby-identifier">proxy</span>, <span class="ruby-ivar">@clear_rb_proxy</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- register_ruby_proxy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- register_ruby_proxy-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

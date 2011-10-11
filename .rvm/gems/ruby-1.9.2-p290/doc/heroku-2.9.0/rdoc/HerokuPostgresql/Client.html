@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: HerokuPostgresql::Client</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/heroku-postgresql/client_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/heroku-postgresql/client.rb">lib/heroku-postgresql/client.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-checking_client_version">#checking_client_version</a></li>
+          
+          <li><a href="#method-i-display_heroku_warning">#display_heroku_warning</a></li>
+          
+          <li><a href="#method-i-get_database">#get_database</a></li>
+          
+          <li><a href="#method-i-get_wait_status">#get_wait_status</a></li>
+          
+          <li><a href="#method-i-http_get">#http_get</a></li>
+          
+          <li><a href="#method-i-http_post">#http_post</a></li>
+          
+          <li><a href="#method-i-http_put">#http_put</a></li>
+          
+          <li><a href="#method-i-ingress">#ingress</a></li>
+          
+          <li><a href="#method-i-reset">#reset</a></li>
+          
+          <li><a href="#method-i-sha">#sha</a></li>
+          
+          <li><a href="#method-i-sym_keys">#sym_keys</a></li>
+          
+          <li><a href="#method-i-unfollow">#unfollow</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="../Heroku/Helpers.html">Heroku::Helpers</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Heroku.html">Heroku</a></li>
+        
+          <li><a href="../Heroku/Auth.html">Heroku::Auth</a></li>
+        
+          <li><a href="../Heroku/BuiltinPlugin.html">Heroku::BuiltinPlugin</a></li>
+        
+          <li><a href="../Heroku/Client.html">Heroku::Client</a></li>
+        
+          <li><a href="../Heroku/Client/AppCrashed.html">Heroku::Client::AppCrashed</a></li>
+        
+          <li><a href="../Heroku/Client/ConsoleSession.html">Heroku::Client::ConsoleSession</a></li>
+        
+          <li><a href="../Heroku/Client/JSON.html">Heroku::Client::JSON</a></li>
+        
+          <li><a href="../Heroku/Client/Rendezvous.html">Heroku::Client::Rendezvous</a></li>
+        
+          <li><a href="../Heroku/Client/Service.html">Heroku::Client::Service</a></li>
+        
+          <li><a href="../Heroku/Command.html">Heroku::Command</a></li>
+        
+          <li><a href="../Heroku/Command/Account.html">Heroku::Command::Account</a></li>
+        
+          <li><a href="../Heroku/Command/Addons.html">Heroku::Command::Addons</a></li>
+        
+          <li><a href="../Heroku/Command/Apps.html">Heroku::Command::Apps</a></li>
+        
+          <li><a href="../Heroku/Command/Auth.html">Heroku::Command::Auth</a></li>
+        
+          <li><a href="../Heroku/Command/Base.html">Heroku::Command::Base</a></li>
+        
+          <li><a href="../Heroku/Command/BaseWithApp.html">Heroku::Command::BaseWithApp</a></li>
+        
+          <li><a href="../Heroku/Command/CommandFailed.html">Heroku::Command::CommandFailed</a></li>
+        
+          <li><a href="../Heroku/Command/Config.html">Heroku::Command::Config</a></li>
+        
+          <li><a href="../Heroku/Command/Db.html">Heroku::Command::Db</a></li>
+        
+          <li><a href="../Heroku/Command/Domains.html">Heroku::Command::Domains</a></li>
+        
+          <li><a href="../Heroku/Command/Help.html">Heroku::Command::Help</a></li>
+        
+          <li><a href="../Heroku/Command/InvalidCommand.html">Heroku::Command::InvalidCommand</a></li>
+        
+          <li><a href="../Heroku/Command/Keys.html">Heroku::Command::Keys</a></li>
+        
+          <li><a href="../Heroku/Command/Logs.html">Heroku::Command::Logs</a></li>
+        
+          <li><a href="../Heroku/Command/Maintenance.html">Heroku::Command::Maintenance</a></li>
+        
+          <li><a href="../Heroku/Command/Pg.html">Heroku::Command::Pg</a></li>
+        
+          <li><a href="../Heroku/Command/Pgbackups.html">Heroku::Command::Pgbackups</a></li>
+        
+          <li><a href="../Heroku/Command/Pgbackups/Display.html">Heroku::Command::Pgbackups::Display</a></li>
+        
+          <li><a href="../Heroku/Command/Pgbackups/Display/DataSource.html">Heroku::Command::Pgbackups::Display::DataSource</a></li>
+        
+          <li><a href="../Heroku/Command/Plugins.html">Heroku::Command::Plugins</a></li>
+        
+          <li><a href="../Heroku/Command/Ps.html">Heroku::Command::Ps</a></li>
+        
+          <li><a href="../Heroku/Command/Releases.html">Heroku::Command::Releases</a></li>
+        
+          <li><a href="../Heroku/Command/Run.html">Heroku::Command::Run</a></li>
+        
+          <li><a href="../Heroku/Command/Sharing.html">Heroku::Command::Sharing</a></li>
+        
+          <li><a href="../Heroku/Command/Ssl.html">Heroku::Command::Ssl</a></li>
+        
+          <li><a href="../Heroku/Command/Stack.html">Heroku::Command::Stack</a></li>
+        
+          <li><a href="../Heroku/Command/Update.html">Heroku::Command::Update</a></li>
+        
+          <li><a href="../Heroku/Command/Version.html">Heroku::Command::Version</a></li>
+        
+          <li><a href="../Heroku/Deprecated.html">Heroku::Deprecated</a></li>
+        
+          <li><a href="../Heroku/Deprecated/Help.html">Heroku::Deprecated::Help</a></li>
+        
+          <li><a href="../Heroku/Deprecated/Help/ClassMethods.html">Heroku::Deprecated::Help::ClassMethods</a></li>
+        
+          <li><a href="../Heroku/Deprecated/Help/HelpGroup.html">Heroku::Deprecated::Help::HelpGroup</a></li>
+        
+          <li><a href="../Heroku/Distribution.html">Heroku::Distribution</a></li>
+        
+          <li><a href="../Heroku/Helpers.html">Heroku::Helpers</a></li>
+        
+          <li><a href="../Heroku/OkJson.html">Heroku::OkJson</a></li>
+        
+          <li><a href="../Heroku/OkJson/ParserError.html">Heroku::OkJson::ParserError</a></li>
+        
+          <li><a href="../Heroku/Plugin.html">Heroku::Plugin</a></li>
+        
+          <li><a href="../Heroku/Updater.html">Heroku::Updater</a></li>
+        
+          <li><a href="../HerokuPostgresql.html">HerokuPostgresql</a></li>
+        
+          <li><a href="../HerokuPostgresql/Client.html">HerokuPostgresql::Client</a></li>
+        
+          <li><a href="../PGBackups.html">PGBackups</a></li>
+        
+          <li><a href="../PGBackups/Client.html">PGBackups::Client</a></li>
+        
+          <li><a href="../PGResolver.html">PGResolver</a></li>
+        
+          <li><a href="../PGResolver/Resolver.html">PGResolver::Resolver</a></li>
+        
+          <li><a href="../PgUtils.html">PgUtils</a></li>
+        
+          <li><a href="../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">HerokuPostgresql::Client</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="Version">Version</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(url)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku-postgresql/client.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-ivar">@heroku_postgresql_host</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;HEROKU_POSTGRESQL_HOST&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;https://shogun.heroku.com&quot;</span>
+  <span class="ruby-ivar">@database_sha</span> = <span class="ruby-identifier">sha</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-ivar">@heroku_postgresql_resource</span> = <span class="ruby-constant">RestClient</span><span class="ruby-operator">::</span><span class="ruby-constant">Resource</span>.<span class="ruby-identifier">new</span>(
+    <span class="ruby-node">&quot;#{@heroku_postgresql_host}/client/v10/databases&quot;</span>,
+    <span class="ruby-value">:headers</span> =<span class="ruby-operator">&gt;</span>  { <span class="ruby-value">:x_heroku_gem_version</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Heroku</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">version</span> }
+    )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="get_database-method" class="method-detail ">
+          <a name="method-i-get_database"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_database</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_database-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku-postgresql/client.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_database</span>
+  <span class="ruby-identifier">http_get</span> <span class="ruby-ivar">@database_sha</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_database-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_database-method -->
+
+      
+        <div id="get_wait_status-method" class="method-detail ">
+          <a name="method-i-get_wait_status"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_wait_status</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_wait_status-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku-postgresql/client.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_wait_status</span>
+  <span class="ruby-identifier">http_get</span> <span class="ruby-node">&quot;#{@database_sha}/wait_status&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_wait_status-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_wait_status-method -->
+
+      
+        <div id="ingress-method" class="method-detail ">
+          <a name="method-i-ingress"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ingress</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ingress-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku-postgresql/client.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ingress</span>
+  <span class="ruby-identifier">http_put</span> <span class="ruby-node">&quot;#{@database_sha}/ingress&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ingress-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ingress-method -->
+
+      
+        <div id="reset-method" class="method-detail ">
+          <a name="method-i-reset"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reset</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="reset-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku-postgresql/client.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reset</span>
+  <span class="ruby-identifier">http_put</span> <span class="ruby-node">&quot;#{@database_sha}/reset&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- reset-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reset-method -->
+
+      
+        <div id="unfollow-method" class="method-detail ">
+          <a name="method-i-unfollow"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unfollow</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unfollow-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku-postgresql/client.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unfollow</span>
+  <span class="ruby-identifier">http_put</span> <span class="ruby-node">&quot;#{@database_sha}/unfollow&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unfollow-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unfollow-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+      <div id="protected-instance-method-details" class="method-section section">
+        <h3 class="section-header">Protected Instance Methods</h3>
+
+      
+        <div id="checking_client_version-method" class="method-detail ">
+          <a name="method-i-checking_client_version"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">checking_client_version</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="checking_client_version-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku-postgresql/client.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">checking_client_version</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-keyword">yield</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">RestClient</span><span class="ruby-operator">::</span><span class="ruby-constant">BadRequest</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">message</span> = <span class="ruby-identifier">json_decode</span>(<span class="ruby-identifier">e</span>.<span class="ruby-identifier">response</span>.<span class="ruby-identifier">to_s</span>)[<span class="ruby-string">&quot;upgrade_message&quot;</span>]
+      <span class="ruby-identifier">abort</span>(<span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- checking_client_version-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- checking_client_version-method -->
+
+      
+        <div id="display_heroku_warning-method" class="method-detail ">
+          <a name="method-i-display_heroku_warning"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">display_heroku_warning</span><span
+              class="method-args">(response)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="display_heroku_warning-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku-postgresql/client.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">display_heroku_warning</span>(<span class="ruby-identifier">response</span>)
+  <span class="ruby-identifier">warning</span> = <span class="ruby-identifier">response</span>.<span class="ruby-identifier">headers</span>[<span class="ruby-value">:x_heroku_warning</span>]
+  <span class="ruby-identifier">display</span> <span class="ruby-identifier">warning</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">warning</span>
+  <span class="ruby-identifier">response</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- display_heroku_warning-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- display_heroku_warning-method -->
+
+      
+        <div id="http_get-method" class="method-detail ">
+          <a name="method-i-http_get"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">http_get</span><span
+              class="method-args">(path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="http_get-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku-postgresql/client.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">http_get</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">checking_client_version</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">retry_on_exception</span>(<span class="ruby-constant">RestClient</span><span class="ruby-operator">::</span><span class="ruby-constant">Exception</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">response</span> = <span class="ruby-ivar">@heroku_postgresql_resource</span>[<span class="ruby-identifier">path</span>].<span class="ruby-identifier">get</span>
+      <span class="ruby-identifier">display_heroku_warning</span> <span class="ruby-identifier">response</span>
+      <span class="ruby-identifier">sym_keys</span>(<span class="ruby-identifier">json_decode</span>(<span class="ruby-identifier">response</span>.<span class="ruby-identifier">to_s</span>))
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- http_get-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- http_get-method -->
+
+      
+        <div id="http_post-method" class="method-detail ">
+          <a name="method-i-http_post"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">http_post</span><span
+              class="method-args">(path, payload = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="http_post-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku-postgresql/client.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">http_post</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">payload</span> = {})
+  <span class="ruby-identifier">checking_client_version</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">response</span> = <span class="ruby-ivar">@heroku_postgresql_resource</span>[<span class="ruby-identifier">path</span>].<span class="ruby-identifier">post</span>(<span class="ruby-identifier">json_encode</span>(<span class="ruby-identifier">payload</span>))
+    <span class="ruby-identifier">display_heroku_warning</span> <span class="ruby-identifier">response</span>
+    <span class="ruby-identifier">sym_keys</span>(<span class="ruby-identifier">json_decode</span>(<span class="ruby-identifier">response</span>.<span class="ruby-identifier">to_s</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- http_post-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- http_post-method -->
+
+      
+        <div id="http_put-method" class="method-detail ">
+          <a name="method-i-http_put"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">http_put</span><span
+              class="method-args">(path, payload = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="http_put-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku-postgresql/client.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">http_put</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">payload</span> = {})
+  <span class="ruby-identifier">checking_client_version</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">response</span> = <span class="ruby-ivar">@heroku_postgresql_resource</span>[<span class="ruby-identifier">path</span>].<span class="ruby-identifier">put</span>(<span class="ruby-identifier">json_encode</span>(<span class="ruby-identifier">payload</span>))
+    <span class="ruby-identifier">display_heroku_warning</span> <span class="ruby-identifier">response</span>
+    <span class="ruby-identifier">sym_keys</span>(<span class="ruby-identifier">json_decode</span>(<span class="ruby-identifier">response</span>.<span class="ruby-identifier">to_s</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- http_put-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- http_put-method -->
+
+      
+        <div id="sha-method" class="method-detail ">
+          <a name="method-i-sha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">sha</span><span
+              class="method-args">(url)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="sha-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku-postgresql/client.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sha</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHA2</span>.<span class="ruby-identifier">hexdigest</span> <span class="ruby-identifier">url</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- sha-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- sha-method -->
+
+      
+        <div id="sym_keys-method" class="method-detail ">
+          <a name="method-i-sym_keys"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">sym_keys</span><span
+              class="method-args">(c)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="sym_keys-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku-postgresql/client.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sym_keys</span>(<span class="ruby-identifier">c</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+    <span class="ruby-identifier">c</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sym_keys</span>(<span class="ruby-identifier">e</span>) }
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">c</span>.<span class="ruby-identifier">inject</span>({}) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">h</span>, (<span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span>)<span class="ruby-operator">|</span>
+      <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_sym</span>] = <span class="ruby-identifier">v</span>; <span class="ruby-identifier">h</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- sym_keys-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- sym_keys-method -->
+
+      
+      </div><!-- protected-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

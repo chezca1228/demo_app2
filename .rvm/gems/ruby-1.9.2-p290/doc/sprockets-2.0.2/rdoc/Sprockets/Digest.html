@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Sprockets::Digest</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/sprockets/digest_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/sprockets/digest.rb">lib/sprockets/digest.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-digest">#digest</a></li>
+          
+          <li><a href="#method-i-digest_class">#digest_class</a></li>
+          
+          <li><a href="#method-i-digest_class-3D">#digest_class=</a></li>
+          
+          <li><a href="#method-i-version">#version</a></li>
+          
+          <li><a href="#method-i-version-3D">#version=</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Sprockets.html">Sprockets</a></li>
+        
+          <li><a href="../Sprockets/ArgumentError.html">Sprockets::ArgumentError</a></li>
+        
+          <li><a href="../Sprockets/Asset.html">Sprockets::Asset</a></li>
+        
+          <li><a href="../Sprockets/AssetAttributes.html">Sprockets::AssetAttributes</a></li>
+        
+          <li><a href="../Sprockets/Base.html">Sprockets::Base</a></li>
+        
+          <li><a href="../Sprockets/BundledAsset.html">Sprockets::BundledAsset</a></li>
+        
+          <li><a href="../Sprockets/Cache.html">Sprockets::Cache</a></li>
+        
+          <li><a href="../Sprockets/Cache/FileStore.html">Sprockets::Cache::FileStore</a></li>
+        
+          <li><a href="../Sprockets/Caching.html">Sprockets::Caching</a></li>
+        
+          <li><a href="../Sprockets/CharsetNormalizer.html">Sprockets::CharsetNormalizer</a></li>
+        
+          <li><a href="../Sprockets/CircularDependencyError.html">Sprockets::CircularDependencyError</a></li>
+        
+          <li><a href="../Sprockets/ContentTypeMismatch.html">Sprockets::ContentTypeMismatch</a></li>
+        
+          <li><a href="../Sprockets/Context.html">Sprockets::Context</a></li>
+        
+          <li><a href="../Sprockets/Digest.html">Sprockets::Digest</a></li>
+        
+          <li><a href="../Sprockets/DirectiveProcessor.html">Sprockets::DirectiveProcessor</a></li>
+        
+          <li><a href="../Sprockets/EcoTemplate.html">Sprockets::EcoTemplate</a></li>
+        
+          <li><a href="../Sprockets/EjsTemplate.html">Sprockets::EjsTemplate</a></li>
+        
+          <li><a href="../Sprockets/EncodingError.html">Sprockets::EncodingError</a></li>
+        
+          <li><a href="../Sprockets/EngineError.html">Sprockets::EngineError</a></li>
+        
+          <li><a href="../Sprockets/Engines.html">Sprockets::Engines</a></li>
+        
+          <li><a href="../Sprockets/Environment.html">Sprockets::Environment</a></li>
+        
+          <li><a href="../Sprockets/Error.html">Sprockets::Error</a></li>
+        
+          <li><a href="../Sprockets/FileNotFound.html">Sprockets::FileNotFound</a></li>
+        
+          <li><a href="../Sprockets/FileOutsidePaths.html">Sprockets::FileOutsidePaths</a></li>
+        
+          <li><a href="../Sprockets/Index.html">Sprockets::Index</a></li>
+        
+          <li><a href="../Sprockets/JstProcessor.html">Sprockets::JstProcessor</a></li>
+        
+          <li><a href="../Sprockets/Mime.html">Sprockets::Mime</a></li>
+        
+          <li><a href="../Sprockets/Processing.html">Sprockets::Processing</a></li>
+        
+          <li><a href="../Sprockets/Processor.html">Sprockets::Processor</a></li>
+        
+          <li><a href="../Sprockets/SafetyColons.html">Sprockets::SafetyColons</a></li>
+        
+          <li><a href="../Sprockets/Server.html">Sprockets::Server</a></li>
+        
+          <li><a href="../Sprockets/StaticAsset.html">Sprockets::StaticAsset</a></li>
+        
+          <li><a href="../Sprockets/Trail.html">Sprockets::Trail</a></li>
+        
+          <li><a href="../Sprockets/Utils.html">Sprockets::Utils</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Sprockets::Digest</h1>
+
+    <div id="description" class="description">
+      
+<p>`Digest` is an internal mixin whose public methods are exposed on the
+`Environment` and `Index` classes.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="digest-method" class="method-detail ">
+          <a name="method-i-digest"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">digest</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns a `Digest` instance for the `Environment`.</p>
+
+<p>This value serves two purposes. If two `Environment`s have the same digest
+value they can be treated as equal. This is more useful for comparing
+environment states between processes rather than in the same. Two equal
+`Environment`s can share the same cached assets.</p>
+
+<p>The value also provides a seed digest for all `Asset` digests. Any change
+in the environment digest will affect all of its assets.</p>
+            
+
+            
+            <div class="method-source-code" id="digest-source">
+<pre>
+<span class="ruby-comment"># File lib/sprockets/digest.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">digest</span>
+  <span class="ruby-comment"># Compute the initial digest using the implementation class. The</span>
+  <span class="ruby-comment"># Sprockets release version and custom environment version are</span>
+  <span class="ruby-comment"># mixed in. So any new releases will affect all your assets.</span>
+  <span class="ruby-ivar">@digest</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">digest_class</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">update</span>(<span class="ruby-constant">VERSION</span>).<span class="ruby-identifier">update</span>(<span class="ruby-identifier">version</span>.<span class="ruby-identifier">to_s</span>)
+
+  <span class="ruby-comment"># Returned a dupped copy so the caller can safely mutate it with `.update`</span>
+  <span class="ruby-ivar">@digest</span>.<span class="ruby-identifier">dup</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- digest-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- digest-method -->
+
+      
+        <div id="digest_class-method" class="method-detail ">
+          <a name="method-i-digest_class"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">digest_class</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns a `Digest` implementation class.</p>
+
+<p>Defaults to `Digest::MD5`.</p>
+            
+
+            
+            <div class="method-source-code" id="digest_class-source">
+<pre>
+<span class="ruby-comment"># File lib/sprockets/digest.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">digest_class</span>
+  <span class="ruby-ivar">@digest_class</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- digest_class-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- digest_class-method -->
+
+      
+        <div id="digest_class-3D-method" class="method-detail ">
+          <a name="method-i-digest_class-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">digest_class=</span><span
+              class="method-args">(klass)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Assign a `Digest` implementation class. This maybe any Ruby `Digest::`
+implementation such as `Digest::MD5` or `Digest::SHA1`.</p>
+
+<pre>environment.digest_class = Digest::SHA1</pre>
+            
+
+            
+            <div class="method-source-code" id="digest_class-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/sprockets/digest.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">digest_class=</span>(<span class="ruby-identifier">klass</span>)
+  <span class="ruby-identifier">expire_index!</span>
+  <span class="ruby-ivar">@digest_class</span> = <span class="ruby-identifier">klass</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- digest_class-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- digest_class-3D-method -->
+
+      
+        <div id="version-method" class="method-detail ">
+          <a name="method-i-version"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">version</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The `Environment#version` is a custom value used for manually expiring all
+asset caches.</p>
+
+<p><a href="../Sprockets.html">Sprockets</a> is able to track most file and
+directory changes and will take care of expiring the cache for you.
+However, its impossible to know when any custom helpers change that you mix
+into the `Context`.</p>
+
+<p>It would be wise to increment this value anytime you make a configuration
+change to the `Environment` object.</p>
+            
+
+            
+            <div class="method-source-code" id="version-source">
+<pre>
+<span class="ruby-comment"># File lib/sprockets/digest.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">version</span>
+  <span class="ruby-ivar">@version</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- version-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- version-method -->
+
+      
+        <div id="version-3D-method" class="method-detail ">
+          <a name="method-i-version-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">version=</span><span
+              class="method-args">(version)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Assign an environment version.</p>
+
+<pre>environment.version = '2.0'</pre>
+            
+
+            
+            <div class="method-source-code" id="version-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/sprockets/digest.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">version=</span>(<span class="ruby-identifier">version</span>)
+  <span class="ruby-identifier">expire_index!</span>
+  <span class="ruby-ivar">@version</span> = <span class="ruby-identifier">version</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- version-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- version-3D-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

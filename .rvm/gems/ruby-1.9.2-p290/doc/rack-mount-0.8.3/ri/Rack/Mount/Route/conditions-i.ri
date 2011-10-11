@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"conditions:EFI""Rack::Mount::Route#conditions;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"GA hash of conditions to match against. Conditions may be expressed;TI",as strings or regexps to match against.;T:
+@file0FI"lib/rack/mount/route.rb;T

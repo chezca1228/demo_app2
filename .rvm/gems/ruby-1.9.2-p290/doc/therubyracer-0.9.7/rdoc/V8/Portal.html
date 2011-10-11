@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: V8::Portal</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/v8/portal_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/v8/portal.rb">lib/v8/portal.rb</a></li>
+          
+            <li><a href="../lib/v8/portal/templates_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/v8/portal/templates.rb">lib/v8/portal/templates.rb</a></li>
+          
+            <li><a href="../lib/v8/portal/proxies_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/v8/portal/proxies.rb">lib/v8/portal/proxies.rb</a></li>
+          
+            <li><a href="../lib/v8/portal/constructor_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/v8/portal/constructor.rb">lib/v8/portal/constructor.rb</a></li>
+          
+            <li><a href="../lib/v8/portal/caller_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/v8/portal/caller.rb">lib/v8/portal/caller.rb</a></li>
+          
+            <li><a href="../lib/v8/portal/interceptors_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/v8/portal/interceptors.rb">lib/v8/portal/interceptors.rb</a></li>
+          
+            <li><a href="../lib/v8/portal/function_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/v8/portal/function.rb">lib/v8/portal/function.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="Portal/Caller.html">V8::Portal::Caller</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Portal/ConstructorAdapter.html">V8::Portal::ConstructorAdapter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Portal/FunctionAdapter.html">V8::Portal::FunctionAdapter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Portal/Interceptors.html">V8::Portal::Interceptors</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Portal/Proxies.html">V8::Portal::Proxies</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Portal/Templates.html">V8::Portal::Templates</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-lock">#lock</a></li>
+          
+          <li><a href="#method-i-open">#open</a></li>
+          
+          <li><a href="#method-i-rb">#rb</a></li>
+          
+          <li><a href="#method-i-v8">#v8</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../ext/v8/Makefile.html">Makefile</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../V8.html">V8</a></li>
+        
+          <li><a href="../V8/Access.html">V8::Access</a></li>
+        
+          <li><a href="../V8/Array.html">V8::Array</a></li>
+        
+          <li><a href="../V8/C.html">V8::C</a></li>
+        
+          <li><a href="../V8/C/Context.html">V8::C::Context</a></li>
+        
+          <li><a href="../V8/CLI.html">V8::CLI</a></li>
+        
+          <li><a href="../V8/CLI/Shell.html">V8::CLI::Shell</a></li>
+        
+          <li><a href="../V8/Context.html">V8::Context</a></li>
+        
+          <li><a href="../V8/Function.html">V8::Function</a></li>
+        
+          <li><a href="../V8/JSError.html">V8::JSError</a></li>
+        
+          <li><a href="../V8/JSError/Boundary.html">V8::JSError::Boundary</a></li>
+        
+          <li><a href="../V8/JSError.html">V8::JavasriptError</a></li>
+        
+          <li><a href="../V8/Object.html">V8::Object</a></li>
+        
+          <li><a href="../V8/Portal.html">V8::Portal</a></li>
+        
+          <li><a href="../V8/Portal/Caller.html">V8::Portal::Caller</a></li>
+        
+          <li><a href="../V8/Portal/ConstructorAdapter.html">V8::Portal::ConstructorAdapter</a></li>
+        
+          <li><a href="../V8/Portal/FunctionAdapter.html">V8::Portal::FunctionAdapter</a></li>
+        
+          <li><a href="../V8/Portal/FunctionAdapter/BindAndCall.html">V8::Portal::FunctionAdapter::BindAndCall</a></li>
+        
+          <li><a href="../V8/Portal/FunctionAdapter/Call.html">V8::Portal::FunctionAdapter::Call</a></li>
+        
+          <li><a href="../V8/Portal/Interceptors.html">V8::Portal::Interceptors</a></li>
+        
+          <li><a href="../V8/Portal/Interceptors/IndexedPropertyDeleter.html">V8::Portal::Interceptors::IndexedPropertyDeleter</a></li>
+        
+          <li><a href="../V8/Portal/Interceptors/IndexedPropertyEnumerator.html">V8::Portal::Interceptors::IndexedPropertyEnumerator</a></li>
+        
+          <li><a href="../V8/Portal/Interceptors/IndexedPropertyGetter.html">V8::Portal::Interceptors::IndexedPropertyGetter</a></li>
+        
+          <li><a href="../V8/Portal/Interceptors/IndexedPropertyQuery.html">V8::Portal::Interceptors::IndexedPropertyQuery</a></li>
+        
+          <li><a href="../V8/Portal/Interceptors/IndexedPropertySetter.html">V8::Portal::Interceptors::IndexedPropertySetter</a></li>
+        
+          <li><a href="../V8/Portal/Interceptors/Interceptor.html">V8::Portal::Interceptors::Interceptor</a></li>
+        
+          <li><a href="../V8/Portal/Interceptors/NamedPropertyDeleter.html">V8::Portal::Interceptors::NamedPropertyDeleter</a></li>
+        
+          <li><a href="../V8/Portal/Interceptors/NamedPropertyEnumerator.html">V8::Portal::Interceptors::NamedPropertyEnumerator</a></li>
+        
+          <li><a href="../V8/Portal/Interceptors/NamedPropertyGetter.html">V8::Portal::Interceptors::NamedPropertyGetter</a></li>
+        
+          <li><a href="../V8/Portal/Interceptors/NamedPropertyQuery.html">V8::Portal::Interceptors::NamedPropertyQuery</a></li>
+        
+          <li><a href="../V8/Portal/Interceptors/NamedPropertySetter.html">V8::Portal::Interceptors::NamedPropertySetter</a></li>
+        
+          <li><a href="../V8/Portal/Interceptors/PropertyAttributes.html">V8::Portal::Interceptors::PropertyAttributes</a></li>
+        
+          <li><a href="../V8/Portal/Proxies.html">V8::Portal::Proxies</a></li>
+        
+          <li><a href="../V8/Portal/Proxies/ClearJSProxy.html">V8::Portal::Proxies::ClearJSProxy</a></li>
+        
+          <li><a href="../V8/Portal/Proxies/ClearRubyProxy.html">V8::Portal::Proxies::ClearRubyProxy</a></li>
+        
+          <li><a href="../V8/Portal/Templates.html">V8::Portal::Templates</a></li>
+        
+          <li><a href="../V8/Portal/Templates/Release.html">V8::Portal::Templates::Release</a></li>
+        
+          <li><a href="../V8/StackFrame.html">V8::StackFrame</a></li>
+        
+          <li><a href="../V8/StackTrace.html">V8::StackTrace</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">V8::Portal</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="access-attribute-method" class="method-detail">
+          <a name="access"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">access</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="caller-attribute-method" class="method-detail">
+          <a name="caller"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">caller</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="context-attribute-method" class="method-detail">
+          <a name="context"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">context</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="interceptors-attribute-method" class="method-detail">
+          <a name="interceptors"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">interceptors</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="proxies-attribute-method" class="method-detail">
+          <a name="proxies"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">proxies</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="templates-attribute-method" class="method-detail">
+          <a name="templates"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">templates</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(context, access)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">context</span>, <span class="ruby-identifier">access</span>)
+  <span class="ruby-ivar">@context</span>, <span class="ruby-ivar">@access</span> = <span class="ruby-identifier">context</span>, <span class="ruby-identifier">access</span>
+  <span class="ruby-ivar">@proxies</span> = <span class="ruby-constant">Proxies</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@templates</span> = <span class="ruby-constant">Templates</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-ivar">@interceptors</span> = <span class="ruby-constant">Interceptors</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-ivar">@caller</span> = <span class="ruby-constant">Caller</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="lock-method" class="method-detail ">
+          <a name="method-i-lock"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">lock</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="lock-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">lock</span>
+  <span class="ruby-identifier">lock</span> = <span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">Locker</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">yield</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-identifier">lock</span>.<span class="ruby-identifier">delete</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- lock-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- lock-method -->
+
+      
+        <div id="open-method" class="method-detail ">
+          <a name="method-i-open"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">open</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="open-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">open</span>
+  <span class="ruby-identifier">lock</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@context</span>.<span class="ruby-identifier">native</span>.<span class="ruby-identifier">enter</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-keyword">yield</span>(<span class="ruby-keyword">self</span>)
+    <span class="ruby-keyword">end</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- open-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- open-method -->
+
+      
+        <div id="rb-method" class="method-detail ">
+          <a name="method-i-rb"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rb</span><span
+              class="method-args">(value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="rb-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rb</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-ivar">@proxies</span>.<span class="ruby-identifier">js2rb</span>(<span class="ruby-identifier">value</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">value</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">Function</span>    <span class="ruby-keyword">then</span> <span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">Function</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">value</span>, <span class="ruby-keyword">self</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span>       <span class="ruby-keyword">then</span> <span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">value</span>, <span class="ruby-keyword">self</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">Object</span>      <span class="ruby-keyword">then</span> <span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">Object</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">value</span>, <span class="ruby-keyword">self</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">String</span>      <span class="ruby-keyword">then</span> <span class="ruby-identifier">value</span>.<span class="ruby-constant">Utf8Value</span>.<span class="ruby-identifier">tap</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-keyword">return</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:force_encoding</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-string">&quot;UTF-8&quot;</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">s</span>}
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">Date</span>        <span class="ruby-keyword">then</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-identifier">value</span>.<span class="ruby-constant">NumberValue</span>() <span class="ruby-operator">/</span> <span class="ruby-value">1000</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">StackTrace</span>  <span class="ruby-keyword">then</span> <span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">StackTrace</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">value</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">Value</span>       <span class="ruby-keyword">then</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-constant">IsEmpty</span>()
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">value</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rb-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rb-method -->
+
+      
+        <div id="v8-method" class="method-detail ">
+          <a name="method-i-v8"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">v8</span><span
+              class="method-args">(value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="v8-source">
+<pre>
+<span class="ruby-comment"># File lib/v8/portal.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">v8</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">V8</span><span class="ruby-operator">::</span><span class="ruby-constant">Object</span>
+    <span class="ruby-identifier">value</span>.<span class="ruby-identifier">instance_eval</span> {<span class="ruby-ivar">@native</span>}
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">String</span>
+    <span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">String</span><span class="ruby-operator">::</span><span class="ruby-constant">New</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Symbol</span>
+    <span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">String</span><span class="ruby-operator">::</span><span class="ruby-constant">NewSymbol</span>(<span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Proc</span>,<span class="ruby-constant">Method</span>,<span class="ruby-constant">UnboundMethod</span>
+    <span class="ruby-ivar">@proxies</span>.<span class="ruby-identifier">rb2js</span>(<span class="ruby-identifier">value</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-ivar">@templates</span>.<span class="ruby-identifier">to_function</span>(<span class="ruby-identifier">value</span>).<span class="ruby-identifier">function</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Array</span>
+    <span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span><span class="ruby-operator">::</span><span class="ruby-constant">New</span>(<span class="ruby-identifier">value</span>.<span class="ruby-identifier">length</span>).<span class="ruby-identifier">tap</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">value</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">a</span>.<span class="ruby-constant">Set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">v8</span>(<span class="ruby-identifier">item</span>))
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Hash</span>
+    <span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">Object</span><span class="ruby-operator">::</span><span class="ruby-constant">New</span>().<span class="ruby-identifier">tap</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">value</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">o</span>.<span class="ruby-constant">Set</span>(<span class="ruby-identifier">v8</span>(<span class="ruby-identifier">key</span>), <span class="ruby-identifier">v8</span>(<span class="ruby-identifier">val</span>))
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Time</span>
+    <span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">Date</span><span class="ruby-operator">::</span><span class="ruby-constant">New</span>(<span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_f</span> * <span class="ruby-value">1000</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Class</span>
+    <span class="ruby-ivar">@proxies</span>.<span class="ruby-identifier">rb2js</span>(<span class="ruby-identifier">value</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">constructor</span> = <span class="ruby-ivar">@templates</span>.<span class="ruby-identifier">to_constructor</span>(<span class="ruby-identifier">value</span>)
+      <span class="ruby-identifier">constructor</span>.<span class="ruby-identifier">exposed</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-identifier">constructor</span>.<span class="ruby-identifier">function</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-keyword">nil</span>,<span class="ruby-constant">Numeric</span>,<span class="ruby-constant">TrueClass</span>,<span class="ruby-constant">FalseClass</span>, <span class="ruby-constant">C</span><span class="ruby-operator">::</span><span class="ruby-constant">Value</span>
+    <span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@proxies</span>.<span class="ruby-identifier">rb2js</span>(<span class="ruby-identifier">value</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-ivar">@templates</span>.<span class="ruby-identifier">to_constructor</span>(<span class="ruby-identifier">value</span>.<span class="ruby-identifier">class</span>).<span class="ruby-identifier">allocate</span>(<span class="ruby-identifier">value</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- v8-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- v8-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

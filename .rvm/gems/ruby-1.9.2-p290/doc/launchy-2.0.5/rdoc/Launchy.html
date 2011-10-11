@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Launchy</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/launchy_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/launchy.rb">lib/launchy.rb</a></li>
+          
+            <li><a href="./lib/launchy/application_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/launchy/application.rb">lib/launchy/application.rb</a></li>
+          
+            <li><a href="./lib/launchy/os_family_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/launchy/os_family.rb">lib/launchy/os_family.rb</a></li>
+          
+            <li><a href="./lib/launchy/cli_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/launchy/cli.rb">lib/launchy/cli.rb</a></li>
+          
+            <li><a href="./lib/launchy/version_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/launchy/version.rb">lib/launchy/version.rb</a></li>
+          
+            <li><a href="./lib/launchy/error_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/launchy/error.rb">lib/launchy/error.rb</a></li>
+          
+            <li><a href="./lib/launchy/deprecated_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/launchy/deprecated.rb">lib/launchy/deprecated.rb</a></li>
+          
+            <li><a href="./lib/launchy/descendant_tracker_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/launchy/descendant_tracker.rb">lib/launchy/descendant_tracker.rb</a></li>
+          
+            <li><a href="./lib/launchy/detect_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/launchy/detect.rb">lib/launchy/detect.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">MODULE</span> <a href="Launchy/DescendantTracker.html">Launchy::DescendantTracker</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="Launchy/Detect.html">Launchy::Detect</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="Launchy/Version.html">Launchy::Version</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Launchy/Application.html">Launchy::Application</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Launchy/ApplicationNotFoundError.html">Launchy::ApplicationNotFoundError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Launchy/Browser.html">Launchy::Browser</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Launchy/Cli.html">Launchy::Cli</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Launchy/Error.html">Launchy::Error</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Launchy/OSFamily.html">Launchy::OSFamily</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-application">::application</a></li>
+          
+          <li><a href="#method-c-application-3D">::application=</a></li>
+          
+          <li><a href="#method-c-bug_report_message">::bug_report_message</a></li>
+          
+          <li><a href="#method-c-debug-3D">::debug=</a></li>
+          
+          <li><a href="#method-c-debug-3F">::debug?</a></li>
+          
+          <li><a href="#method-c-dry_run-3D">::dry_run=</a></li>
+          
+          <li><a href="#method-c-dry_run-3F">::dry_run?</a></li>
+          
+          <li><a href="#method-c-extract_global_options">::extract_global_options</a></li>
+          
+          <li><a href="#method-c-host_os">::host_os</a></li>
+          
+          <li><a href="#method-c-host_os-3D">::host_os=</a></li>
+          
+          <li><a href="#method-c-log">::log</a></li>
+          
+          <li><a href="#method-c-open">::open</a></li>
+          
+          <li><a href="#method-c-reset_global_options">::reset_global_options</a></li>
+          
+          <li><a href="#method-c-ruby_engine">::ruby_engine</a></li>
+          
+          <li><a href="#method-c-ruby_engine-3D">::ruby_engine=</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./HISTORY.html">HISTORY</a></li>
+        
+          <li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="./README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Launchy.html">Launchy</a></li>
+        
+          <li><a href="./Launchy/Application.html">Launchy::Application</a></li>
+        
+          <li><a href="./Launchy/Application/Browser.html">Launchy::Application::Browser</a></li>
+        
+          <li><a href="./Launchy/ApplicationNotFoundError.html">Launchy::ApplicationNotFoundError</a></li>
+        
+          <li><a href="./Launchy/Browser.html">Launchy::Browser</a></li>
+        
+          <li><a href="./Launchy/Cli.html">Launchy::Cli</a></li>
+        
+          <li><a href="./Launchy/DescendantTracker.html">Launchy::DescendantTracker</a></li>
+        
+          <li><a href="./Launchy/Detect.html">Launchy::Detect</a></li>
+        
+          <li><a href="./Launchy/Detect/HostOs.html">Launchy::Detect::HostOs</a></li>
+        
+          <li><a href="./Launchy/Detect/HostOsFamily.html">Launchy::Detect::HostOsFamily</a></li>
+        
+          <li><a href="./Launchy/Detect/HostOsFamily/Cygwin.html">Launchy::Detect::HostOsFamily::Cygwin</a></li>
+        
+          <li><a href="./Launchy/Detect/HostOsFamily/Darwin.html">Launchy::Detect::HostOsFamily::Darwin</a></li>
+        
+          <li><a href="./Launchy/Detect/HostOsFamily/Nix.html">Launchy::Detect::HostOsFamily::Nix</a></li>
+        
+          <li><a href="./Launchy/Detect/HostOsFamily/NotFoundError.html">Launchy::Detect::HostOsFamily::NotFoundError</a></li>
+        
+          <li><a href="./Launchy/Detect/HostOsFamily/Windows.html">Launchy::Detect::HostOsFamily::Windows</a></li>
+        
+          <li><a href="./Launchy/Detect/NixDesktopEnvironment.html">Launchy::Detect::NixDesktopEnvironment</a></li>
+        
+          <li><a href="./Launchy/Detect/NixDesktopEnvironment/Gnome.html">Launchy::Detect::NixDesktopEnvironment::Gnome</a></li>
+        
+          <li><a href="./Launchy/Detect/NixDesktopEnvironment/Kde.html">Launchy::Detect::NixDesktopEnvironment::Kde</a></li>
+        
+          <li><a href="./Launchy/Detect/NixDesktopEnvironment/NotFoundError.html">Launchy::Detect::NixDesktopEnvironment::NotFoundError</a></li>
+        
+          <li><a href="./Launchy/Detect/NixDesktopEnvironment/Xfce.html">Launchy::Detect::NixDesktopEnvironment::Xfce</a></li>
+        
+          <li><a href="./Launchy/Detect/RubyEngine.html">Launchy::Detect::RubyEngine</a></li>
+        
+          <li><a href="./Launchy/Detect/RubyEngine/Jruby.html">Launchy::Detect::RubyEngine::Jruby</a></li>
+        
+          <li><a href="./Launchy/Detect/RubyEngine/MacRuby.html">Launchy::Detect::RubyEngine::MacRuby</a></li>
+        
+          <li><a href="./Launchy/Detect/RubyEngine/Mri.html">Launchy::Detect::RubyEngine::Mri</a></li>
+        
+          <li><a href="./Launchy/Detect/RubyEngine/NotFoundError.html">Launchy::Detect::RubyEngine::NotFoundError</a></li>
+        
+          <li><a href="./Launchy/Detect/RubyEngine/Rbx.html">Launchy::Detect::RubyEngine::Rbx</a></li>
+        
+          <li><a href="./Launchy/Detect/Runner.html">Launchy::Detect::Runner</a></li>
+        
+          <li><a href="./Launchy/Detect/Runner/Forkable.html">Launchy::Detect::Runner::Forkable</a></li>
+        
+          <li><a href="./Launchy/Detect/Runner/Jruby.html">Launchy::Detect::Runner::Jruby</a></li>
+        
+          <li><a href="./Launchy/Detect/Runner/NotFoundError.html">Launchy::Detect::Runner::NotFoundError</a></li>
+        
+          <li><a href="./Launchy/Detect/Runner/Windows.html">Launchy::Detect::Runner::Windows</a></li>
+        
+          <li><a href="./Launchy/Error.html">Launchy::Error</a></li>
+        
+          <li><a href="./Launchy/OSFamily.html">Launchy::OSFamily</a></li>
+        
+          <li><a href="./Launchy/Version.html">Launchy::Version</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Launchy</h1>
+
+    <div id="description" class="description">
+      
+<p>The entry point into <a href="Launchy.html">Launchy</a>. This is the sole
+supported public API.</p>
+
+<pre>Launchy.open( uri, options = {} )</pre>
+
+<p>The currently defined global options are:</p>
+
+<pre>:debug        Turn on debugging output
+:application  Explicitly state what application class is going to be used
+:host_os      Explicitly state what host operating system to pretend to be
+:ruby_engine  Explicitly state what ruby engine to pretend to be under
+:dry_run      Do nothing and print the command that would be executed on $stdout</pre>
+
+<p>Other options may be used, and those will be passed directly to the
+application class</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="VERSION">VERSION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="application-method" class="method-detail ">
+          <a name="method-c-application"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">application</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="application-source">
+<pre>
+<span class="ruby-comment"># File lib/launchy.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">application</span>
+  <span class="ruby-ivar">@application</span> <span class="ruby-operator">||</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'LAUNCHY_APPLICATION'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- application-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- application-method -->
+
+      
+        <div id="application-3D-method" class="method-detail ">
+          <a name="method-c-application-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">application=</span><span
+              class="method-args">( app )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="application-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/launchy.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">application=</span>( <span class="ruby-identifier">app</span> )
+  <span class="ruby-ivar">@application</span> = <span class="ruby-identifier">app</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- application-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- application-3D-method -->
+
+      
+        <div id="bug_report_message-method" class="method-detail ">
+          <a name="method-c-bug_report_message"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bug_report_message</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="bug_report_message-source">
+<pre>
+<span class="ruby-comment"># File lib/launchy.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bug_report_message</span>
+  <span class="ruby-string">&quot;Please file a bug at https://github.com/copiousfreetime/launchy/issues/new&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- bug_report_message-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- bug_report_message-method -->
+
+      
+        <div id="debug-3D-method" class="method-detail ">
+          <a name="method-c-debug-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">debug=</span><span
+              class="method-args">( d )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="debug-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/launchy.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">debug=</span>( <span class="ruby-identifier">d</span> )
+  <span class="ruby-ivar">@debug</span> = (<span class="ruby-identifier">d</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;true&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- debug-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- debug-3D-method -->
+
+      
+        <div id="debug-3F-method" class="method-detail ">
+          <a name="method-c-debug-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">debug?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>we may do logging before a call to ‘open’, hence the need to check
+LAUNCHY_DEBUG here</p>
+            
+
+            
+            <div class="method-source-code" id="debug-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/launchy.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">debug?</span>
+  <span class="ruby-ivar">@debug</span> <span class="ruby-operator">||</span> (<span class="ruby-constant">ENV</span>[<span class="ruby-string">'LAUNCHY_DEBUG'</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'true'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- debug-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- debug-3F-method -->
+
+      
+        <div id="dry_run-3D-method" class="method-detail ">
+          <a name="method-c-dry_run-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dry_run=</span><span
+              class="method-args">( dry_run )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="dry_run-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/launchy.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dry_run=</span>( <span class="ruby-identifier">dry_run</span> )
+  <span class="ruby-ivar">@dry_run</span> = <span class="ruby-identifier">dry_run</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dry_run-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dry_run-3D-method -->
+
+      
+        <div id="dry_run-3F-method" class="method-detail ">
+          <a name="method-c-dry_run-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dry_run?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="dry_run-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/launchy.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dry_run?</span>
+  <span class="ruby-ivar">@dry_run</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dry_run-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dry_run-3F-method -->
+
+      
+        <div id="extract_global_options-method" class="method-detail ">
+          <a name="method-c-extract_global_options"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">extract_global_options</span><span
+              class="method-args">( options )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="extract_global_options-source">
+<pre>
+<span class="ruby-comment"># File lib/launchy.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">extract_global_options</span>( <span class="ruby-identifier">options</span> )
+  <span class="ruby-constant">Launchy</span>.<span class="ruby-identifier">debug</span>        = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>( <span class="ruby-value">:debug</span>       ) <span class="ruby-operator">||</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'LAUNCHY_DEBUG'</span>]
+  <span class="ruby-constant">Launchy</span>.<span class="ruby-identifier">application</span>  = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>( <span class="ruby-value">:application</span> ) <span class="ruby-operator">||</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'LAUNCHY_APPLICATION'</span>]
+  <span class="ruby-constant">Launchy</span>.<span class="ruby-identifier">host_os</span>      = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>( <span class="ruby-value">:host_os</span>     ) <span class="ruby-operator">||</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'LAUNCHY_HOST_OS'</span>]
+  <span class="ruby-constant">Launchy</span>.<span class="ruby-identifier">ruby_engine</span>  = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>( <span class="ruby-value">:ruby_engine</span> ) <span class="ruby-operator">||</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'LAUNCHY_RUBY_ENGINE'</span>]
+  <span class="ruby-constant">Launchy</span>.<span class="ruby-identifier">dry_run</span>      = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>( <span class="ruby-value">:dry_run</span>     )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- extract_global_options-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- extract_global_options-method -->
+
+      
+        <div id="host_os-method" class="method-detail ">
+          <a name="method-c-host_os"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">host_os</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="host_os-source">
+<pre>
+<span class="ruby-comment"># File lib/launchy.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">host_os</span>
+  <span class="ruby-ivar">@host_os</span> <span class="ruby-operator">||</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'LAUNCHY_HOST_OS'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- host_os-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- host_os-method -->
+
+      
+        <div id="host_os-3D-method" class="method-detail ">
+          <a name="method-c-host_os-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">host_os=</span><span
+              class="method-args">( host_os )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="host_os-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/launchy.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">host_os=</span>( <span class="ruby-identifier">host_os</span> )
+  <span class="ruby-ivar">@host_os</span> = <span class="ruby-identifier">host_os</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- host_os-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- host_os-3D-method -->
+
+      
+        <div id="log-method" class="method-detail ">
+          <a name="method-c-log"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">log</span><span
+              class="method-args">(msg)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="log-source">
+<pre>
+<span class="ruby-comment"># File lib/launchy.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">log</span>(<span class="ruby-identifier">msg</span>)
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;LAUNCHY_DEBUG: #{msg}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Launchy</span>.<span class="ruby-identifier">debug?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- log-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- log-method -->
+
+      
+        <div id="open-method" class="method-detail ">
+          <a name="method-c-open"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">open</span><span
+              class="method-args">(uri, options = {} )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Convenience method to launch an item</p>
+            
+
+            
+            <div class="method-source-code" id="open-source">
+<pre>
+<span class="ruby-comment"># File lib/launchy.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">open</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">options</span> = {} )
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">extract_global_options</span>( <span class="ruby-identifier">options</span> )
+    <span class="ruby-identifier">uri</span> = <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(  <span class="ruby-identifier">uri</span> )
+    <span class="ruby-identifier">app</span> = <span class="ruby-constant">Launchy</span><span class="ruby-operator">::</span><span class="ruby-constant">Application</span>.<span class="ruby-identifier">handling</span>( <span class="ruby-identifier">uri</span> )
+    <span class="ruby-identifier">app</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">open</span>( <span class="ruby-identifier">uri</span>, <span class="ruby-identifier">options</span> )
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">msg</span> = <span class="ruby-node">&quot;Failure in opening #{uri} with options #{options.inspect}: #{e}&quot;</span>
+    <span class="ruby-constant">Launchy</span>.<span class="ruby-identifier">log</span> <span class="ruby-node">&quot;#{self.name} : #{msg}&quot;</span>
+    <span class="ruby-identifier">e</span>.<span class="ruby-identifier">backtrace</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">bt</span><span class="ruby-operator">|</span>
+      <span class="ruby-constant">Launchy</span>.<span class="ruby-identifier">log</span> <span class="ruby-identifier">bt</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">msg</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- open-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- open-method -->
+
+      
+        <div id="reset_global_options-method" class="method-detail ">
+          <a name="method-c-reset_global_options"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reset_global_options</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="reset_global_options-source">
+<pre>
+<span class="ruby-comment"># File lib/launchy.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reset_global_options</span>
+  <span class="ruby-constant">Launchy</span>.<span class="ruby-identifier">debug</span>       = <span class="ruby-keyword">false</span>
+  <span class="ruby-constant">Launchy</span>.<span class="ruby-identifier">application</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-constant">Launchy</span>.<span class="ruby-identifier">host_os</span>     = <span class="ruby-keyword">nil</span>
+  <span class="ruby-constant">Launchy</span>.<span class="ruby-identifier">ruby_engine</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-constant">Launchy</span>.<span class="ruby-identifier">dry_run</span>     = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- reset_global_options-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reset_global_options-method -->
+
+      
+        <div id="ruby_engine-method" class="method-detail ">
+          <a name="method-c-ruby_engine"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ruby_engine</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ruby_engine-source">
+<pre>
+<span class="ruby-comment"># File lib/launchy.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ruby_engine</span>
+  <span class="ruby-ivar">@ruby_engine</span> <span class="ruby-operator">||</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'LAUNCHY_RUBY_ENGINE'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ruby_engine-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ruby_engine-method -->
+
+      
+        <div id="ruby_engine-3D-method" class="method-detail ">
+          <a name="method-c-ruby_engine-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ruby_engine=</span><span
+              class="method-args">( ruby_engine )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ruby_engine-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/launchy.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ruby_engine=</span>( <span class="ruby-identifier">ruby_engine</span> )
+  <span class="ruby-ivar">@ruby_engine</span> = <span class="ruby-identifier">ruby_engine</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ruby_engine-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ruby_engine-3D-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

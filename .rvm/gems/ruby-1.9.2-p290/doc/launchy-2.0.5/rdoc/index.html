@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>launchy-2.0.5 Documentation</title>
+
+  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+  
+  <h1>launchy-2.0.5 Documentation</h1>
+
+  
+  <div id="main">
+    
+<h2>launchy</h2>
+<ul><li>
+<p><a href="http://www.copiousfreetime.org/projects/launchy/">Homepage</a></p>
+</li><li>
+<p><a href="http://github.com/copiousfreetime/launchy">Github Project</a></p>
+</li><li>
+<p>email jeremy at hinegardner dot org</p>
+</li></ul>
+
+<h2>DESCRIPTION</h2>
+
+<p><a href="Launchy.html">Launchy</a> is helper class for launching
+cross-platform applications in a fire and forget manner.</p>
+
+<p>There are application concepts (browser, email client, etc) that are common
+across all platforms, and they may be launched differently on each
+platform. <a href="Launchy.html">Launchy</a> is here to make a common
+approach to launching external application from within ruby programs.</p>
+
+<h2>FEATURES</h2>
+
+<p>Currently only launching a browser is supported.</p>
+
+<h2>SYNOPSIS</h2>
+
+<p>You can use launchy on the commandline, or via its API.</p>
+
+<h3>Commandline</h3>
+
+<pre>% launchy http://www.ruby-lang.org/</pre>
+
+<p>There are additional commandline options, use ‘launchy –help’ to see them.</p>
+
+<h3>Public API</h3>
+
+<p>In the vein of <a href="http://semver.org">Semantic Versioning</a>,
+starting with version 2.0.0, this is the sole supported public API.</p>
+
+<pre>Launchy.open( uri, options = {} )</pre>
+
+<p>At the moment, the only available options are:</p>
+
+<pre>:debug        Turn on debugging output
+:application  Explicitly state what application class is going to be used
+:host_os      Explicitly state what host operating system to pretend to be
+:ruby_engine  Explicitly state what ruby engine to pretend to be under
+:dry_run      Do nothing and print the command that would be executed on $stdout</pre>
+
+<p>An example of using the public API:</p>
+
+<pre>Launchy.open( &quot;http://www.ruby-lang.org&quot; )</pre>
+
+<h2>UPGRADING</h2>
+
+<p>The previously published version of <a href="Launchy.html">Launchy</a> was
+0.4.0. There have been so many changes, and a mistaken tag at 1.0.0, that I
+have decided to bump all the way to 2.0.x.</p>
+
+<p>I have attempted to keep backward compatibility with the previous examples.
+The previous API examples of:</p>
+
+<pre>Launchy::Browser.run(&quot;http://www.ruby-lang.org/&quot;)</pre>
+
+<p>and</p>
+
+<pre>Launchy::Browser.new.visit(&quot;http://www.ruby-lang.org/&quot;)</pre>
+
+<p>will still work, and you will get a deprecation notice, along with the line
+of code you should probably update. For example, this is what would print
+out in the github gem if it was updated to use 2.0.x but not use the
+supported API.</p>
+
+<pre>% gh home
+WARNING: You made a call to a deprecated Launchy API. This call should be changed to 'Launchy.open( uri )'
+WARNING: I think I was able to find the location that needs to be fixed. Please go look at:
+WARNING:
+WARNING: /Users/jeremy/.rvm/gems/ruby-1.8.7-p334/gems/github-0.6.2/lib/commands/helpers.rb:275:in `open'
+WARNING: helper :open do |url|
+WARNING:   has_launchy? proc {
+WARNING:     Launchy::Browser.new.visit url
+WARNING:   }
+WARNING: end
+WARNING:
+WARNING: If this is not the case, please file a bug. Please file a bug at https://github.com/copiousfreetime/launchy/issues/new</pre>
+
+<h2>ISC <a href="LICENSE.html">LICENSE</a></h2>
+
+<p><a
+href="http://opensource.org/licenses/isc-license.txt">opensource.org/licenses/isc-license.txt</a></p>
+
+<p>Copyright © 2007-2011 Jeremy Hinegardner</p>
+
+<p>Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.</p>
+
+<p>THE SOFTWARE IS PROVIDED “AS IS” AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</p>
+
+  </div>
+  
+
+  
+  
+  <h2>Files</h2>
+  <ul>
+    
+      <li class="file"><a href="HISTORY.html">HISTORY</a></li>
+    
+      <li class="file"><a href="LICENSE.html">LICENSE</a></li>
+    
+      <li class="file"><a href="README.html">README</a></li>
+    
+  </ul>
+  
+
+  <h2 id="classes">Classes/Modules</h2>
+  <ul>
+    
+    <li class="module"><a href="Launchy.html">Launchy</a></li>
+    
+    <li class="class"><a href="Launchy/Application.html">Launchy::Application</a></li>
+    
+    <li class="class"><a href="Launchy/Application/Browser.html">Launchy::Application::Browser</a></li>
+    
+    <li class="class"><a href="Launchy/ApplicationNotFoundError.html">Launchy::ApplicationNotFoundError</a></li>
+    
+    <li class="class"><a href="Launchy/Browser.html">Launchy::Browser</a></li>
+    
+    <li class="class"><a href="Launchy/Cli.html">Launchy::Cli</a></li>
+    
+    <li class="module"><a href="Launchy/DescendantTracker.html">Launchy::DescendantTracker</a></li>
+    
+    <li class="module"><a href="Launchy/Detect.html">Launchy::Detect</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/HostOs.html">Launchy::Detect::HostOs</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/HostOsFamily.html">Launchy::Detect::HostOsFamily</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/HostOsFamily/Cygwin.html">Launchy::Detect::HostOsFamily::Cygwin</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/HostOsFamily/Darwin.html">Launchy::Detect::HostOsFamily::Darwin</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/HostOsFamily/Nix.html">Launchy::Detect::HostOsFamily::Nix</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/HostOsFamily/NotFoundError.html">Launchy::Detect::HostOsFamily::NotFoundError</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/HostOsFamily/Windows.html">Launchy::Detect::HostOsFamily::Windows</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/NixDesktopEnvironment.html">Launchy::Detect::NixDesktopEnvironment</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/NixDesktopEnvironment/Gnome.html">Launchy::Detect::NixDesktopEnvironment::Gnome</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/NixDesktopEnvironment/Kde.html">Launchy::Detect::NixDesktopEnvironment::Kde</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/NixDesktopEnvironment/NotFoundError.html">Launchy::Detect::NixDesktopEnvironment::NotFoundError</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/NixDesktopEnvironment/Xfce.html">Launchy::Detect::NixDesktopEnvironment::Xfce</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/RubyEngine.html">Launchy::Detect::RubyEngine</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/RubyEngine/Jruby.html">Launchy::Detect::RubyEngine::Jruby</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/RubyEngine/MacRuby.html">Launchy::Detect::RubyEngine::MacRuby</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/RubyEngine/Mri.html">Launchy::Detect::RubyEngine::Mri</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/RubyEngine/NotFoundError.html">Launchy::Detect::RubyEngine::NotFoundError</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/RubyEngine/Rbx.html">Launchy::Detect::RubyEngine::Rbx</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/Runner.html">Launchy::Detect::Runner</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/Runner/Forkable.html">Launchy::Detect::Runner::Forkable</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/Runner/Jruby.html">Launchy::Detect::Runner::Jruby</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/Runner/NotFoundError.html">Launchy::Detect::Runner::NotFoundError</a></li>
+    
+    <li class="class"><a href="Launchy/Detect/Runner/Windows.html">Launchy::Detect::Runner::Windows</a></li>
+    
+    <li class="class"><a href="Launchy/Error.html">Launchy::Error</a></li>
+    
+    <li class="class"><a href="Launchy/OSFamily.html">Launchy::OSFamily</a></li>
+    
+    <li class="module"><a href="Launchy/Version.html">Launchy::Version</a></li>
+    
+  </ul>
+
+  <h2 id="methods">Methods</h2>
+  <ul>
+    
+      <li><a href="Launchy.html#method-c-application">::application &mdash; Launchy</a></li>
+    
+      <li><a href="Launchy.html#method-c-application-3D">::application= &mdash; Launchy</a></li>
+    
+      <li><a href="Launchy/Detect/NixDesktopEnvironment/Kde.html#method-c-browser">::browser &mdash; Launchy::Detect::NixDesktopEnvironment::Kde</a></li>
+    
+      <li><a href="Launchy/Detect/NixDesktopEnvironment/Xfce.html#method-c-browser">::browser &mdash; Launchy::Detect::NixDesktopEnvironment::Xfce</a></li>
+    
+      <li><a href="Launchy/Detect/NixDesktopEnvironment/Gnome.html#method-c-browser">::browser &mdash; Launchy::Detect::NixDesktopEnvironment::Gnome</a></li>
+    
+      <li><a href="Launchy.html#method-c-bug_report_message">::bug_report_message &mdash; Launchy</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily.html#method-c-cygwin-3F">::cygwin? &mdash; Launchy::Detect::HostOsFamily</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily.html#method-c-darwin-3F">::darwin? &mdash; Launchy::Detect::HostOsFamily</a></li>
+    
+      <li><a href="Launchy.html#method-c-debug-3D">::debug= &mdash; Launchy</a></li>
+    
+      <li><a href="Launchy.html#method-c-debug-3F">::debug? &mdash; Launchy</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily.html#method-c-detect">::detect &mdash; Launchy::Detect::HostOsFamily</a></li>
+    
+      <li><a href="Launchy/Detect/RubyEngine.html#method-c-detect">::detect &mdash; Launchy::Detect::RubyEngine</a></li>
+    
+      <li><a href="Launchy/Detect/NixDesktopEnvironment.html#method-c-detect">::detect &mdash; Launchy::Detect::NixDesktopEnvironment</a></li>
+    
+      <li><a href="Launchy/Detect/Runner.html#method-c-detect">::detect &mdash; Launchy::Detect::Runner</a></li>
+    
+      <li><a href="Launchy.html#method-c-dry_run-3D">::dry_run= &mdash; Launchy</a></li>
+    
+      <li><a href="Launchy.html#method-c-dry_run-3F">::dry_run? &mdash; Launchy</a></li>
+    
+      <li><a href="Launchy/Detect/RubyEngine/Mri.html#method-c-engine_name">::engine_name &mdash; Launchy::Detect::RubyEngine::Mri</a></li>
+    
+      <li><a href="Launchy/Detect/RubyEngine/Jruby.html#method-c-engine_name">::engine_name &mdash; Launchy::Detect::RubyEngine::Jruby</a></li>
+    
+      <li><a href="Launchy/Detect/RubyEngine/MacRuby.html#method-c-engine_name">::engine_name &mdash; Launchy::Detect::RubyEngine::MacRuby</a></li>
+    
+      <li><a href="Launchy/Detect/RubyEngine/Rbx.html#method-c-engine_name">::engine_name &mdash; Launchy::Detect::RubyEngine::Rbx</a></li>
+    
+      <li><a href="Launchy.html#method-c-extract_global_options">::extract_global_options &mdash; Launchy</a></li>
+    
+      <li><a href="Launchy/Detect/NixDesktopEnvironment.html#method-c-fallback_browsers">::fallback_browsers &mdash; Launchy::Detect::NixDesktopEnvironment</a></li>
+    
+      <li><a href="Launchy/Application.html#method-c-find_executable">::find_executable &mdash; Launchy::Application</a></li>
+    
+      <li><a href="Launchy/Application/Browser.html#method-c-handles-3F">::handles? &mdash; Launchy::Application::Browser</a></li>
+    
+      <li><a href="Launchy/Application.html#method-c-handling">::handling &mdash; Launchy::Application</a></li>
+    
+      <li><a href="Launchy.html#method-c-host_os">::host_os &mdash; Launchy</a></li>
+    
+      <li><a href="Launchy.html#method-c-host_os-3D">::host_os= &mdash; Launchy</a></li>
+    
+      <li><a href="Launchy/Detect/NixDesktopEnvironment/Gnome.html#method-c-is_current_desktop_environment-3F">::is_current_desktop_environment? &mdash; Launchy::Detect::NixDesktopEnvironment::Gnome</a></li>
+    
+      <li><a href="Launchy/Detect/NixDesktopEnvironment/Kde.html#method-c-is_current_desktop_environment-3F">::is_current_desktop_environment? &mdash; Launchy::Detect::NixDesktopEnvironment::Kde</a></li>
+    
+      <li><a href="Launchy/Detect/NixDesktopEnvironment/Xfce.html#method-c-is_current_desktop_environment-3F">::is_current_desktop_environment? &mdash; Launchy::Detect::NixDesktopEnvironment::Xfce</a></li>
+    
+      <li><a href="Launchy/Detect/RubyEngine/Mri.html#method-c-is_current_engine-3F">::is_current_engine? &mdash; Launchy::Detect::RubyEngine::Mri</a></li>
+    
+      <li><a href="Launchy/Detect/RubyEngine.html#method-c-is_current_engine-3F">::is_current_engine? &mdash; Launchy::Detect::RubyEngine</a></li>
+    
+      <li><a href="Launchy/Detect/RubyEngine.html#method-c-jruby-3F">::jruby? &mdash; Launchy::Detect::RubyEngine</a></li>
+    
+      <li><a href="Launchy.html#method-c-log">::log &mdash; Launchy</a></li>
+    
+      <li><a href="Launchy/Detect/RubyEngine.html#method-c-macruby-3F">::macruby? &mdash; Launchy::Detect::RubyEngine</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily.html#method-c-matches-3F">::matches? &mdash; Launchy::Detect::HostOsFamily</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily/Windows.html#method-c-matching_regex">::matching_regex &mdash; Launchy::Detect::HostOsFamily::Windows</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily/Darwin.html#method-c-matching_regex">::matching_regex &mdash; Launchy::Detect::HostOsFamily::Darwin</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily/Cygwin.html#method-c-matching_regex">::matching_regex &mdash; Launchy::Detect::HostOsFamily::Cygwin</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily/Nix.html#method-c-matching_regex">::matching_regex &mdash; Launchy::Detect::HostOsFamily::Nix</a></li>
+    
+      <li><a href="Launchy/Detect/RubyEngine.html#method-c-mri-3F">::mri? &mdash; Launchy::Detect::RubyEngine</a></li>
+    
+      <li><a href="Launchy/Detect/RubyEngine.html#method-c-new">::new &mdash; Launchy::Detect::RubyEngine</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily.html#method-c-new">::new &mdash; Launchy::Detect::HostOsFamily</a></li>
+    
+      <li><a href="Launchy/Cli.html#method-c-new">::new &mdash; Launchy::Cli</a></li>
+    
+      <li><a href="Launchy/Detect/HostOs.html#method-c-new">::new &mdash; Launchy::Detect::HostOs</a></li>
+    
+      <li><a href="Launchy/Application.html#method-c-new">::new &mdash; Launchy::Application</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily.html#method-c-nix-3F">::nix? &mdash; Launchy::Detect::HostOsFamily</a></li>
+    
+      <li><a href="Launchy.html#method-c-open">::open &mdash; Launchy</a></li>
+    
+      <li><a href="Launchy/Detect/RubyEngine.html#method-c-rbx-3F">::rbx? &mdash; Launchy::Detect::RubyEngine</a></li>
+    
+      <li><a href="Launchy.html#method-c-reset_global_options">::reset_global_options &mdash; Launchy</a></li>
+    
+      <li><a href="Launchy.html#method-c-ruby_engine">::ruby_engine &mdash; Launchy</a></li>
+    
+      <li><a href="Launchy.html#method-c-ruby_engine-3D">::ruby_engine= &mdash; Launchy</a></li>
+    
+      <li><a href="Launchy/Detect/RubyEngine.html#method-c-ruby_engine_error_message">::ruby_engine_error_message &mdash; Launchy::Detect::RubyEngine</a></li>
+    
+      <li><a href="Launchy/Browser.html#method-c-run">::run &mdash; Launchy::Browser</a></li>
+    
+      <li><a href="Launchy/Application/Browser.html#method-c-schemes">::schemes &mdash; Launchy::Application::Browser</a></li>
+    
+      <li><a href="Launchy/Version.html#method-c-to_a">::to_a &mdash; Launchy::Version</a></li>
+    
+      <li><a href="Launchy/Version.html#method-c-to_s">::to_s &mdash; Launchy::Version</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily.html#method-c-windows-3F">::windows? &mdash; Launchy::Detect::HostOsFamily</a></li>
+    
+      <li><a href="Launchy/Detect/Runner/Windows.html#method-i-all_args">#all_args &mdash; Launchy::Detect::Runner::Windows</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily/Nix.html#method-i-app_list">#app_list &mdash; Launchy::Detect::HostOsFamily::Nix</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily/Cygwin.html#method-i-app_list">#app_list &mdash; Launchy::Detect::HostOsFamily::Cygwin</a></li>
+    
+      <li><a href="Launchy/Application/Browser.html#method-i-app_list">#app_list &mdash; Launchy::Application::Browser</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily/Darwin.html#method-i-app_list">#app_list &mdash; Launchy::Detect::HostOsFamily::Darwin</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily/Windows.html#method-i-app_list">#app_list &mdash; Launchy::Detect::HostOsFamily::Windows</a></li>
+    
+      <li><a href="Launchy/Application/Browser.html#method-i-browser_cmdline">#browser_cmdline &mdash; Launchy::Application::Browser</a></li>
+    
+      <li><a href="Launchy/Application/Browser.html#method-i-browser_env">#browser_env &mdash; Launchy::Application::Browser</a></li>
+    
+      <li><a href="Launchy/DescendantTracker.html#method-i-children">#children &mdash; Launchy::DescendantTracker</a></li>
+    
+      <li><a href="Launchy/Application/Browser.html#method-i-cmd_and_args">#cmd_and_args &mdash; Launchy::Application::Browser</a></li>
+    
+      <li><a href="Launchy/Detect/Runner.html#method-i-commandline_normalize">#commandline_normalize &mdash; Launchy::Detect::Runner</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily.html#method-i-cygwin-3F">#cygwin? &mdash; Launchy::Detect::HostOsFamily</a></li>
+    
+      <li><a href="Launchy/Application/Browser.html#method-i-cygwin_app_list">#cygwin_app_list &mdash; Launchy::Application::Browser</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily.html#method-i-darwin-3F">#darwin? &mdash; Launchy::Detect::HostOsFamily</a></li>
+    
+      <li><a href="Launchy/Application/Browser.html#method-i-darwin_app_list">#darwin_app_list &mdash; Launchy::Application::Browser</a></li>
+    
+      <li><a href="Launchy/Detect/HostOs.html#method-i-default_host_os">#default_host_os &mdash; Launchy::Detect::HostOs</a></li>
+    
+      <li><a href="Launchy/Detect/Runner/Windows.html#method-i-dry_run">#dry_run &mdash; Launchy::Detect::Runner::Windows</a></li>
+    
+      <li><a href="Launchy/Detect/Runner.html#method-i-dry_run">#dry_run &mdash; Launchy::Detect::Runner</a></li>
+    
+      <li><a href="Launchy/DescendantTracker.html#method-i-find_child">#find_child &mdash; Launchy::DescendantTracker</a></li>
+    
+      <li><a href="Launchy/Application.html#method-i-find_executable">#find_executable &mdash; Launchy::Application</a></li>
+    
+      <li><a href="Launchy/Cli.html#method-i-good_run">#good_run &mdash; Launchy::Cli</a></li>
+    
+      <li><a href="Launchy/DescendantTracker.html#method-i-inherited">#inherited &mdash; Launchy::DescendantTracker</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily.html#method-i-nix-3F">#nix? &mdash; Launchy::Detect::HostOsFamily</a></li>
+    
+      <li><a href="Launchy/Application/Browser.html#method-i-nix_app_list">#nix_app_list &mdash; Launchy::Application::Browser</a></li>
+    
+      <li><a href="Launchy/Application/Browser.html#method-i-open">#open &mdash; Launchy::Application::Browser</a></li>
+    
+      <li><a href="Launchy/Detect/HostOs.html#method-i-override_host_os">#override_host_os &mdash; Launchy::Detect::HostOs</a></li>
+    
+      <li><a href="Launchy/Cli.html#method-i-parse">#parse &mdash; Launchy::Cli</a></li>
+    
+      <li><a href="Launchy/Cli.html#method-i-parser">#parser &mdash; Launchy::Cli</a></li>
+    
+      <li><a href="Launchy/Detect/Runner.html#method-i-run">#run &mdash; Launchy::Detect::Runner</a></li>
+    
+      <li><a href="Launchy/Cli.html#method-i-run">#run &mdash; Launchy::Cli</a></li>
+    
+      <li><a href="Launchy/Application.html#method-i-run">#run &mdash; Launchy::Application</a></li>
+    
+      <li><a href="Launchy/Detect/Runner.html#method-i-shell_commands">#shell_commands &mdash; Launchy::Detect::Runner</a></li>
+    
+      <li><a href="Launchy/Detect/Runner/Windows.html#method-i-shell_commands">#shell_commands &mdash; Launchy::Detect::Runner::Windows</a></li>
+    
+      <li><a href="Launchy/Browser.html#method-i-visit">#visit &mdash; Launchy::Browser</a></li>
+    
+      <li><a href="Launchy/Detect/Runner/Jruby.html#method-i-wet_run">#wet_run &mdash; Launchy::Detect::Runner::Jruby</a></li>
+    
+      <li><a href="Launchy/Detect/Runner/Forkable.html#method-i-wet_run">#wet_run &mdash; Launchy::Detect::Runner::Forkable</a></li>
+    
+      <li><a href="Launchy/Detect/Runner/Windows.html#method-i-wet_run">#wet_run &mdash; Launchy::Detect::Runner::Windows</a></li>
+    
+      <li><a href="Launchy/Detect/HostOsFamily.html#method-i-windows-3F">#windows? &mdash; Launchy::Detect::HostOsFamily</a></li>
+    
+      <li><a href="Launchy/Application/Browser.html#method-i-windows_app_list">#windows_app_list &mdash; Launchy::Application::Browser</a></li>
+    
+  </ul>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>

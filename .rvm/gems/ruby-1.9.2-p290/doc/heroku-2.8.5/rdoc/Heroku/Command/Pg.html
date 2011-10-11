@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Heroku::Command::Pg</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/heroku/command/pg_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/heroku/command/pg.rb">lib/heroku/command/pg.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">BaseWithApp</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-info">#info</a></li>
+          
+          <li><a href="#method-i-ingress">#ingress</a></li>
+          
+          <li><a href="#method-i-promote">#promote</a></li>
+          
+          <li><a href="#method-i-psql">#psql</a></li>
+          
+          <li><a href="#method-i-reset">#reset</a></li>
+          
+          <li><a href="#method-i-unfollow">#unfollow</a></li>
+          
+          <li><a href="#method-i-wait">#wait</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="../../PgUtils.html">PgUtils</a></li>
+        
+        
+        
+          <li><a class="include" href="../../PGResolver.html">PGResolver</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Heroku.html">Heroku</a></li>
+        
+          <li><a href="../../Heroku/Auth.html">Heroku::Auth</a></li>
+        
+          <li><a href="../../Heroku/BuiltinPlugin.html">Heroku::BuiltinPlugin</a></li>
+        
+          <li><a href="../../Heroku/Client.html">Heroku::Client</a></li>
+        
+          <li><a href="../../Heroku/Client/AppCrashed.html">Heroku::Client::AppCrashed</a></li>
+        
+          <li><a href="../../Heroku/Client/ConsoleSession.html">Heroku::Client::ConsoleSession</a></li>
+        
+          <li><a href="../../Heroku/Client/JSON.html">Heroku::Client::JSON</a></li>
+        
+          <li><a href="../../Heroku/Client/Rendezvous.html">Heroku::Client::Rendezvous</a></li>
+        
+          <li><a href="../../Heroku/Client/Service.html">Heroku::Client::Service</a></li>
+        
+          <li><a href="../../Heroku/Command.html">Heroku::Command</a></li>
+        
+          <li><a href="../../Heroku/Command/Account.html">Heroku::Command::Account</a></li>
+        
+          <li><a href="../../Heroku/Command/Addons.html">Heroku::Command::Addons</a></li>
+        
+          <li><a href="../../Heroku/Command/Apps.html">Heroku::Command::Apps</a></li>
+        
+          <li><a href="../../Heroku/Command/Auth.html">Heroku::Command::Auth</a></li>
+        
+          <li><a href="../../Heroku/Command/Base.html">Heroku::Command::Base</a></li>
+        
+          <li><a href="../../Heroku/Command/BaseWithApp.html">Heroku::Command::BaseWithApp</a></li>
+        
+          <li><a href="../../Heroku/Command/CommandFailed.html">Heroku::Command::CommandFailed</a></li>
+        
+          <li><a href="../../Heroku/Command/Config.html">Heroku::Command::Config</a></li>
+        
+          <li><a href="../../Heroku/Command/Db.html">Heroku::Command::Db</a></li>
+        
+          <li><a href="../../Heroku/Command/Domains.html">Heroku::Command::Domains</a></li>
+        
+          <li><a href="../../Heroku/Command/Help.html">Heroku::Command::Help</a></li>
+        
+          <li><a href="../../Heroku/Command/InvalidCommand.html">Heroku::Command::InvalidCommand</a></li>
+        
+          <li><a href="../../Heroku/Command/Keys.html">Heroku::Command::Keys</a></li>
+        
+          <li><a href="../../Heroku/Command/Logs.html">Heroku::Command::Logs</a></li>
+        
+          <li><a href="../../Heroku/Command/Maintenance.html">Heroku::Command::Maintenance</a></li>
+        
+          <li><a href="../../Heroku/Command/Pg.html">Heroku::Command::Pg</a></li>
+        
+          <li><a href="../../Heroku/Command/Pgbackups.html">Heroku::Command::Pgbackups</a></li>
+        
+          <li><a href="../../Heroku/Command/Pgbackups/Display.html">Heroku::Command::Pgbackups::Display</a></li>
+        
+          <li><a href="../../Heroku/Command/Pgbackups/Display/DataSource.html">Heroku::Command::Pgbackups::Display::DataSource</a></li>
+        
+          <li><a href="../../Heroku/Command/Plugins.html">Heroku::Command::Plugins</a></li>
+        
+          <li><a href="../../Heroku/Command/Ps.html">Heroku::Command::Ps</a></li>
+        
+          <li><a href="../../Heroku/Command/Releases.html">Heroku::Command::Releases</a></li>
+        
+          <li><a href="../../Heroku/Command/Run.html">Heroku::Command::Run</a></li>
+        
+          <li><a href="../../Heroku/Command/Sharing.html">Heroku::Command::Sharing</a></li>
+        
+          <li><a href="../../Heroku/Command/Ssl.html">Heroku::Command::Ssl</a></li>
+        
+          <li><a href="../../Heroku/Command/Stack.html">Heroku::Command::Stack</a></li>
+        
+          <li><a href="../../Heroku/Command/Update.html">Heroku::Command::Update</a></li>
+        
+          <li><a href="../../Heroku/Command/Version.html">Heroku::Command::Version</a></li>
+        
+          <li><a href="../../Heroku/Deprecated.html">Heroku::Deprecated</a></li>
+        
+          <li><a href="../../Heroku/Deprecated/Help.html">Heroku::Deprecated::Help</a></li>
+        
+          <li><a href="../../Heroku/Deprecated/Help/ClassMethods.html">Heroku::Deprecated::Help::ClassMethods</a></li>
+        
+          <li><a href="../../Heroku/Deprecated/Help/HelpGroup.html">Heroku::Deprecated::Help::HelpGroup</a></li>
+        
+          <li><a href="../../Heroku/Distribution.html">Heroku::Distribution</a></li>
+        
+          <li><a href="../../Heroku/Helpers.html">Heroku::Helpers</a></li>
+        
+          <li><a href="../../Heroku/OkJson.html">Heroku::OkJson</a></li>
+        
+          <li><a href="../../Heroku/OkJson/ParserError.html">Heroku::OkJson::ParserError</a></li>
+        
+          <li><a href="../../Heroku/Plugin.html">Heroku::Plugin</a></li>
+        
+          <li><a href="../../Heroku/Updater.html">Heroku::Updater</a></li>
+        
+          <li><a href="../../HerokuPostgresql.html">HerokuPostgresql</a></li>
+        
+          <li><a href="../../HerokuPostgresql/Client.html">HerokuPostgresql::Client</a></li>
+        
+          <li><a href="../../PGBackups.html">PGBackups</a></li>
+        
+          <li><a href="../../PGBackups/Client.html">PGBackups::Client</a></li>
+        
+          <li><a href="../../PGResolver.html">PGResolver</a></li>
+        
+          <li><a href="../../PGResolver/Resolver.html">PGResolver::Resolver</a></li>
+        
+          <li><a href="../../PgUtils.html">PgUtils</a></li>
+        
+          <li><a href="../../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Heroku::Command::Pg</h1>
+
+    <div id="description" class="description">
+      
+<p>manage heroku postgresql databases</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="info-method" class="method-detail ">
+          <a name="method-i-info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>pg:info [DATABASE]</p>
+
+<p>display database information</p>
+
+<p>defaults to all databases if no DATABASE is specified</p>
+            
+
+            
+            <div class="method-source-code" id="info-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pg.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">info</span>
+  <span class="ruby-identifier">specified_db_or_all</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">db</span><span class="ruby-operator">|</span> <span class="ruby-identifier">display_db_info</span> <span class="ruby-identifier">db</span> }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- info-method -->
+
+      
+        <div id="ingress-method" class="method-detail ">
+          <a name="method-i-ingress"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ingress</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>pg:ingress [DATABASE]</p>
+
+<p>allow direct connections to the database from this IP for one minute</p>
+
+<p>(dedicated only) defaults to DATABASE_URL databases if no DATABASE is
+specified</p>
+            
+
+            
+            <div class="method-source-code" id="ingress-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pg.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ingress</span>
+  <span class="ruby-identifier">deprecate_dash_dash_db</span>(<span class="ruby-string">&quot;pg:ingress&quot;</span>)
+  <span class="ruby-identifier">uri</span> = <span class="ruby-identifier">generate_ingress_uri</span>(<span class="ruby-string">&quot;Granting ingress for 60s&quot;</span>)
+  <span class="ruby-identifier">display</span> <span class="ruby-string">&quot;Connection info string:&quot;</span>
+  <span class="ruby-identifier">display</span> <span class="ruby-node">&quot;   \&quot;dbname=#{uri.path[1..-1]} host=#{uri.host} user=#{uri.user} password=#{uri.password} sslmode=required\&quot;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ingress-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ingress-method -->
+
+      
+        <div id="promote-method" class="method-detail ">
+          <a name="method-i-promote"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">promote</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>pg:promote &lt;DATABASE&gt;</p>
+
+<p>sets DATABASE as your DATABASE_URL</p>
+            
+
+            
+            <div class="method-source-code" id="promote-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pg.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">promote</span>
+  <span class="ruby-identifier">deprecate_dash_dash_db</span>(<span class="ruby-string">&quot;pg:promote&quot;</span>)
+  <span class="ruby-identifier">follower_db</span> = <span class="ruby-identifier">resolve_db</span>(<span class="ruby-value">:required</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'pg:promote'</span>)
+  <span class="ruby-identifier">abort</span>( <span class="ruby-node">&quot; !   DATABASE_URL is already set to #{follower_db[:name]}&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">follower_db</span>[<span class="ruby-value">:default</span>]
+
+  <span class="ruby-identifier">working_display</span> <span class="ruby-node">&quot;-----&gt; Promoting #{follower_db[:name]} to DATABASE_URL&quot;</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">heroku</span>.<span class="ruby-identifier">add_config_vars</span>(<span class="ruby-identifier">app</span>, {<span class="ruby-string">&quot;DATABASE_URL&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">follower_db</span>[<span class="ruby-value">:url</span>]})
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- promote-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- promote-method -->
+
+      
+        <div id="psql-method" class="method-detail ">
+          <a name="method-i-psql"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">psql</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>pg:psql [DATABASE]</p>
+
+<p>open a psql shell to the database</p>
+
+<p>(dedicated only) defaults to DATABASE_URL databases if no DATABASE is
+specified</p>
+            
+
+            
+            <div class="method-source-code" id="psql-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pg.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">psql</span>
+  <span class="ruby-identifier">deprecate_dash_dash_db</span>(<span class="ruby-string">&quot;pg:psql&quot;</span>)
+  <span class="ruby-identifier">uri</span> = <span class="ruby-identifier">generate_ingress_uri</span>(<span class="ruby-string">&quot;Connecting&quot;</span>)
+  <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;PGPASSWORD&quot;</span>] = <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">password</span>
+  <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;PGSSLMODE&quot;</span>]  = <span class="ruby-string">'require'</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">exec</span> <span class="ruby-node">&quot;psql -U #{uri.user} -h #{uri.host} -p #{uri.port || 5432} #{uri.path[1..-1]}&quot;</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-string">&quot; !   The local psql command could not be located&quot;</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-string">&quot; !   For help installing psql, see http://devcenter.heroku.com/articles/local-postgresql&quot;</span>
+    <span class="ruby-identifier">abort</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- psql-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- psql-method -->
+
+      
+        <div id="reset-method" class="method-detail ">
+          <a name="method-i-reset"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reset</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>pg:reset &lt;DATABASE&gt;</p>
+
+<p>delete all data in DATABASE</p>
+            
+
+            
+            <div class="method-source-code" id="reset-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pg.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reset</span>
+  <span class="ruby-identifier">deprecate_dash_dash_db</span>(<span class="ruby-string">&quot;pg:reset&quot;</span>)
+  <span class="ruby-identifier">db</span> = <span class="ruby-identifier">resolve_db</span>(<span class="ruby-value">:required</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'pg:reset'</span>)
+
+  <span class="ruby-identifier">display</span> <span class="ruby-node">&quot;Resetting #{db[:pretty_name]}&quot;</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">confirm_command</span>
+
+  <span class="ruby-identifier">working_display</span> <span class="ruby-string">'Resetting'</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-string">&quot;SHARED_DATABASE&quot;</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">db</span>[<span class="ruby-value">:name</span>]
+      <span class="ruby-identifier">heroku</span>.<span class="ruby-identifier">database_reset</span>(<span class="ruby-identifier">app</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">heroku_postgresql_client</span>(<span class="ruby-identifier">db</span>[<span class="ruby-value">:url</span>]).<span class="ruby-identifier">reset</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- reset-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reset-method -->
+
+      
+        <div id="unfollow-method" class="method-detail ">
+          <a name="method-i-unfollow"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unfollow</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>pg:unfollow &lt;REPLICA&gt;</p>
+
+<p>stop a replica from following and make it a read/write database</p>
+            
+
+            
+            <div class="method-source-code" id="unfollow-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pg.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unfollow</span>
+  <span class="ruby-identifier">follower_db</span> = <span class="ruby-identifier">resolve_db</span>(<span class="ruby-value">:required</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'pg:unfollow'</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">follower_db</span>[<span class="ruby-value">:name</span>].<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;SHARED_DATABASE&quot;</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-string">&quot; !    SHARED_DATABASE is not following another database&quot;</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">follower_name</span> = <span class="ruby-identifier">follower_db</span>[<span class="ruby-value">:pretty_name</span>]
+  <span class="ruby-identifier">follower_db_info</span> = <span class="ruby-identifier">heroku_postgresql_client</span>(<span class="ruby-identifier">follower_db</span>[<span class="ruby-value">:url</span>]).<span class="ruby-identifier">get_database</span>
+  <span class="ruby-identifier">origin_db_url</span> = <span class="ruby-identifier">follower_db_info</span>[<span class="ruby-value">:following</span>]
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">origin_db_url</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-node">&quot; !    #{follower_name} is not following another database&quot;</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">origin_name</span> = <span class="ruby-identifier">name_from_url</span>(<span class="ruby-identifier">origin_db_url</span>)
+
+  <span class="ruby-identifier">display</span> <span class="ruby-node">&quot; !    #{follower_name} will become writable and no longer&quot;</span>
+  <span class="ruby-identifier">display</span> <span class="ruby-node">&quot; !    follow #{origin_name}. This cannot be undone.&quot;</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">confirm_command</span>
+
+  <span class="ruby-identifier">working_display</span> <span class="ruby-string">&quot;Unfollowing&quot;</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">heroku_postgresql_client</span>(<span class="ruby-identifier">follower_db</span>[<span class="ruby-value">:url</span>]).<span class="ruby-identifier">unfollow</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unfollow-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unfollow-method -->
+
+      
+        <div id="wait-method" class="method-detail ">
+          <a name="method-i-wait"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">wait</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>pg:wait [DATABASE]</p>
+
+<p>monitor database creation, exit when complete</p>
+
+<p>defaults to all databases if no DATABASE is specified</p>
+            
+
+            
+            <div class="method-source-code" id="wait-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/command/pg.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">wait</span>
+  <span class="ruby-identifier">specified_db_or_all</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">db</span><span class="ruby-operator">|</span> <span class="ruby-identifier">wait_for</span> <span class="ruby-identifier">db</span> }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- wait-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- wait-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,1258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Heroku::Auth</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/heroku/auth_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/heroku/auth.rb">lib/heroku/auth.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-ask_for_and_save_credentials">::ask_for_and_save_credentials</a></li>
+          
+          <li><a href="#method-c-ask_for_credentials">::ask_for_credentials</a></li>
+          
+          <li><a href="#method-c-ask_for_password">::ask_for_password</a></li>
+          
+          <li><a href="#method-c-ask_for_password_on_windows">::ask_for_password_on_windows</a></li>
+          
+          <li><a href="#method-c-associate_key">::associate_key</a></li>
+          
+          <li><a href="#method-c-associate_or_generate_ssh_key">::associate_or_generate_ssh_key</a></li>
+          
+          <li><a href="#method-c-available_ssh_public_keys">::available_ssh_public_keys</a></li>
+          
+          <li><a href="#method-c-check">::check</a></li>
+          
+          <li><a href="#method-c-check_for_associated_ssh_key">::check_for_associated_ssh_key</a></li>
+          
+          <li><a href="#method-c-clear">::clear</a></li>
+          
+          <li><a href="#method-c-client">::client</a></li>
+          
+          <li><a href="#method-c-credentials_file">::credentials_file</a></li>
+          
+          <li><a href="#method-c-default_host">::default_host</a></li>
+          
+          <li><a href="#method-c-delete_credentials">::delete_credentials</a></li>
+          
+          <li><a href="#method-c-echo_off">::echo_off</a></li>
+          
+          <li><a href="#method-c-echo_on">::echo_on</a></li>
+          
+          <li><a href="#method-c-generate_ssh_key">::generate_ssh_key</a></li>
+          
+          <li><a href="#method-c-host">::host</a></li>
+          
+          <li><a href="#method-c-login">::login</a></li>
+          
+          <li><a href="#method-c-logout">::logout</a></li>
+          
+          <li><a href="#method-c-read_credentials">::read_credentials</a></li>
+          
+          <li><a href="#method-c-reauthorize">::reauthorize</a></li>
+          
+          <li><a href="#method-c-retry_login-3F">::retry_login?</a></li>
+          
+          <li><a href="#method-c-set_credentials_permissions">::set_credentials_permissions</a></li>
+          
+          <li><a href="#method-c-write_credentials">::write_credentials</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="Helpers.html">Heroku::Helpers</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Heroku.html">Heroku</a></li>
+        
+          <li><a href="../Heroku/Auth.html">Heroku::Auth</a></li>
+        
+          <li><a href="../Heroku/BuiltinPlugin.html">Heroku::BuiltinPlugin</a></li>
+        
+          <li><a href="../Heroku/Client.html">Heroku::Client</a></li>
+        
+          <li><a href="../Heroku/Client/AppCrashed.html">Heroku::Client::AppCrashed</a></li>
+        
+          <li><a href="../Heroku/Client/ConsoleSession.html">Heroku::Client::ConsoleSession</a></li>
+        
+          <li><a href="../Heroku/Client/JSON.html">Heroku::Client::JSON</a></li>
+        
+          <li><a href="../Heroku/Client/Rendezvous.html">Heroku::Client::Rendezvous</a></li>
+        
+          <li><a href="../Heroku/Client/Service.html">Heroku::Client::Service</a></li>
+        
+          <li><a href="../Heroku/Command.html">Heroku::Command</a></li>
+        
+          <li><a href="../Heroku/Command/Account.html">Heroku::Command::Account</a></li>
+        
+          <li><a href="../Heroku/Command/Addons.html">Heroku::Command::Addons</a></li>
+        
+          <li><a href="../Heroku/Command/Apps.html">Heroku::Command::Apps</a></li>
+        
+          <li><a href="../Heroku/Command/Auth.html">Heroku::Command::Auth</a></li>
+        
+          <li><a href="../Heroku/Command/Base.html">Heroku::Command::Base</a></li>
+        
+          <li><a href="../Heroku/Command/BaseWithApp.html">Heroku::Command::BaseWithApp</a></li>
+        
+          <li><a href="../Heroku/Command/CommandFailed.html">Heroku::Command::CommandFailed</a></li>
+        
+          <li><a href="../Heroku/Command/Config.html">Heroku::Command::Config</a></li>
+        
+          <li><a href="../Heroku/Command/Db.html">Heroku::Command::Db</a></li>
+        
+          <li><a href="../Heroku/Command/Domains.html">Heroku::Command::Domains</a></li>
+        
+          <li><a href="../Heroku/Command/Help.html">Heroku::Command::Help</a></li>
+        
+          <li><a href="../Heroku/Command/InvalidCommand.html">Heroku::Command::InvalidCommand</a></li>
+        
+          <li><a href="../Heroku/Command/Keys.html">Heroku::Command::Keys</a></li>
+        
+          <li><a href="../Heroku/Command/Logs.html">Heroku::Command::Logs</a></li>
+        
+          <li><a href="../Heroku/Command/Maintenance.html">Heroku::Command::Maintenance</a></li>
+        
+          <li><a href="../Heroku/Command/Pg.html">Heroku::Command::Pg</a></li>
+        
+          <li><a href="../Heroku/Command/Pgbackups.html">Heroku::Command::Pgbackups</a></li>
+        
+          <li><a href="../Heroku/Command/Pgbackups/Display.html">Heroku::Command::Pgbackups::Display</a></li>
+        
+          <li><a href="../Heroku/Command/Pgbackups/Display/DataSource.html">Heroku::Command::Pgbackups::Display::DataSource</a></li>
+        
+          <li><a href="../Heroku/Command/Plugins.html">Heroku::Command::Plugins</a></li>
+        
+          <li><a href="../Heroku/Command/Ps.html">Heroku::Command::Ps</a></li>
+        
+          <li><a href="../Heroku/Command/Releases.html">Heroku::Command::Releases</a></li>
+        
+          <li><a href="../Heroku/Command/Run.html">Heroku::Command::Run</a></li>
+        
+          <li><a href="../Heroku/Command/Sharing.html">Heroku::Command::Sharing</a></li>
+        
+          <li><a href="../Heroku/Command/Ssl.html">Heroku::Command::Ssl</a></li>
+        
+          <li><a href="../Heroku/Command/Stack.html">Heroku::Command::Stack</a></li>
+        
+          <li><a href="../Heroku/Command/Update.html">Heroku::Command::Update</a></li>
+        
+          <li><a href="../Heroku/Command/Version.html">Heroku::Command::Version</a></li>
+        
+          <li><a href="../Heroku/Deprecated.html">Heroku::Deprecated</a></li>
+        
+          <li><a href="../Heroku/Deprecated/Help.html">Heroku::Deprecated::Help</a></li>
+        
+          <li><a href="../Heroku/Deprecated/Help/ClassMethods.html">Heroku::Deprecated::Help::ClassMethods</a></li>
+        
+          <li><a href="../Heroku/Deprecated/Help/HelpGroup.html">Heroku::Deprecated::Help::HelpGroup</a></li>
+        
+          <li><a href="../Heroku/Distribution.html">Heroku::Distribution</a></li>
+        
+          <li><a href="../Heroku/Helpers.html">Heroku::Helpers</a></li>
+        
+          <li><a href="../Heroku/OkJson.html">Heroku::OkJson</a></li>
+        
+          <li><a href="../Heroku/OkJson/ParserError.html">Heroku::OkJson::ParserError</a></li>
+        
+          <li><a href="../Heroku/Plugin.html">Heroku::Plugin</a></li>
+        
+          <li><a href="../Heroku/Updater.html">Heroku::Updater</a></li>
+        
+          <li><a href="../HerokuPostgresql.html">HerokuPostgresql</a></li>
+        
+          <li><a href="../HerokuPostgresql/Client.html">HerokuPostgresql::Client</a></li>
+        
+          <li><a href="../PGBackups.html">PGBackups</a></li>
+        
+          <li><a href="../PGBackups/Client.html">PGBackups::Client</a></li>
+        
+          <li><a href="../PGResolver.html">PGResolver</a></li>
+        
+          <li><a href="../PGResolver/Resolver.html">PGResolver::Resolver</a></li>
+        
+          <li><a href="../PgUtils.html">PgUtils</a></li>
+        
+          <li><a href="../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Heroku::Auth</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="credentials-attribute-method" class="method-detail">
+          <a name="credentials"></a>
+          
+          <a name="credentials="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">credentials</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="ask_for_and_save_credentials-method" class="method-detail ">
+          <a name="method-c-ask_for_and_save_credentials"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ask_for_and_save_credentials</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ask_for_and_save_credentials-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ask_for_and_save_credentials</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@credentials</span> = <span class="ruby-identifier">ask_for_credentials</span>
+    <span class="ruby-identifier">write_credentials</span>
+    <span class="ruby-identifier">check</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-operator">::</span><span class="ruby-constant">RestClient</span><span class="ruby-operator">::</span><span class="ruby-constant">Unauthorized</span>, <span class="ruby-operator">::</span><span class="ruby-constant">RestClient</span><span class="ruby-operator">::</span><span class="ruby-constant">ResourceNotFound</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">delete_credentials</span>
+    <span class="ruby-identifier">clear</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-string">&quot;Authentication failed.&quot;</span>
+    <span class="ruby-keyword">retry</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">retry_login?</span>
+    <span class="ruby-identifier">exit</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">delete_credentials</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">check_for_associated_ssh_key</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">Heroku</span><span class="ruby-operator">::</span><span class="ruby-constant">Command</span>.<span class="ruby-identifier">current_command</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;keys:add&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ask_for_and_save_credentials-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ask_for_and_save_credentials-method -->
+
+      
+        <div id="ask_for_credentials-method" class="method-detail ">
+          <a name="method-c-ask_for_credentials"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ask_for_credentials</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ask_for_credentials-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ask_for_credentials</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Enter your Heroku credentials.&quot;</span>
+
+  <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;Email: &quot;</span>
+  <span class="ruby-identifier">user</span> = <span class="ruby-identifier">ask</span>
+
+  <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;Password: &quot;</span>
+  <span class="ruby-identifier">password</span> = <span class="ruby-identifier">running_on_windows?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">ask_for_password_on_windows</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">ask_for_password</span>
+  <span class="ruby-identifier">api_key</span> = <span class="ruby-constant">Heroku</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">auth</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">host</span>)[<span class="ruby-string">'api_key'</span>]
+
+  [<span class="ruby-identifier">user</span>, <span class="ruby-identifier">api_key</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ask_for_credentials-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ask_for_credentials-method -->
+
+      
+        <div id="ask_for_password-method" class="method-detail ">
+          <a name="method-c-ask_for_password"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ask_for_password</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ask_for_password-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ask_for_password</span>
+  <span class="ruby-identifier">echo_off</span>
+  <span class="ruby-identifier">password</span> = <span class="ruby-identifier">ask</span>
+  <span class="ruby-identifier">puts</span>
+  <span class="ruby-identifier">echo_on</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">password</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ask_for_password-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ask_for_password-method -->
+
+      
+        <div id="ask_for_password_on_windows-method" class="method-detail ">
+          <a name="method-c-ask_for_password_on_windows"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ask_for_password_on_windows</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ask_for_password_on_windows-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ask_for_password_on_windows</span>
+  <span class="ruby-identifier">require</span> <span class="ruby-string">&quot;Win32API&quot;</span>
+  <span class="ruby-identifier">char</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">password</span> = <span class="ruby-string">''</span>
+
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">char</span> = <span class="ruby-constant">Win32API</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;crtdll&quot;</span>, <span class="ruby-string">&quot;_getch&quot;</span>, [ ], <span class="ruby-string">&quot;L&quot;</span>).<span class="ruby-constant">Call</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">char</span> <span class="ruby-operator">==</span> <span class="ruby-value">10</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">char</span> <span class="ruby-operator">==</span> <span class="ruby-value">13</span> <span class="ruby-comment"># received carriage return or newline</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">char</span> <span class="ruby-operator">==</span> <span class="ruby-value">127</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">char</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span> <span class="ruby-comment"># backspace and delete</span>
+      <span class="ruby-identifier">password</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-value">-1</span>, <span class="ruby-value">1</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment"># windows might throw a -1 at us so make sure to handle RangeError</span>
+      (<span class="ruby-identifier">password</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">char</span>.<span class="ruby-identifier">chr</span>) <span class="ruby-keyword">rescue</span> <span class="ruby-constant">RangeError</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">puts</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">password</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ask_for_password_on_windows-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ask_for_password_on_windows-method -->
+
+      
+        <div id="associate_key-method" class="method-detail ">
+          <a name="method-c-associate_key"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">associate_key</span><span
+              class="method-args">(key)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="associate_key-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 185</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">associate_key</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-identifier">display</span> <span class="ruby-node">&quot;Uploading ssh public key #{key}&quot;</span>
+  <span class="ruby-identifier">client</span>.<span class="ruby-identifier">add_key</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">key</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- associate_key-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- associate_key-method -->
+
+      
+        <div id="associate_or_generate_ssh_key-method" class="method-detail ">
+          <a name="method-c-associate_or_generate_ssh_key"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">associate_or_generate_ssh_key</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="associate_or_generate_ssh_key-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">associate_or_generate_ssh_key</span>
+  <span class="ruby-identifier">public_keys</span> = <span class="ruby-identifier">available_ssh_public_keys</span>.<span class="ruby-identifier">sort</span>
+
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">public_keys</span>.<span class="ruby-identifier">length</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">0</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-string">&quot;Could not find an existing public key.&quot;</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-string">&quot;Would you like to generate one? [Yn] &quot;</span>, <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">ask</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;n&quot;</span>
+      <span class="ruby-identifier">display</span> <span class="ruby-string">&quot;Generating new SSH public key.&quot;</span>
+      <span class="ruby-identifier">generate_ssh_key</span>(<span class="ruby-string">&quot;id_rsa&quot;</span>)
+      <span class="ruby-identifier">associate_key</span>(<span class="ruby-node">&quot;#{home_directory}/.ssh/id_rsa.pub&quot;</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">1</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-node">&quot;Found existing public key: #{public_keys.first}&quot;</span>
+    <span class="ruby-identifier">associate_key</span>(<span class="ruby-identifier">public_keys</span>.<span class="ruby-identifier">first</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-string">&quot;Found the following SSH public keys:&quot;</span>
+    <span class="ruby-identifier">public_keys</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">display</span> <span class="ruby-node">&quot;#{index+1}) #{File.basename(key)}&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">display</span> <span class="ruby-string">&quot;Which would you like to use with your Heroku account? &quot;</span>, <span class="ruby-keyword">false</span>
+    <span class="ruby-identifier">chosen</span> = <span class="ruby-identifier">public_keys</span>[<span class="ruby-identifier">ask</span>.<span class="ruby-identifier">to_i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>] <span class="ruby-keyword">rescue</span> <span class="ruby-identifier">error</span>(<span class="ruby-string">&quot;Invalid choice&quot;</span>)
+    <span class="ruby-identifier">associate_key</span>(<span class="ruby-identifier">chosen</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- associate_or_generate_ssh_key-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- associate_or_generate_ssh_key-method -->
+
+      
+        <div id="available_ssh_public_keys-method" class="method-detail ">
+          <a name="method-c-available_ssh_public_keys"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">available_ssh_public_keys</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="available_ssh_public_keys-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 190</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">available_ssh_public_keys</span>
+  <span class="ruby-identifier">keys</span> = [
+    <span class="ruby-node">&quot;#{home_directory}/.ssh/id_rsa.pub&quot;</span>,
+    <span class="ruby-node">&quot;#{home_directory}/.ssh/id_dsa.pub&quot;</span>
+  ]
+  <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-constant">Dir</span>[<span class="ruby-node">&quot;#{home_directory}/.ssh/*.pub&quot;</span>])
+  <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">d</span><span class="ruby-operator">|</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">d</span>) }.<span class="ruby-identifier">uniq</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- available_ssh_public_keys-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- available_ssh_public_keys-method -->
+
+      
+        <div id="check-method" class="method-detail ">
+          <a name="method-c-check"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">check</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>just a stub; will raise if not authenticated</p>
+            
+
+            
+            <div class="method-source-code" id="check-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check</span>
+  <span class="ruby-identifier">client</span>.<span class="ruby-identifier">list</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- check-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- check-method -->
+
+      
+        <div id="check_for_associated_ssh_key-method" class="method-detail ">
+          <a name="method-c-check_for_associated_ssh_key"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">check_for_associated_ssh_key</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="check_for_associated_ssh_key-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_for_associated_ssh_key</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">client</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">length</span>.<span class="ruby-identifier">zero?</span>
+  <span class="ruby-identifier">associate_or_generate_ssh_key</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- check_for_associated_ssh_key-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- check_for_associated_ssh_key-method -->
+
+      
+        <div id="clear-method" class="method-detail ">
+          <a name="method-c-clear"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">clear</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="clear-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clear</span>
+  <span class="ruby-ivar">@credentials</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@client</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- clear-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- clear-method -->
+
+      
+        <div id="client-method" class="method-detail ">
+          <a name="method-c-client"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">client</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="client-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">client</span>
+  <span class="ruby-ivar">@client</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">client</span> = <span class="ruby-constant">Heroku</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">host</span>)
+    <span class="ruby-identifier">client</span>.<span class="ruby-identifier">on_warning</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">msg</span><span class="ruby-operator">|</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">display</span>(<span class="ruby-node">&quot;\n#{msg}\n\n&quot;</span>) }
+    <span class="ruby-identifier">client</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- client-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- client-method -->
+
+      
+        <div id="credentials_file-method" class="method-detail ">
+          <a name="method-c-credentials_file"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">credentials_file</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="credentials_file-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">credentials_file</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">host</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">default_host</span>
+    <span class="ruby-node">&quot;#{home_directory}/.heroku/credentials&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-node">&quot;#{home_directory}/.heroku/credentials.#{host}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- credentials_file-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- credentials_file-method -->
+
+      
+        <div id="default_host-method" class="method-detail ">
+          <a name="method-c-default_host"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">default_host</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="default_host-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">default_host</span>
+  <span class="ruby-string">&quot;heroku.com&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- default_host-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- default_host-method -->
+
+      
+        <div id="delete_credentials-method" class="method-detail ">
+          <a name="method-c-delete_credentials"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">delete_credentials</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="delete_credentials-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_credentials</span>
+  <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">rm_f</span>(<span class="ruby-identifier">credentials_file</span>)
+  <span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- delete_credentials-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- delete_credentials-method -->
+
+      
+        <div id="echo_off-method" class="method-detail ">
+          <a name="method-c-echo_off"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">echo_off</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="echo_off-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">echo_off</span>
+  <span class="ruby-identifier">system</span> <span class="ruby-string">&quot;stty -echo&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- echo_off-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- echo_off-method -->
+
+      
+        <div id="echo_on-method" class="method-detail ">
+          <a name="method-c-echo_on"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">echo_on</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="echo_on-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">echo_on</span>
+  <span class="ruby-identifier">system</span> <span class="ruby-string">&quot;stty echo&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- echo_on-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- echo_on-method -->
+
+      
+        <div id="generate_ssh_key-method" class="method-detail ">
+          <a name="method-c-generate_ssh_key"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate_ssh_key</span><span
+              class="method-args">(keyfile)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="generate_ssh_key-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_ssh_key</span>(<span class="ruby-identifier">keyfile</span>)
+  <span class="ruby-identifier">ssh_dir</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">home_directory</span>, <span class="ruby-string">&quot;.ssh&quot;</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">ssh_dir</span>)
+    <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span> <span class="ruby-identifier">ssh_dir</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">chmod</span>(<span class="ruby-value">0700</span>, <span class="ruby-identifier">ssh_dir</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-node">`ssh-keygen -t rsa -N &quot;&quot; -f \&quot;#{home_directory}/.ssh/#{keyfile}\&quot; 2&gt;&amp;1`</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate_ssh_key-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate_ssh_key-method -->
+
+      
+        <div id="host-method" class="method-detail ">
+          <a name="method-c-host"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">host</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="host-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">host</span>
+  <span class="ruby-constant">ENV</span>[<span class="ruby-string">'HEROKU_HOST'</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">default_host</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- host-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- host-method -->
+
+      
+        <div id="login-method" class="method-detail ">
+          <a name="method-c-login"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">login</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="login-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">login</span>
+  <span class="ruby-identifier">delete_credentials</span>
+  <span class="ruby-identifier">get_credentials</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- login-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- login-method -->
+
+      
+        <div id="logout-method" class="method-detail ">
+          <a name="method-c-logout"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">logout</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="logout-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">logout</span>
+  <span class="ruby-identifier">delete_credentials</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- logout-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- logout-method -->
+
+      
+        <div id="read_credentials-method" class="method-detail ">
+          <a name="method-c-read_credentials"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">read_credentials</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="read_credentials-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_credentials</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">credentials_file</span>) <span class="ruby-keyword">and</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">credentials_file</span>).<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- read_credentials-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- read_credentials-method -->
+
+      
+        <div id="reauthorize-method" class="method-detail ">
+          <a name="method-c-reauthorize"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reauthorize</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="reauthorize-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reauthorize</span>
+  <span class="ruby-ivar">@credentials</span> = <span class="ruby-identifier">ask_for_and_save_credentials</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- reauthorize-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reauthorize-method -->
+
+      
+        <div id="retry_login-3F-method" class="method-detail ">
+          <a name="method-c-retry_login-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">retry_login?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="retry_login-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 199</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">retry_login?</span>
+  <span class="ruby-ivar">@login_attempts</span> <span class="ruby-operator">||=</span> <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@login_attempts</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-ivar">@login_attempts</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- retry_login-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- retry_login-3F-method -->
+
+      
+        <div id="set_credentials_permissions-method" class="method-detail ">
+          <a name="method-c-set_credentials_permissions"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_credentials_permissions</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="set_credentials_permissions-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_credentials_permissions</span>
+  <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">chmod</span> <span class="ruby-value">0700</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">credentials_file</span>)
+  <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">chmod</span> <span class="ruby-value">0600</span>, <span class="ruby-identifier">credentials_file</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_credentials_permissions-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_credentials_permissions-method -->
+
+      
+        <div id="write_credentials-method" class="method-detail ">
+          <a name="method-c-write_credentials"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">write_credentials</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="write_credentials-source">
+<pre>
+<span class="ruby-comment"># File lib/heroku/auth.rb, line 205</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">write_credentials</span>
+  <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">credentials_file</span>))
+  <span class="ruby-identifier">f</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">credentials_file</span>, <span class="ruby-string">'w'</span>)
+  <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">credentials</span>
+  <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-identifier">set_credentials_permissions</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- write_credentials-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- write_credentials-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
