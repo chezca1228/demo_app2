@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <gconf>
-	<entry name="nautilus-window-scroll-position" mtime="1317984251" type="string">
+	<entry name="nautilus-window-scroll-position" mtime="1318330539" type="string">
 		<stringvalue>x-nautilus-desktop:///Windows.volume</stringvalue>
 	</entry>
-	<entry name="nautilus-icon-view-layout-timestamp" mtime="1318295441" type="string">
-		<stringvalue>1318295441</stringvalue>
+	<entry name="nautilus-icon-view-layout-timestamp" mtime="1318383090" type="string">
+		<stringvalue>1318383090</stringvalue>
 	</entry>
-	<entry name="nautilus-icon-view-keep-aligned" mtime="1318295440" type="string">
+	<entry name="nautilus-icon-view-keep-aligned" mtime="1318383090" type="string">
 		<stringvalue>true</stringvalue>
 	</entry>
 </gconf>

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <gconf>
-	<entry name="virtual_root" mtime="1317979960" type="string">
-		<stringvalue>file:///home/ralbaredo/.ssh</stringvalue>
+	<entry name="virtual_root" mtime="1318390718" type="string">
+		<stringvalue>file:///home/ralbaredo/rrbscombined2/app/controllers</stringvalue>
 	</entry>
-	<entry name="root" mtime="1317979960" type="string">
+	<entry name="root" mtime="1318390718" type="string">
 		<stringvalue>file:///</stringvalue>
 	</entry>
-	<entry name="tree_view" mtime="1317979960" type="bool" value="true"/>
+	<entry name="tree_view" mtime="1318390718" type="bool" value="true"/>
 </gconf>

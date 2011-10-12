@@ -10,11 +10,12 @@
  */
 
 user_pref("accessibility.typeaheadfind.flashBar", 0);
-user_pref("app.update.lastUpdateTime.addon-background-update-timer", 1317967675);
-user_pref("app.update.lastUpdateTime.blocklist-background-update-timer", 1317967867);
+user_pref("app.update.lastUpdateTime.addon-background-update-timer", 1318296058);
+user_pref("app.update.lastUpdateTime.blocklist-background-update-timer", 1318296471);
 user_pref("app.update.lastUpdateTime.microsummary-generator-update-timer", 1317967868);
-user_pref("app.update.lastUpdateTime.places-maintenance-timer", 1317967079);
-user_pref("app.update.lastUpdateTime.search-engine-update-timer", 1317967567);
+user_pref("app.update.lastUpdateTime.places-maintenance-timer", 1318296609);
+user_pref("app.update.lastUpdateTime.search-engine-update-timer", 1318318797);
+user_pref("browser.download.lastDir", "/home/ralbaredo/Downloads");
 user_pref("browser.migration.version", 1);
 user_pref("browser.places.importBookmarksHTML", false);
 user_pref("browser.places.smartBookmarksVersion", 2);
@@ -25,7 +26,7 @@ user_pref("distribution.canonical.bookmarksProcessed", true);
 user_pref("extensions.enabledItems", "langpack-en-GB@firefox-3.6.ubuntu.com:3.6,ubufox@ubuntu.com:0.9rc2,{972ce4c6-7e08-4474-a285-3208198ce6fd}:3.6.23");
 user_pref("extensions.lastAppVersion", "3.6.23");
 user_pref("extensions.update.notifyUser", false);
-user_pref("idle.lastDailyNotification", 1317979406);
+user_pref("idle.lastDailyNotification", 1318297136);
 user_pref("intl.charsetmenu.browser.cache", "ISO-8859-1, UTF-8");
 user_pref("network.cookie.prefsMigrated", true);
 user_pref("places.last_vacuum", 1317979406);

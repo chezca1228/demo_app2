@@ -89,8 +89,8 @@
 			<stringvalue>session</stringvalue>
 		</li>
 	</entry>
-	<entry name="cursor_size" mtime="1318295440" type="int" value="18"/>
-	<entry name="cursor_theme" mtime="1318295440" type="string">
+	<entry name="cursor_size" mtime="1318383090" type="int" value="18"/>
+	<entry name="cursor_theme" mtime="1318383090" type="string">
 		<stringvalue>DMZ-White</stringvalue>
 	</entry>
 </gconf>

@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
 <gconf>
-	<entry name="main_window_hidden" mtime="1318297319" type="bool" value="true"/>
+	<entry name="show_offline" mtime="1318394240" type="bool" value="true"/>
+	<entry name="show_protocols" mtime="1318394240" type="bool" value="true"/>
+	<entry name="main_window_hidden" mtime="1318314120" type="bool" value="true"/>
 </gconf>

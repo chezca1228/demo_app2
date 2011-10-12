@@ -163,3 +163,177 @@ exit
 heroku
 heroku keys:add ~/.ssh/id_rsa.pub 
 git push heroku master
+cd rails_apps/first_app/
+ls
+git push heroku master
+cd
+git push heroku master
+git push origin master
+heroku create
+git push heroku master
+heroku open
+git push origin master
+git remote -v
+git remote rm heroku
+git remote -v
+sudo gem install heroku
+gem install heroku
+heroku keys:add
+heroku create
+git push heroku master
+git init
+git add
+git add .
+git commit -m "first commit"
+git push heroku master
+heroku create
+git push heroku master
+cd rails_apps/
+git push heroku master
+git remote -v
+git remote rm heroku
+ls
+heroku create softcraft-bakery
+heroku create yourwitch_ismycommand
+heroku create yourwitch-ismycommand
+git remote add heroku git@heroku.com:yourwitch-ismycommand.git
+git push heroku master
+git remote -v
+cd rails_apps/first_app/
+ls
+cd ..
+rails new demo_app
+cd demo_app/
+bundle install
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin git@github.com:chezca1228/demo_app.git
+git push origin master
+git remote add origin git@github.com:chezca1228/demo_app.git
+git push origin master
+ls
+git remote add origin git@github.com:chezca1228/demo_app.git
+git push origin master
+ls
+cd
+sudo apt-get install python python-twisted python-twisted-web2 python-openssl python-simplejson python-setuptools gettext intltool python-xdg python-chardet python-geoip python-libtorrent python-notify python-pygame python-gtk2 python-gtk2-dev librsvg2-dev xdg-utils python-mako 
+python setup.py clean -a
+python setup.py clean -als
+ls
+cd /bin/
+ls
+cd rails_apps/first_app/
+rails s
+y
+exit
+locate mysql_config
+locate mysql
+gem install mysql
+sudo apt-get install libmysql-ruby libmysqlclient-dev
+rails s
+ls
+cd rrbscombined2/
+rails s
+exit
+git init
+git status
+git branch -a
+git clone https://github.com/jobelleazur/rrbscombined2.git
+cd rrbscombined2/
+rails s
+bundle update mysql2
+bundle install
+gem install mysql2 -v '0.2.6
+gem install mysql2 -v '0.2.6'
+bundle update mysql2
+bundle install
+rails s
+gem install mysql
+rails s
+bundle update mysql2
+bundler install
+bundler update
+gem install mysql2 -v 0.2.6
+rails s
+gem install mysql2 -v 0.3
+rails s
+bundle update mysql2
+cd
+cd /var/run/
+ls
+cd
+sudo mkdir /var/run/msqld
+sudo rm /var/run/msqld/
+sudo mkdir /var/run/mysqld
+sudo touch /var/run/mysqld/mysqld.sock
+sudo chown -R mysql /var/run/mysqld/
+sudo /etc/init.d/mysql start
+sudo apt-get purge mysql-client mysql-server
+sudo apt-get install mysql-client mysql-server
+exit
+mysql -u root test
+mysql
+netstat -ln | grep mysql
+mysql -u root mysql
+sudo mysql
+/etc/init.d/mysqld stop
+/etc/init.d/mysql stop
+mysqld_safe --skip-grant-tables & mysql -u root
+sudo apt-get purge mysql-client mysql-server
+exit
+cd rrbscombined2/
+rails s
+mysql -u root -p
+Sudo /etc/init.d/mysql start
+cd
+sudo /etc/init.d/mysql start
+exit
+cd rrbscombined2/
+rails s
+exit
+cd rails_apps/
+cd demo_app/
+ls
+rails generate scaffold User name:string email:string
+exit
+sudo apt-get install nodejs
+gem execjs
+gem install execjs
+gem install therubyracer
+bundle install
+cd rails_apps/demo_app/
+bundle install
+gem install execjs
+gem install therubyracer
+bundle install
+rails s
+cd ..
+cd first_app/
+rails s
+cd ..
+rails new demo_app2
+cd demo_app2/
+bundle install
+rails generate scaffold User name:string email:string
+gem install execjs
+gem install the rubyracer
+bundle install
+rails generate scaffold User name:string email:string
+rails
+exit
+restart
+reload
+cls
+clear
+cd rails_apps/demo_app2/
+rails s
+gem install therubyrhino
+bundle update
+bundle show therubyracer
+bundle show therubyrhino
+cd ..
+bundle show therubyrhino
+cd demo_app2/
+bundle show therubyrhino
+exit

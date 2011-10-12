@@ -1,5 +1,5 @@
 {
   "version": 1,
-  "bluetooth-manager": { "first-time": "2011-10-07T05:56:01.517824Z", "last-time": "2011-10-07T06:12:58.946415Z", "category": "Hardware"},
-  "gnome-power-manager": { "first-time": "2011-10-07T05:56:01.517783Z", "last-time": "2011-10-07T06:12:58.946376Z", "category": "Hardware"}
+  "bluetooth-manager": { "first-time": "2011-10-07T05:56:01.517824Z", "last-time": "2011-10-11T05:38:04.687364Z", "category": "Hardware"},
+  "gnome-power-manager": { "first-time": "2011-10-07T05:56:01.517783Z", "last-time": "2011-10-11T05:38:04.687031Z", "category": "Hardware"}
 }
